@@ -1,0 +1,74 @@
+#bg_img{
+    width: 1100px;
+    height: 500px;
+    background-color:red;
+    background-image: url("https://www.idgcdn.com.au/article/images/740x500/dimg/screenshot_2019-06-03_blizzard_press_center_-_world_of_warcraft_classic_and_15th_anniversary.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-attachment: fixed;
+}
+
+#style1{
+    width: 500px;
+    height: 500px;
+    border-style: dashed;
+    border-color:black;
+    border-width: 2px;
+
+}
+#style2{
+    width: 500px;
+    height: 500px;
+    border-style: dotted;
+    border-color: red;
+    border-width: 3px;
+    
+}
+#style3{
+    width: 500px;
+    height: 500px;
+    border-style: solid;
+    border-color: blue;
+    border-width: 4px;
+    
+}
+
+#style4{
+    width: 500px;
+    height: 500px;
+    border-bottom-style: solid;
+    border-right-style: dashed;
+    border-left-style: double;
+    border-color: blue;
+    border-width: 4px;
+}
+#style5{
+    width: 0px;
+    height: 0px;
+    border-left-color:blue;
+    border-top-color:red;
+    border-right-color:yellow;
+    border-bottom-color:green;
+    border-width: 300px;
+    border-style: solid;
+}
+
+#style6{
+    width: 0px;
+    height: 0px;
+    background-color: green;
+    border-left-color:white;
+    border-top-color:white;
+    border-right-color:yellow;
+    border-bottom-color:transparent;
+    border-width: 300px;
+    border-style: solid;
+}
+
+
+#style7{
+    font-family:monospace,'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
