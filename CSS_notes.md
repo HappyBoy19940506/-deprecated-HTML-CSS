@@ -1,8 +1,8 @@
-# CSS
+#  CSS
 
 This is a demo repository for learning CSS
 
-## Grammar
+## 基本语法Grammar
 
 selector:
 
@@ -14,7 +14,7 @@ attr3:value
 
 }
 
-## size
+## 单位大小size
 
 size : px / %
 
@@ -164,5 +164,367 @@ font-size: 字体大小
 
    1. color: 直接在div里面加，作用的是 字体颜色，也不用说什么font-color  :thumbsdown:
 
+## CSS段落样式
+
+***把a标签下面的下划线效果去掉***：*** text-decoration:none***
+
+4·css段落样式？
+text-decoration：文本装饰
+下划线：underline
+删除线：line-through
+上划线：overline
+不添加任何装饰：none
+注：添加多个文本修饰：line-throughunderlineoverline
+text-transform:文本大小写（针对英文段落）
+小写；lowercase
+大写：uppercase
+只针对首字母大写：capitalize
+
+****** 识别结果 1******
+
+text-indent：文本缩进、首行缩进
+em单位：相对单位，1em永远都是跟字体大小相同
+text-align：文本对齐方式
+对齐方式：left、right、center、justify（两端点对齐）
+
+**这就是为什么字体大小都要用even number** **不然在处理text align或者text indent涉及段落处理的时候不好弄**
 
 
+
+line-height：定义行高
+什么是行高，一行文字的高度，上边距和下边距的等价关系。
+默认行高；不是固定值，而是变化的。根据当前字体的大小再不断的变化。
+取值：
+
+1.数值(px）
+
+2.scale（比例值，跟文字大小成比例）
+
+
+
+****** 识别结果 1******
+
+letter-spacing：字之间的间距
+word-spacing：词之间的间距〈针对英文段落的）
+英文和数字不自动折行的问题．
+1·word-break：break-all；（非常强烈的折行，如果最后边塞不下直接折断该单词）
+2·word-wrap：break-word (不是那么强烈的折行，如果单词放不下，会写在下面一行开头会产生一些空白区域)
+
+
+
+## CSS 复合样式
+
+ **复合的写法，是通过空格的方式实现的。复合写法有的 是不需要关心顺序的，例如background/border**
+
+**但是font需要有顺序的->（最少要有两个值:size + family,而且顺序也要遵循weight+style+size+family）**
+
+> ​	weight+style+size+family 
+>
+> ​	style+weight+size+ family 
+>
+>  反正永远size+family都是在最后面
+>
+> 别忘了写color -字体颜色
+
+1. background: red url( ) repeat 0,0
+
+2. font: 20px Times
+
+3. border: 1px red solid
+
+   > ​	不要混写，要么全部单一样式，要么直接复合样式，如果一定混混在里面写，
+   >
+   >  ** 一定要先写复合，再写单一！！！！！**
+   >
+   >  ** 一定要先写复合，再写单一！！！！！**
+   >
+   >  ** 一定要先写复合，再写单一！！！！！**
+   >
+   > 因为后面写的会覆盖掉前面写的
+
+
+
+## CSS  id选择题
+
+1. id选择器
+
+   >html--- \<div id=#XX>
+   >
+   >css- #XX{}
+   >
+   >快捷键快速创建： div#NAME---Tab---然后会自动生成带id的div标签
+
+   ****** 识别结果 1******
+
+   **注：**
+   **1．在一个页面中，ID值是唯一的。**一定要有语义！如果你要重复利用，用class选择器。
+   **2，命名规范，字母+数字（命名的第一位不能是数字）。**
+   **3，命名方式，！！驼峰式！！！（不要用在css里，用在js里）、下划线式、短线式。**
+
+   > searchSmallButton 用在js
+   >
+   > search-small-button 用在css
+   >
+   > search_small_button 用在css
+
+
+
+## Div 命名规则
+
+> ​	**头：header**
+> 　　**内容：content/container**
+> 　　**尾：footer**
+> 　　**导航：nav**
+> 　　**侧栏：sidebar**
+> 　　**栏目：column**
+> 　　**页面外围控制整体佈局宽度：wrapper**
+> 　　**左右中：left right center**
+> 　　**登录条：loginbar**
+> 　　**标志：logo**
+> 　　**广告：banner**
+> 　　**页面主体：main**
+> 　　**热点：hot**
+> 　　**新闻：news**
+> 　　**下载：download**
+> 　　**子导航：subnav**
+> 　　**菜单：menu**
+> 　　**子菜单：submenu**
+> 　　**搜索：search**
+> 　　**友情链接：friendlink**
+> 　　**页脚：footer**
+> 　　**版权：copyright**
+> 　　**滚动：scroll**
+> 　　**内容：content**
+> 　　**标签：tags**
+> 　　**文章列表：list**
+> 　　**提示信息：msg**
+> 　　**小技巧：tips**
+> 　　**栏目标题：title**
+> 　　**加入：joinus**
+> 　　**指南：guide**
+> 　　**服务：service**
+> 　　**注册：regsiter**
+> 　　**状态：status**
+> 　　**投票：vote**
+> 　　**合作伙伴：partner**
+> **注释的写法:**
+> 　　**/* Header */
+> 　　内容区
+> 　　/* End Header */**
+> **Id的命名:**
+> 　　**1)页面结构**
+> 　　**容器: container**
+> 　　**页头：header**
+> 　　**内容：content/container**
+> 　　**页面主体：main**
+> 　　**页尾：footer**
+> 　　**导航：nav**
+> 　　**侧栏：sidebar**
+> 　　**栏目：column**
+> 　　**页面外围控制整体佈局宽度：wrapper**
+> 　　**左右中：left right center**
+> **(2)导航**
+> 　　**导航：nav**
+> 　　**主导航：mainnav**
+> 　　**子导航：subnav**
+> 　　**顶导航：topnav**
+> 　　**边导航：sidebar**
+> 　　**左导航：leftsidebar**
+> 　　**右导航：rightsidebar**
+> 　　**菜单：menu**
+> 　　**子菜单：submenu**
+> 　　**标题: title**
+> 　　**摘要: summary**
+> **(3)功能**
+> 　　**标志：logo**
+> 　　**广告：banner**
+> 　　**登陆：login**
+> 　　**登录条：loginbar**
+> 　　**注册：register**
+> 　　**搜索：search**
+> 　　**功能区：shop**
+> 　　**标题：title**
+> 　　**加入：joinus**
+> 　　**状态：status**
+> 　　**按钮：btn**
+> 　　**滚动：scroll**
+> 　　**标籤页：tab**
+> 　　**文章列表：list**
+> 　　**提示信息：msg**
+> 　　**当前的: current**
+> 　　**小技巧：tips**
+> 　　**图标: icon**
+> 　　**注释：note**
+> 　　**指南：guild**
+> 　　**服务：service**
+> 　　**热点：hot**
+> 　　**新闻：news**
+> 　　**下载：download**
+> 　　**投票：vote**
+> 　　**合作伙伴：partner**
+> 　　**友情链接：link**
+> 　　**版权：copyright**
+> **注意事项::**
+> 　　**1.一律小写;**
+> 　　**2.尽量用英文;**
+> 　　**3.不加中槓和下划线;**
+> 　　**4.尽量不缩写，除非一看就明白的单词。**
+> **CSS样式表文件命名**
+> 　　**主要的 master.css**
+> 　　**模块 module.css**
+> 　　**基本共用 base.css**
+> 　　**布局、版面 layout.css**
+> 　　**主题 themes.css**
+> 　　**专栏 columns.css**
+> 　　**文字 font.css**
+> 　　**表单 forms.css**
+> 　　**补丁 mend.css**
+> 　　**打印 print.css**
+
+
+
+## BEM 命名规范
+
+[BEM 命名规范2](https://juejin.im/post/5a6c5881518825733201daf7#heading-2)
+
+
+
+[BEM 命名规范2](https://juejin.im/post/5b925e616fb9a05cdd2ce70d)
+
+
+
+> .block{}
+>
+> .block__element{}
+>
+> .block_element-modifer{}
+>
+> nav__menu--modifier
+>
+> banner__btn--modifier
+
+
+
+## Class 选择器
+
+> ​	html里  div class=XX
+>
+> ​	css里  .class{}
+
+
+
+****** 识别结果 1******
+
+注：
+1·class选擇器是可以复用的·
+2·可以添加多个class样式。 class="A B"
+3．多个样式的时候，样式的优先级根据css决定，而不是 class="A B"中的 AB前后顺序决定。
+4· \<标签>.Class名字， 可以在css里面精准定位一个单独的标签使其生效：
+
+> ​	比如说，我现在背景用的  .bg 按钮样式用的.btn ,然后组合起来，但是我就是想让一个特殊的地方，这里的按钮图标颜色变下，我就可以在不改变class样式，不影响别处用这个class样式的前提下去修改：
+>
+> container.banner.btn {} 然后去覆盖掉之前的效果，把颜色color换掉就行了，这样既不会影响class里面原生额颜色，也可以精准定位修改。
+
+
+
+## 标签tag 选择器
+
+>HTML :\<Div>
+>
+>CSS:  div{}
+>
+>1. 一般很少用到，因为会渲染所以标签，但是有些时候可以用来消除统一格式，比如a标签的下换线。
+>2. 主要用在 ul li{}  form input{  }  table tr/th/td {} ol li{}  dl dt/dd{} 等层次选择器
+
+ 
+
+## 群组group选择器
+
+> CSS: div , #style1, box 1{}
+>
+> HTML : 
+>
+> div> <
+>
+> h2 id=style1
+>
+> p class=box1
+
+```css
+div,#style1, .box1 {}
+```
+
+
+
+```html
+<div>sss</div>
+<h2 id="style"></h2>
+<p class="box1"></p>
+```
+
+
+
+## 通配*选择器
+
+> ​	CSS :  *{			}
+
+
+
+## 层次选择器
+
+****** 识别结果 1******
+
+层次选择器
+
+M N 可以是 标签 也可以是id 比如写成： ul #box
+
+后代：M N  	M标签下面若干层所有的N标签，包括儿子 和孙子，都会被渲染
+父子：M>N 	M标签下面一层的所有的N标签，只包括儿子，但是是所有的N标签儿子，不包括孙子
+兄弟：M~N 	M标签**下面**的**所有**叫N的标签。**下面**就是肉眼去看html文件标签的上下关系
+相邻 ：M+N	M 标签***下面***的**一个**叫N的标签，如果不是下面紧挨着就不会生效。对比M+N
+
+
+
+
+
+## 属性选择器
+
+```html
+<div class="search">              
+<div class="my_search_box">
+<div class="search_btn">
+<div class="btn_search">
+```
+
+
+
+```css
+div[class=search]{background:red}  ---匹配class值为search的
+
+div[class*=search]{background:red}	---匹配class值当中出现了search的
+
+div[class^=search]{background:red} ------匹配class值为首字母为search的
+
+div[class$=search]{background:red} ------匹配class值为末尾是search的
+
+div[class]{background:red}  -------匹配出现了写了class属性的div标签
+```
+
+
+
+## 伪类选择器
+
+```css
+a:link{}  访问前的样式
+a:vistited{} 访问后的样式
+tag:hover{} 鼠标移入时的样式
+tag:active{} 鼠标按下时候的样式
+tag:before{content:" "} 在tag后面添加文字或者效果
+tag:after{content:" "} 在tag前面添加文字或者效果
+input (只适用于type=checkbox disabled):disabled{} 当某个表单属性值是disabled的时候，该标签显示什么
+input (只适用于type=checkbox checked):checked{ } 当某个表单属性值是checked的时候，该标签显示什么
+input (只适用于type=text):focus{} 当用户光标点击了这个输入框之后会发生什么效果
+```
+
+>1. 一般的网站对于a标签 只设置 a{},和 a：hover 来做效果
+>2. 同一个标签的写伪类，顺序是 Linked, Visited, Hover,Active

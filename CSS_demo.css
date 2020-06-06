@@ -4,8 +4,8 @@
     background-color:red;
     background-image: url("https://www.idgcdn.com.au/article/images/740x500/dimg/screenshot_2019-06-03_blizzard_press_center_-_world_of_warcraft_classic_and_15th_anniversary.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
-    background-attachment: fixed;
+    background-position: left center;
+    background-attachment: scroll;
 }
 
 #style1{
@@ -71,4 +71,138 @@
     font-size: 50px;
     font-weight: bold;
     font-style: italic;
+    color: red;
+}
+
+#style8{
+    text-decoration: line-through;
+}
+
+#style9{
+    text-decoration: overline;
+}
+
+#style10{
+    text-decoration: underline;   
+
+}
+#style11{
+    text-transform: capitalize;
+   
+   }
+#style12{
+    text-transform: lowercase;
+
+}
+#style13{
+text-transform: uppercase;
+}
+
+#style14{
+    text-align: left;
+
+}
+#style15{
+    text-align: right;
+}
+#style16{
+    text-align: center;
+}
+#style17{
+    text-align: justify;
+}
+
+#style18{
+    line-height: 2;
+}
+#style19{
+    letter-spacing: 3em;
+}
+#style20{
+    word-spacing: 3em;
+}
+#style21{
+    width: 300px;
+    border-width: 1px;
+    border-color: red;
+    border-style: solid;
+    word-break: break-all;
+}
+#style22{
+    width: 300px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    word-wrap: break-word;
+}
+
+#style23{
+    width: 300px;
+    height: 300px;
+    background: red url() no-repeat scroll center center;
+}
+#style24{
+    width: 300px;
+    height: 300px;
+    border: solid 1px red;
+
+}
+#style25{
+    width: 300px;
+    height: 300px;
+    border-right: blue 2px dashed;
+}
+
+#style26{
+    width: 300px;
+    height:300px;
+    font: italic  bold 30px monospac;
+    line-height: 30px;
+    /* font-family: monospace; */
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    background: red url() no-repeat scroll center center;
+}
+
+.sty1{
+    border: dashed 1px red;
+}
+
+#pseudo_linked:link{
+    color:red;
+}
+
+#pseudo_visited:visited{
+    color: yellow;
+}
+
+#pse_hover:hover{
+    width: 16px;
+    height: 16px;
+    background: red;
+}
+
+#pse_active:active{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+
+#hover_a{
+    color:tomato ;
+}
+
+#hover_a:hover{
+    color: yellowgreen;
+}
+
+#h3_hover{
+    background-color: white;
+}
+
+#h3_hover:hover{
+    background-color: thistle;
 }
