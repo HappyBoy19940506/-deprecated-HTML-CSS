@@ -206,3 +206,51 @@ text-transform: uppercase;
 #h3_hover:hover{
     background-color: thistle;
 }
+
+
+#pseduo_class_test_2:disabled{
+    width: 32px;
+    height: 32px;
+}
+
+#pseduo_class_test_3:checked{
+    width: 32px;
+    height: 32px;
+}
+
+#pseduo_class_test:focus{
+    background: red;
+}
+
+#nth_of_type_test_even li:nth-of-type(2n+1){
+    background: red;
+
+}
+
+#nth_of_type_test_odd li:nth-of-type(2n){
+    background: grey;
+
+}
+
+table{
+    border: 1px black solid;
+    width: 100px;
+    height: 300px;
+    border-collapse: collapse;
+
+}
+
+table tr,td,th{
+    border: 1px black solid;
+
+}
+
+table  tr:nth-of-type(2n){
+    background-color: grey;
+}
+
+#haha > li{
+    width: 100px;
+    background-color:red;
+
+}

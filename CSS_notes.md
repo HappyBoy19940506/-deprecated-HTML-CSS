@@ -169,29 +169,29 @@ font-size: 字体大小
 ***把a标签下面的下划线效果去掉***：*** text-decoration:none***
 
 4·css段落样式？
-text-decoration：文本装饰
+**text-decoration：文本装饰**
 下划线：underline
 删除线：line-through
 上划线：overline
 不添加任何装饰：none
 注：添加多个文本修饰：line-throughunderlineoverline
-text-transform:文本大小写（针对英文段落）
+**text-transform:文本大小写（针对英文段落）**
 小写；lowercase
 大写：uppercase
 只针对首字母大写：capitalize
 
 ****** 识别结果 1******
 
-text-indent：文本缩进、首行缩进
+**text-indent：文本缩进、首行缩进**
 em单位：相对单位，1em永远都是跟字体大小相同
-text-align：文本对齐方式
+**text-align：文本对齐方式**
 对齐方式：left、right、center、justify（两端点对齐）
 
 **这就是为什么字体大小都要用even number** **不然在处理text align或者text indent涉及段落处理的时候不好弄**
 
 
 
-line-height：定义行高
+**line-height：定义行高**
 什么是行高，一行文字的高度，上边距和下边距的等价关系。
 默认行高；不是固定值，而是变化的。根据当前字体的大小再不断的变化。
 取值：
@@ -199,6 +199,8 @@ line-height：定义行高
 1.数值(px）
 
 2.scale（比例值，跟文字大小成比例）
+
+3.em
 
 
 
@@ -208,7 +210,7 @@ letter-spacing：字之间的间距
 word-spacing：词之间的间距〈针对英文段落的）
 英文和数字不自动折行的问题．
 1·word-break：break-all；（非常强烈的折行，如果最后边塞不下直接折断该单词）
-2·word-wrap：break-word (不是那么强烈的折行，如果单词放不下，会写在下面一行开头会产生一些空白区域)
+2·word-wrap：break-word (不是那么强烈的折行，如果单词放不下，会写在下面一行开头，上一行的末尾会产生一些空白区域)
 
 
 
@@ -421,9 +423,7 @@ word-spacing：词之间的间距〈针对英文段落的）
 3．多个样式的时候，样式的优先级根据css决定，而不是 class="A B"中的 AB前后顺序决定。
 4· \<标签>.Class名字， 可以在css里面精准定位一个单独的标签使其生效：
 
-> ​	比如说，我现在背景用的  .bg 按钮样式用的.btn ,然后组合起来，但是我就是想让一个特殊的地方，这里的按钮图标颜色变下，我就可以在不改变class样式，不影响别处用这个class样式的前提下去修改：
->
-> container.banner.btn {} 然后去覆盖掉之前的效果，把颜色color换掉就行了，这样既不会影响class里面原生额颜色，也可以精准定位修改。
+> p.box --- class名为box的所有p标签
 
 
 
@@ -462,11 +462,19 @@ div,#style1, .box1 {}
 <p class="box1"></p>
 ```
 
-
+> ​	用逗号，可以把所有不同类型的选择器同时选择起来
 
 ## 通配*选择器
 
 > ​	CSS :  *{			}
+
+> ​	注意，之前理解错了，这个不是说，把整个页面都渲染在*{}的样式，而是说，整个页面所有的标签 都会执行这个属性。
+>
+> 比如， 你写 *{border:1px red solid} 他不是整个页面画一个边框，而是这个页面里面任何的标签都会上一个边框，会有好多好多边框，观念要试着改变。
+
+
+
+----
 
 
 
@@ -521,10 +529,87 @@ tag:hover{} 鼠标移入时的样式
 tag:active{} 鼠标按下时候的样式
 tag:before{content:" "} 在tag后面添加文字或者效果
 tag:after{content:" "} 在tag前面添加文字或者效果
-input (只适用于type=checkbox disabled):disabled{} 当某个表单属性值是disabled的时候，该标签显示什么
-input (只适用于type=checkbox checked):checked{ } 当某个表单属性值是checked的时候，该标签显示什么
+input (只适用于type=checkbox/radio disabled):disabled{} 当某个表单属性值是disabled的时候，该标签显示什么
+input (只适用于type=checkbox/radio):checked{ } 当用户选择刚选项时，或者本身就是checked的时候，该标签显示什么
 input (只适用于type=text):focus{} 当用户光标点击了这个输入框之后会发生什么效果
 ```
 
 >1. 一般的网站对于a标签 只设置 a{},和 a：hover 来做效果
 >2. 同一个标签的写伪类，顺序是 Linked, Visited, Hover,Active
+
+
+
+----
+
+## 结构伪类选择器
+
+>li:nth-of-type(2n)    给偶数行上色
+>
+>li:nth-of-type(2n+1) 给奇数行上色
+
+有些表格我们会遇到那种一行间隔一行的表格上色问题。
+
+>****** 识别结果 1******
+>
+>结构性伪类选择器
+>nth-of-type()
+>nth-child()
+>角标是从1开始的，1表示第一项，2表示第二项|n值表示从9到无穷大
+>first-of-type
+>last-of-type
+>only-of-type
+>nth-of-type()和nth-child()之间的区别
+>type：类型
+>child：孩子
+>
+>
+
+具体区别看这个：说的很详细
+
+> ​	[区别](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-child)
+
+
+
+## CSS的继承特性
+
+> ```html
+> ****** 识别结果 1******
+> 文字相关的样式可以被继承
+> 布局相关的样式不能被继承（默认是不能继承的，但是可以设置继承属性inherit的值）
+> 比如 你想让 现在此tag继承什么的边框布局样式，那么你直接在该层的css里的border里填inherit，就会自动继承上一层的样式，
+> 
+> <div style="border: 1px red solid">
+>   <P style="border:inherit">
+>     This is a demo
+>   </P>
+> </div>
+> ```
+>
+> 
+
+---
+
+## CSS 各层样式的优先级
+
+****** 识别结果 1******
+
+1·相同样式优先级
+当设置相同样式时，后面的优先级较高，但不建议出现重复设置样式的情况。同一次里面写两遍，跟后面来算。
+
+2·内部样式与外部样式
+
+内部样式与外部样式优先趿相同，如果都设置了相同样式，那么后写的引入方式优先级高。
+
+引入了css，又在head 里面写了style，谁在后面谁说了算。
+
+3·单一样式优先级
+style行间	>  id	>	class	>	tag	>	*	>	继承
+注：style行间权重1000
+id  100
+class 10
+tag 1
+
+
+
+
+
