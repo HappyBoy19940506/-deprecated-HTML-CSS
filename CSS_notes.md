@@ -686,6 +686,7 @@ div{
 ```css
 2·约分比较
 	.box 	P 	input{}	
-．hello	span	#elem{}
+	．hello	span	#elem{} 
+这里的意思肯定是 #elem和input是指代同一个东西
 ```
 
