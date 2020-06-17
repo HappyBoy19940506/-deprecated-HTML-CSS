@@ -254,3 +254,7 @@ table  tr:nth-of-type(2n){
     background-color:red;
 
 }
+
+#elem{
+    color: blue !important;
+}
