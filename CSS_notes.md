@@ -711,3 +711,21 @@ div{
 > padding-right
 > padding-top
 > padding-bottom
+
+margin: 外边距 (外填充)
+
+> 只写一个值；30px（上下左右）
+> 写两个值：30px 40px（上下、左右）
+> 写四个值：30px 40px 30px 40px（上、右、下、左）
+> 单一样式只能写一个值：
+> margin-left
+> margin-right
+> margin-top
+> margin-bottom
+
+注意：
+
+>   1.background-color会填充除了margin以外的所有区域，包括padding和border。
+>
+> 	2. 文字只会出现在content区域。
+>  	3. padding不能为负数，但是margin可以。

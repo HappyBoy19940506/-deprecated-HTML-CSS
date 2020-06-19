@@ -265,4 +265,5 @@ table  tr:nth-of-type(2n){
     padding: 20px;
     border: 30px blue solid;
     background-color: crimson;
+    margin: 30px;
 }
