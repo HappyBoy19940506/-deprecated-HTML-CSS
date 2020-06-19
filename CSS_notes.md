@@ -807,5 +807,27 @@ margin-right:auto 靠在最左
 > </div>
 > 
 > ```
+
+
+
+## 标签的分类-按类型来分
+
+> 1. block:  div , p, ul,li ,h1-h5...
 >
-> 
+>    > - 独占一行。2个div在一块，就会一上一下。
+>    > - 支持所有属性，比如width height margin background等等等等
+>    > - 不写width的时候，width的值为父元素的宽度。（就是默认body的宽度）
+>    > - 所占区域是一个矩形。
+>
+>  2. inline:  span,a,em,strong,img...
+>
+>     > + 默认左右并列的
+>     > + 有些样式不支持，比如  width， height，padding，margin等等
+>     > + 不写width时候，width的值取决于里面文字内容的长度
+>     > + 所占的区域不一定就是矩形。（如果浏览器宽度变窄，span可能会延伸到下面一行。
+>     > + inline标签之间会有空隙，原因：换行产生的。i.e. 2个\<span>一上一下就会有间隙，一左一右就不会。
+>     > + 但是要注意:布局一般用block标签，span只用在修饰文本里面。
+>
+>  3. inline-block:  input, select..
+>
+>     > + 默认左右并列显示，挨在一起，但是却支持block元素的一些属性值。比如input可以设置
