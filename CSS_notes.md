@@ -856,3 +856,72 @@ lnteractive：互动的
 > ​	替换元素 img / input 可以通过更换属性和属性值来达到不同效果，input-text/ input-checkbox
 >
 > ​	非替换元素 h1-h5
+
+
+
+----
+
+## Display属性
+
+1. block
+
+2. inline
+
+3. inline-block
+
+4. none   注意： display:none  与  visibility:hidden的区别
+
+   > ​	display:none是不占空间的，设置了之后该标签所占位置会collapse。
+   >
+   > ​	visibility：hidden是占空间的，设置了之后位置空间还在，显示空白。
+
+
+
+---
+
+## 标签的嵌套规范
+
+1. ul li
+
+2. dl dt dd
+
+3. table tr td
+
+   > 这些标签之前不允许有别的标签
+
+4. 块元素可以嵌套 层级元素：
+
+   > ```html
+   > <div>
+   >   <a></a>
+   >   <span></span>
+   > </div>
+   > ```
+
+5. 特殊： p标签是块元素，但是p标签不能嵌套div标签：\<p>  \<div>\</div> \</p>
+
+6. 内联标签是不能嵌套块标签的, 除了a标签：
+
+   ```html
+   <a> 
+     <div> 可以给一个区域加a标签链接  </div>	
+   </a>
+   ```
+
+   
+
+---
+
+## overflow属性
+
+overflow:  \<div>里的内容如果长度超出div本身大小，会怎么显示
+
+> ​	visible (默认)：超过部分直接溢出整个div边框
+>
+> ​	hidden：超过部分直接隐藏
+>
+> ​    scroll：超过部分出现滚动条
+>
+> ​	auto：自适应，这个比较好，自动的，多的时候出现滚动条
+>
+> ​	overflow-x  /  overflow-y : 只针对x轴或者y轴来设置overflow属性
