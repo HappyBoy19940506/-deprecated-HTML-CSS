@@ -831,3 +831,21 @@ margin-right:auto 靠在最左
 >  3. inline-block:  input, select..
 >
 >     > + 默认左右并列显示，挨在一起，但是却支持block元素的一些属性值。比如input可以设置
+
+
+
+----
+
+##  标签的分类-按内容划分
+
+按内容
+Flow：流内容
+Metadata：元数据
+Sectioning：分区
+Heading：标题
+Phrasing:措辞
+Embedded：嵌入的
+lnteractive：互动的
+
+[go check this for more info](https://www.w3.org/TR/html52/dom.html#the-nothing-content-model)
+
