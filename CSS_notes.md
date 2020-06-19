@@ -849,3 +849,10 @@ lnteractive：互动的
 
 [go check this for more info](https://www.w3.org/TR/html52/dom.html#the-nothing-content-model)
 
+----
+
+## 标签的分类-按显示划分
+
+> ​	替换元素 img / input 可以通过更换属性和属性值来达到不同效果，input-text/ input-checkbox
+>
+> ​	非替换元素 h1-h5
