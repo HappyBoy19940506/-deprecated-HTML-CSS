@@ -688,6 +688,26 @@ div{
 	.box 	P 	input{}	
 	．hello	span	#elem{} 
 这里的意思肯定是 #elem和input是指代同一个东西
-
 ```
 
+
+
+## CSS盒子模型
+
+盒子模型的组成：  content --- padding --- border --margin
+
+类比:   快递盒子 _   快递物品- 填充的塞的报纸 --包装盒--包装盒之间的填充物
+
+> 	****** 识别结果 1******
+>
+> content: 内容区域 -  width和height组成的
+> padding: ：内访距（内填充）
+>
+> 只写一个值；30px（上下左右）
+> 写两个值：30px 40px（上下、左右）
+> 写四个值：30px 40px 30px 40px（上、右、下、左）
+> 单一样式只能写一个值：
+> padding-left
+> padding-right
+> padding-top
+> padding-bottom
