@@ -300,3 +300,14 @@ table  tr:nth-of-type(2n){
     padding: 5px;
     border:1px dashed black;
 }
+
+#min_height{
+    border: black 1px solid;
+    min-height: 300px;
+    width: 500px;
+}
+#max_height{
+    border: black 1px solid;
+    max-height: 300px;
+    width: 500px;
+}

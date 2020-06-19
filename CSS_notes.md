@@ -20,6 +20,8 @@ size : px / %
 
 %----- 相当于父类的像素大小的百分比
 
+> ​	如果属性值写的是百分比%，那么他<***只会继承他的父元素的尺寸***>，和他的爷爷是没有任何关系的，如果他的父元素没有任何对应的对应尺寸，那么就会显示不出来！！！
+
 
 
 ## CSS的引入方式
@@ -947,4 +949,54 @@ overflow:  \<div>里的内容如果长度超出div本身大小，会怎么显示
 
 - Cursor: 自定义鼠标样式
 
-  - 默认值为：default
+  - 默认值为：default 就是普通的箭头
+
+  - 值：pointer
+
+  - 值：help
+
+  - 值：move
+
+  - 值：自定义鼠标样式：
+
+    > 1. 准备.ico 或者.cur后缀的特殊文件
+    >
+    >  2. ```css
+    >     #div{
+    >     cursor:url(../icon/xxx.ico),auto;
+    >     }
+    >     ```
+
+---
+
+## Min-height /Max-width
+
+```css
+#div{
+  min-height:100px; 
+  //最小高度是100px，即使文本不足100px，框体也依然保持100px的大小,超过100px，无论多少，框体自适应，都能包含进去
+  max-height:100px; 
+  //最大高度是100px，如果文本小于100px，框体大小会根据文体自适应，超过100px，overflow发生，采用overflow属性调整
+  min-width:100px;
+  max-width:100px;
+}
+```
+
+
+
+
+
+## 容器自适应整个屏幕高度
+
+> 页面有多长，整个container就有多长
+>
+>  ```css
+> html,body{height:100%}
+> //一定要写！规范！
+> //后面你在任何元素里面写 %的值得width或者height就都不怕了
+>  ```
+>
+> 原因参考： https://blog.csdn.net/javaloveiphone/article/details/51098972
+>
+> 只要设置了html和body，就不怕 任何子元素设置%的时候，丢失父元素目标，反正最终往上索引会找到html和body元素
+
