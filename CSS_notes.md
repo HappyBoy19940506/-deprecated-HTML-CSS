@@ -729,3 +729,83 @@ margin: 外边距 (外填充)
 >
 > 	2. 文字只会出现在content区域。
 >  	3. padding不能为负数，但是margin可以。
+
+
+
+## box-sizing属性
+
+盒尺寸。 可以改变盒子模型的展示形态：
+
+默认值为 content-box ，意思就是 height 和width 作用于content的大小
+
+可选值为border-box， 意思就是 height 和width 就会作用到 content+padding+border
+
+```css
+div{
+box-sizing: border-box;
+}
+```
+
+可以使用的场景：
+
+> 1. 直接固定整个box的大小，不用再另算border 和padding后content的大小
+>
+>   2.可以解决一些百分比大小的问题，比如宽度和高度是百分比自适应的，那么如果再加padding就会超出边界，如果直接把padding加载自适应里面就OK。 width:100% ; padding:30px;box-sizing: border-box;
+
+
+
+## margin的叠加问题
+
+> ​	box1有一个 margin-bottom:30px
+>
+> ​	box2有一个 margin-top:30px
+>
+>    他们两个一上一下的时候，中间的margin并不是60px，而是30px，机制是， 哪个大按哪个算。
+>
+> ​    但是，如果他们是一正一负的话，是可以相加减的，比如 一个bottom50px， 一个top -30px，结构显示起来 和bottom：20px一个样子
+
+
+
+---
+
+## margin的传递问题
+
+在嵌套的结构中，子元素如果用margin-top 会使得父元素跟着子元素一起移动。
+
+解决办法：
+
+> 	1. BFC rules
+>  	2. 给父元素加个边框
+
+----
+
+## margin 的 auto自适应
+
+margin-left:auto 靠在最右
+
+margin-right:auto 靠在最左
+
+两个都有。那就回居中显示。 所以一般： margin：0 auto。
+
+而且自适应屏幕大小，永远居中。
+
+注意，上下top 、 bottom没有这个属性。如果要上下自适应，需要用flex弹性结构来做。
+
+
+
+---
+
+## 盒子模型不写width和height
+
+> ​	嵌套div中的子元素不写width或者height会自动继承父元素的width和height
+>
+> ```html
+> <div style=width:100px;height:100px>
+>   <div style=width:100px>
+>    这里我不写height的话，子div的高度会自动填满整个父类div，并且附带box-sizing:border-box属性，也就是说，不论怎么改变padding，border，margin都不会出父类div。 
+>   </div>
+> </div>
+> 
+> ```
+>
+> 

@@ -267,3 +267,36 @@ table  tr:nth-of-type(2n){
     background-color: crimson;
     margin: 30px;
 }
+
+#nest_1{
+    border: dashed 1px black;
+    width: 500px;
+    height: 500px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#nest_2{
+    border:5px solid lightblue;
+    background-color:gainsboro;
+    padding: 27px;
+}
+#nest_3{
+    background: red;
+    padding: 5px;
+    border:1px dashed black;
+}
+
+#nest_4{
+    background-color: pink;
+    padding: 8px;
+    border:1px dashed black;
+}
+#nest_5{
+    width: 304px;
+    height: 304px;
+    box-sizing: border-box;
+    background-color: greenyellow;
+    padding: 5px;
+    border:1px dashed black;
+}
