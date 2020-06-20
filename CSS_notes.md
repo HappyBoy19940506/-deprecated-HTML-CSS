@@ -1071,6 +1071,9 @@ img{
   或者写
   display:block;
 }
+table{
+  border-collapse: collapse;
+}
 //为什么要这么做？因为原本的inline会导致图片跟容器底部有一定的空隙（因为他内联元素的对齐方式是根据text的基线的空间大小，而不是底线。
 ```
 
@@ -1109,10 +1112,23 @@ img{
 
 ## 企业级中的切图以及和UI 沟通
 
-> ​	如何让一行文字默认在div中上下居中，很简单，让line-height= div的height 相同，那么肯定可以居中。
-
 + Sketch 
 
   > ​	https://juejin.im/post/5bc91e625188255f8d0ff4e2
   >
   > ​	Sketch一般在查看UI给的设计稿的时候会用到，有时候UI设计师给我们开发的就是sketch文件，我们需要自己导出设计稿，这样才能方便看到具体的设计信息，从而进行开发。这个时候我们就需要用到`Sketch Measure插件`了。
+
+
+
+
+
+## div中文字各种垂直居中的方法
+
+	>如何让一行文字默认在div中上下居中，很简单，让line-height= div的height 相同，那么肯定可以上下居中。
+	>
+	>再加上 text-align：center, 实现左右居中。
+
+具体参考: 
+
+> ​	https://www.jianshu.com/p/3e849e521cae
+
