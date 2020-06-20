@@ -1076,3 +1076,10 @@ img{
 
  
 
+> ​	原则： 写具体页面的时候或者实现一个布局效果的时候，要遵循步骤：
+>
+> 1. 先写机构
+> 2. css重置样式 ( 写reset.css)
+> 3. https://blog.csdn.net/brain_bo/article/details/81560444 常用reset格式代码
+> 4. 具体实现样式
+
