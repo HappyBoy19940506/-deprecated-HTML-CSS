@@ -1094,6 +1094,25 @@ img{
    + psd Photoshop专用格式，方便看出图层
 2. 若拿不到psd文件图片，那么需要 png jpg的切图：
    - 找到需要的区域
-   - 拉标尺，然后矩形选框，alt+scroll放大，框死
+   - 拉标尺，然后矩形选框，alt+scroll放大，框死。
+   - alt+鼠标 减少边框  shift+鼠标增加边框
    - ctrl+C /ctrl+N /ctrl+V三连
    - 导出--存储为web所用的格式
+
+**或者更加方便的方法： 用slice工具：**
+
++ **用slice工具全部切片**
++ **然后直接导出-储存为web所用格式**
++ **会自动生成一个文件夹，里面保存了你所有的slice切片 （包括辅助线rules）**
+
+
+
+## 企业级中的切图以及和UI 沟通
+
+> ​	如何让一行文字默认在div中上下居中，很简单，让line-height= div的height 相同，那么肯定可以居中。
+
++ Sketch 
+
+  > ​	https://juejin.im/post/5bc91e625188255f8d0ff4e2
+  >
+  > ​	Sketch一般在查看UI给的设计稿的时候会用到，有时候UI设计师给我们开发的就是sketch文件，我们需要自己导出设计稿，这样才能方便看到具体的设计信息，从而进行开发。这个时候我们就需要用到`Sketch Measure插件`了。
