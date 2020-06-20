@@ -993,10 +993,79 @@ overflow:  \<div>里的内容如果长度超出div本身大小，会怎么显示
 >  ```css
 > html,body{height:100%}
 > //一定要写！规范！
-> //后面你在任何元素里面写 %的值得width或者height就都不怕了
+> //写这个就是为了 1.配合 %的子元素父级元素一定要有height值
+> //2.如果该值是%，那么向上索引也不怕。可以一路追到顶级html和body以及浏览器的高度。
 >  ```
 >
 > 原因参考： https://blog.csdn.net/javaloveiphone/article/details/51098972
 >
-> 只要设置了html和body，就不怕 任何子元素设置%的时候，丢失父元素目标，反正最终往上索引会找到html和body元素
+> 只要设置了html和body，就不怕 任何子元素设置%的时候，丢失父元素目标，反正最终往上索引会找到html和body元素。 但是 规范写法：**如果出现%，那么一定要在父元素有height，是定值px还是百分比%无所谓，否则没有效果。**
+>
+> 我知道一个事实：一个div块级元素没有主动为其设置宽度和高度，浏览器会为其分配可使用的最大宽度(比如全屏宽度)，但是不负责分配高度，块级元素的高度是由子元素堆砌撑起来的。那么，html和body标签的高度也都是由子级元素堆砌撑起来的。
+>
+> 还有，**元素高度百分比需要向上遍历父标签要找到一个定值高度才能起作用，如果中途有个height为auto或是没有设置height属性，则高度百分比不起作用**，此时的情况是父元素高度依赖子元素堆砌撑高，而子元素依赖父元素的定高起作用，互相依赖，却都无法依赖，死循环了。
+>
+> > ​	说白了，你可以一路下路不设置任何 定值的height，但是一定要设置 height，你可以一路都是%，无所谓，因为你最顶级的html body已经取得了浏览器的高度。
 
+
+
+----
+
+## CSS默认样式
+
+> ​	有些标签是有默认样式的：h1-h5， **body**
+>
+> 1. body--> margin :8px
+>
+> 2. h1---> margin: 上下 21.440px   / font-weight：bold
+>
+> 3. p---->margin: 上下16px
+>
+> 4. ul---->margin：上下16px /  padding（左）40px / 默认点：list-style:disc
+>
+> 5. a--> text-decoration:underline
+>
+>    
+>
+> ​	有些标签没有默认样式的：div    ,     span
+>
+>  :question: :如何通过Chrome控制台看
+>
+>  
+
+ :star: 正是因为body是自带默认样式的。 
+
+> body ---自带 margin-8px 所以这就是为什么你看到很多css文件上来就会：
+>
+> *{
+>   margin:0;
+>   padding:0;
+> }
+
+---
+
+## 重置CSS默认样式
+
+**最常见的reset方案：**
+
+```css
+*{
+  margin:0;
+  padding:0;
+}
+
+ul{
+  list-style:none;
+}
+
+a{
+  text-decoration:none;
+  color:#666
+}
+
+img{
+  display:block;
+}
+```
+
+ 
