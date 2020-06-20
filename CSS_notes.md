@@ -1060,12 +1060,19 @@ ul{
 
 a{
   text-decoration:none;
-  color:#666
+  color:#666;
+}
+a:hover{
+  color:red;
 }
 
 img{
+  vertical-align:bottom;
+  或者写
   display:block;
 }
+//为什么要这么做？因为原本的inline会导致图片跟容器底部有一定的空隙（因为他内联元素的对齐方式是根据text的基线的空间大小，而不是底线。
 ```
 
  
+
