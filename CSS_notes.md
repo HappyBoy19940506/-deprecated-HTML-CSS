@@ -1083,3 +1083,17 @@ img{
 > 3. https://blog.csdn.net/brain_bo/article/details/81560444 常用reset格式代码
 > 4. 具体实现样式
 
+----
+
+## PhotoShop CC 技巧
+
+1. 图片的类型
+   + Jpg  一般用作背景图片，色彩丰富
+   + Png 一般用在item展示，没有背景，背景色继承div
+   + Gif 动图，一般用在小地方
+   + psd Photoshop专用格式，方便看出图层
+2. 若拿不到psd文件图片，那么需要 png jpg的切图：
+   - 找到需要的区域
+   - 拉标尺，然后矩形选框，alt+scroll放大，框死
+   - ctrl+C /ctrl+N /ctrl+V三连
+   - 导出--存储为web所用的格式
