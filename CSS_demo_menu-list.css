@@ -19,8 +19,24 @@ ul{
 }
 
 .main li{
-    width:50px;
+    width:42px;
     border: 1px solid black;
+    padding-left: 8px;
+    position: relative;
+}
+
+.main li:before{
+    content: '';
+    background-color: red;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top:5px;
+    left:-1px;
+    margin: 1px 3px;
+    
+    
 }
 
 .main ul{
@@ -42,3 +58,36 @@ ul{
     display: block;
 }
 
+#list_1:hover #aa{
+    display: block;
+}
+
+#aa{
+    position: absolute;
+    left:51px;
+    top:-1px;
+    display: none;
+}
+
+#aa li{
+    width: 20px;
+}
+
+#bg{
+    width: 300px;
+    height: 250px;
+    margin-left: 30px;
+    margin-top: 100px;
+}   
+
+
+#pic{
+    position: relative;
+}
+#pic div{   
+    position: absolute;
+    left:40px;
+    bottom: 200px;
+    color: yellow;
+    background-color: black;
+}

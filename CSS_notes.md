@@ -1198,7 +1198,7 @@ float：添加之后，会脱离文档流，然后沿着父容器靠左或者靠
 >     clear_float:after{
 >       content:'';  //内容为空，我只需要一个占位的地方
 >       clear:both; //清除上下的float影响
->       display:bloack; //但是after的作用于inline元素，我们要改成块元素。
+>       display:block; //但是after的作用于inline元素，我们要改成块元素。
 >       // 综上，把一个空白内容的内联元素改为块元素，再去掉float后续影响
 >     }
 >     
@@ -1275,5 +1275,49 @@ float：添加之后，会脱离文档流，然后沿着父容器靠左或者靠
        //说白了，z-index要一定要设置在 最最最孙子的元素上，免得出错，或者直接-9999，保证在最底层。
        ```
 
-       
+
+
+
+
+---
+
+## CSS 利用float实现若干功能
+
+左右布局 demo 
+
+1.每层div 用float：left 左右排列， 2.清除每层的float对下层的影响 （给父元素一套after伪类空标签三连），3.用ul 和li
+
+---
+
+
+
+## CSS利用position实现若干功能
+
+1. 下拉菜单demo 思路：1.div + ul li 2.div为父类， ul为子类，父子absolute定位3. 给div加上hover伪类 4.ul默认甚至为display:none, 4,当hover发生时，display：block
+
+   ```css
+   #menu ul{
+     display:none;
+   }
+   #menu :hover ul{
+     display:block;
+   }
+   ***//这里一定要注意: 这种hover后面再跟别的类的写法，这种写法后面的类一定要是hover前面的类的子类！！***
+   ***//这里一定要注意: 这种hover后面再跟别的类的写法，这种写法后面的类一定要是hover前面的类的子类！！***
+   ***//这里一定要注意: 这种hover后面再跟别的类的写法，这种写法后面的类一定要是hover前面的类的子类！！***
+   ***//这里一定要注意: 这种hover后面再跟别的类的写法，这种写法后面的类一定要是hover前面的类的子类！！***
+   ***//这里一定要注意: 这种hover后面再跟别的类的写法，这种写法后面的类一定要是hover前面的类的子类！！***
+   ```
+
+   
+
+2. 实现元素在父元素内居中 demo：父类relative，子类absolute，然后top50%，left50%，再加上margin调整
+
+3. 实现列表项前面的装饰点demo , 大致思路： 给item加before伪类，**并给li写relative定位（而不是给ul写）**，给before伪类写absolute定位。把before添加的定位 基于后面的item内容而定位。
+
+4. 番剧的图像上面 右上角的红字：独播，或者右下角的：更新至30集。
+
+
+
+
 
