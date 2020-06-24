@@ -76,6 +76,8 @@ photoshop工具
 + background-image:    url()  默认水平垂直都铺满
 
   > img标签一般有更多的语义化，background-image更多时候就是装饰作用，没有alt属性之类的
+  >
+  > 注意：url可以写多个： 当写两个的时候，前一个在上层，后一个在上层。
 
 + background-repeat：repeat-x / repeat-y/repeat/no -repeat
 
@@ -776,8 +778,10 @@ box-sizing: border-box;
 
 解决办法：
 
-> 	1. BFC rules
->  	2. 给父元素加个边框
+> 	```css
+> 	1. BFC rules ---给父元素加上溢出隐藏： ul{ overflow:hidden;}
+> 	2. 给父元素加个边框
+> 	```
 
 ----
 

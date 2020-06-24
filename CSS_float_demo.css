@@ -32,3 +32,69 @@ ul{
 .article{
     border: 1px black solid;
 }
+
+#main{
+    width: 320px;
+    height: 180px;
+    border: grey 1px solid;
+    margin-left: 10px;
+}
+
+#main .title{
+    background-color: lightblue;
+    color: darkblue;
+    font-size:20px;
+    font-weight: bold;
+}
+
+#main .title span{
+    padding-left:10px;
+}
+
+
+#main .pic{
+    width: 80px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+#main .l{
+    float:left;
+    margin-bottom: 20px;
+}
+
+#main .l span{
+    padding-left: 20px;
+}
+
+
+#main .clear_f:after{
+    clear:both;
+    content:'';
+    display:block;
+}
+
+#main .clear_f{
+    margin-top:10px;
+}
+
+#main .nei li{
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 20px;
+    width: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a{
+    color: grey;
+}
+
+a:hover{
+    color:grey;
+}
