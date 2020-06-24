@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+.clear:after{
+    content: '';
+    clear:both;
+    display: block;
+}
+
+.img{
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    border: 1px black solid;
+    margin-right: 10px;
+}
+
+.float{
+    float:left
+}
+
+.article{
+    border: 1px black solid;
+}
