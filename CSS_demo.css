@@ -311,3 +311,33 @@ table  tr:nth-of-type(2n){
     max-height: 300px;
     width: 500px;
 }
+
+#float_demo1{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color:yellow;
+    float:left
+
+}
+
+#float_demo2{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+}
+
+#float_demo3{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+
+
+}
+
+#float_demo4{
+    width: 100px;
+    height: 100px;
+    background-color: black; 
+    color:yellow;
+}
