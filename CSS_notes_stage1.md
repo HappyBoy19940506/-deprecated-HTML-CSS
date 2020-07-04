@@ -1413,4 +1413,6 @@ CSS雪碧也叫做CSS精灵，是一种网页图片应用处理方式。它允�
 >  	2. banner中的 滑动图片用ul li， 下面的切换btn用ol li
 >  	3. **为什么滑动的图片一定要用background来设置而不用img标签？ 因为图片不方便居中**
 >  	4. **设置完background如何点击图片，可以跳转，造成 a+img标签的效果？把a元素改为block元素，并设置宽高**
->  	5. 下面的btn按键如何实现？  border+radius+cursor+伪类active+inline并排。
+>  	5. **下面的btn按键如何实现？  border+radius+cursor+伪类active+inline并排。**
+>  	6. **如何实现百叶穿的图片堆叠效果？所有图片直接absolute脱离文档流，定位到一起，然后其中第一张opacity设为1，别的设为0，并把第一张的zindex设为最高**
+

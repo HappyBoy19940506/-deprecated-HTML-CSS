@@ -7,8 +7,9 @@
 
 .banner_list a{
     display: block;
-    width: 100%;
+    width: 1500px;
     height: 500px;
+    margin: 0 auto;
 }
 
 .banner_list li{
@@ -28,7 +29,7 @@
     width: 100px;
     height: 20px;
     position: absolute; 
-    bottom: 30px;
+    bottom: 20px;
     left: 900px;
 }
 
@@ -44,6 +45,6 @@
 }
 
 
-.banner_btn:active{
+.banner_btn-list .active{
     background-color:white;
 }
