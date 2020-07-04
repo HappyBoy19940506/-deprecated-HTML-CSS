@@ -18,7 +18,7 @@
 
 }
 .banner_list{
-
+    position: relative;
 }
 
 .banner{
@@ -47,4 +47,40 @@
 
 .banner_btn-list .active{
     background-color:white;
+}
+
+.title_bg{
+    width: 350px;
+    height: 50px;
+    margin: 20px auto;
+    position: relative;
+    color: #646464;
+    font-size: 16px;
+}
+
+.title_bg-text{
+    position: absolute;
+    left:125px;
+    bottom: 20px;
+    color: #646464;
+    font-size: 20px;
+}
+
+.title_bg span{
+    display: block;
+    margin-left: 120px;
+}
+
+.service_list{
+    position: relative;
+}
+
+.service_box-items{
+    width: 250px;
+    height: 244px;
+    margin-left: 20px;
+}
+
+.service_box-items img,h3,span{
+    margin-bottom: 5px;   
 }

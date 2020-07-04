@@ -1234,7 +1234,7 @@ float：添加之后，会脱离文档流，然后沿着父容器靠左或者靠
 
        > :question: : 所以， 内联元素支持宽高吗？答：默认不支持，那是block元素的特性。
        >
-       > 怎么让他支持呢？ 让内联元素，加上 position：absolute就行了。或者 用display：inline-block？
+       > 怎么让他支持呢？ 让内联元素，加上 position：absolute就行了。或者 用display：inline-block
 
      - 如果有内容，默认宽度由内容宽度决定。所以你又没内容 又没设置宽度就会啥也看不到。
 
