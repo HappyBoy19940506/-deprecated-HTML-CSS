@@ -69,10 +69,16 @@ ul{
     display: none;
 }
 
+
+
 #aa li{
     width: 20px;
 }
 
+
+#aa li:hover{
+    background-color: yellow;
+}
 #bg{
     width: 300px;
     height: 250px;
