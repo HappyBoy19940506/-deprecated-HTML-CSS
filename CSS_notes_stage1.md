@@ -1,4 +1,4 @@
-#  CSS
+#  CSS Stage 1
 
 This is a demo repository for learning CSS
 
@@ -1378,7 +1378,8 @@ CSS雪碧也叫做CSS精灵，是一种网页图片应用处理方式。它允�
   width:200px;
   height:200px;
   background:red;
-  border-radius:10px;
+  border-radius:10px; //相当于设置一个半径为10px的圆形与其宽度相切，所以如果设置的值正好是width的一般，那么就会把整个div变成圆形。或者直接写成50%
+  // 如果想设置椭圆相切， 可以写成border-radius:20px/30px; 意思是x轴20px y为30px的椭圆
 }
 ```
 
