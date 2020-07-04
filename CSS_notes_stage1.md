@@ -1011,7 +1011,7 @@ overflow:  \<div>里的内容如果长度超出div本身大小，会怎么显示
 >
 > 还有，**元素高度百分比需要向上遍历父标签要找到一个定值高度才能起作用，如果中途有个height为auto或是没有设置height属性，则高度百分比不起作用**，此时的情况是父元素高度依赖子元素堆砌撑高，而子元素依赖父元素的定高起作用，互相依赖，却都无法依赖，死循环了。
 >
-> > ​	说白了，你可以一路下路不设置任何 定值的height，但是一定要设置 height，你可以一路都是%，无所谓，因为你最顶级的html body已经取得了浏览器的高度。
+> > ​	说白了，你可以一路下不设置任何 定值的height，但是一定要设置 height，你可以一路都是%，无所谓，因为你最顶级的html body已经取得了浏览器的高度。
 
 
 
@@ -1063,6 +1063,7 @@ overflow:  \<div>里的内容如果长度超出div本身大小，会怎么显示
 html,body{
   height:100%;
 }
+//为什么？ https://blog.csdn.net/javaloveiphone/article/details/51098972
 
 ul{
   list-style:none;
@@ -1081,10 +1082,10 @@ img{
   或者写
   display:block;
 }
+//为什么要这么做？因为原本的inline会导致图片跟容器底部有一定的空隙（因为他内联元素的对齐方式是根据text的基线的空间大小，而不是底线。
 table{
   border-collapse: collapse;
 }
-//为什么要这么做？因为原本的inline会导致图片跟容器底部有一定的空隙（因为他内联元素的对齐方式是根据text的基线的空间大小，而不是底线。
 ```
 
  
@@ -1237,10 +1238,10 @@ float：添加之后，会脱离文档流，然后沿着父容器靠左或者靠
 
      - 如果有内容，默认宽度由内容宽度决定。所以你又没内容 又没设置宽度就会啥也看不到。
 
-     - 他的left/bottom/right/top的偏移是相当于 他的 **有定位也就是有position这个属性的父元素** 为基准而发生的定位:
+     - left/right/top/bottom相对于当前元素的左上角（0，0）的自身的位置发生偏移
 
        > 	1. absolute的上面的父元素必有 relative/absolute/fixed中的一种，否则无法定位。
-       >  	2. 相当位置是基于这个 有偏移属性的 父元素来进行的。
+       >  	2. left/right/top/bottom相对于当前元素的左上角（0，0）的自身的位置发生偏移。
        >  	3. 如果全部没有，那就会按照这个html来当做父元素，一般不会发生，除非你是傻逼。
 
    - fixed
@@ -1395,5 +1396,21 @@ CSS雪碧也叫做CSS精灵，是一种网页图片应用处理方式。它允�
 >
 >   很多时候，是 版心 嵌套在 通栏里面。
 
+---
 
+## 布局之 导航菜单栏
 
+> 1. reset css.
+>
+> 	2. nav-logo, left float
+>  	3.  nav-menu right float
+
+---
+
+## 布局之banner
+
+> 	1. banner是否占据整个通栏
+>  	2. banner中的 滑动图片用ul li， 下面的切换btn用ol li
+>  	3. **为什么滑动的图片一定要用background来设置而不用img标签？ 因为图片不方便居中**
+>  	4. **设置完background如何点击图片，可以跳转，造成 a+img标签的效果？把a元素改为block元素，并设置宽高**
+>  	5. 下面的btn按键如何实现？  border+radius+cursor+伪类active+inline并排。

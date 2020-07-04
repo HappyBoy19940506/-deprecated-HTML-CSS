@@ -1,0 +1,49 @@
+.banner_1st{
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-image: url(./img/banner1.jpg);
+
+}
+
+.banner_list a{
+    display: block;
+    width: 100%;
+    height: 500px;
+}
+
+.banner_list li{
+    width: 100%;
+    height: 500px;
+
+}
+.banner_list{
+
+}
+
+.banner{
+    position: relative;
+}
+
+.banner_btn-list{
+    width: 100px;
+    height: 20px;
+    position: absolute; 
+    bottom: 30px;
+    left: 900px;
+}
+
+.banner_btn{
+    width: 11px;
+    height: 11px;
+    margin-left: 5px;
+    display: inline-block;
+    border:2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+.banner_btn:active{
+    background-color:white;
+}
