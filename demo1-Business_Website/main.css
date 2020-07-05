@@ -1,3 +1,4 @@
+/* banner */
 .banner{
     position: relative;
 }
@@ -84,10 +85,13 @@
     width: 106px;
 }
 
+/* service - box */
+
 .service_list{
     position: relative;
     color: #646464;
     font-size: 16px;
+    margin-top: 34px;
 }
 
 .service_box-items{
@@ -104,7 +108,68 @@
 .service_box-items img{
     display: block;
     margin: 5px auto ;
- 
-
+    height: 102px;
+    width: 102px;
+    margin-bottom: 24px;
 }
 
+.service_box-items p{
+    color: #6D6D6D;
+    font-size: 14px;
+    line-height: 22px;
+}
+.service_box-items h3{
+    color: #434343;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+/* case-box */
+.case_box{
+    background-color:#F8F8F8;
+    min-height: 462px;
+    overflow: hidden;
+}
+.case_title{
+    margin-top: 55px;
+    text-align: center;
+    background: url(./img/titbg.jpg) no-repeat  center -5px;
+
+}
+.case_title h2{
+    color: #66c5b4;
+    font-size: 20px;
+    line-height: 21px;
+    
+}
+.case_title p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #9d9d9d;
+    line-height: 34px;
+}
+.case_list{
+    margin-top: 28px;
+}
+.case_list li{
+    margin-right: 15px;
+    width: 340px;
+}
+
+.case_btn{
+    width: 176px;
+    height: 38px;
+    border-radius: 20px;
+    background-color:#66C5B4;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 38px;
+    font-size: 14px;
+    margin-top: 36px;
+}
+.case_btn a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}

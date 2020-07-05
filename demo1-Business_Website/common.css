@@ -1,3 +1,4 @@
+/* float setting */
 .float_left{
     float: left;
 
@@ -13,6 +14,7 @@
     display: block;
 }
 
+/* container and .container-fluid */
 .container{
     width:1080px;
     margin:0 auto;
@@ -23,6 +25,8 @@
     width: 100%;
 }
 
+
+/* navigation bar  */
 .nav li{
     margin-left: 58px;
 }
