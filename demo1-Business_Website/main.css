@@ -1,9 +1,7 @@
-.banner_1st{
-    background-repeat: no-repeat;
-    background-position: center 0;
-    background-image: url(./img/banner1.jpg);
-
+.banner{
+    position: relative;
 }
+
 
 .banner_list a{
     display: block;
@@ -21,17 +19,13 @@
     position: relative;
 }
 
-.banner{
-    position: relative;
+.banner_1st{
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-image: url(./img/banner1.jpg);
+
 }
 
-.banner_btn-list{
-    width: 100px;
-    height: 20px;
-    position: absolute; 
-    bottom: 20px;
-    left: 900px;
-}
 
 .banner_btn{
     width: 11px;
@@ -45,8 +39,21 @@
 }
 
 
+.banner_btn-list{
+    width: 100px;
+    height: 20px;
+    position: absolute; 
+    bottom: 20px;
+    left: 900px;
+}
+
 .banner_btn-list .active{
     background-color:white;
+}
+
+.service_box{
+    overflow: hidden;
+    min-height: 408px;
 }
 
 .title_bg{
@@ -54,21 +61,27 @@
     height: 50px;
     margin: 20px auto;
     position: relative;
-    color: #646464;
-    font-size: 16px;
+    margin-top: 61px;
+    text-align: center;
 }
 
 .title_bg-text{
     position: absolute;
-    left:125px;
-    bottom: 20px;
-    color: #646464;
+    left:130px;
+    bottom: 24px;
+    color: #363636;
     font-size: 20px;
+    height: 20px;
+    line-height: 20px;
 }
 
 .title_bg span{
     display: block;
-    margin-left: 120px;
+    margin-left: 118px;
+    color: #9F9F9F;
+    font-size: 14px;
+    height: 34px;
+    width: 106px;
 }
 
 .service_list{
@@ -94,3 +107,4 @@
  
 
 }
+
