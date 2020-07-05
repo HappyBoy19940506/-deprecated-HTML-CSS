@@ -237,7 +237,21 @@ span文字内联
 
 
 
+---
+
+## Label+Input标签的使用。
+
+```html
+<form>
+  <label for="male">Male</label>
+  <input type="radio" name="sex" id="male" />
+  <br />
+  <label for="female">Female</label>
+  <input type="radio" name="sex" id="female" />
+</form>
+```
 
 
 
+* https://www.w3school.com.cn/tags/tag_label.asp
 

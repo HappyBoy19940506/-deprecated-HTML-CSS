@@ -173,6 +173,14 @@
     height: 100%;
     color: white;
 }
+
+.case_btn:hover{
+    background-color:#53B5A3
+}
+.case_btn:hover a{
+    text-decoration: underline;
+}
+
 /* news box */
 .news_box{
     min-height: 415px;
