@@ -27,6 +27,12 @@
 
 
 /* navigation bar  */
+.nav  {
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  background-color:rgba(255,255,255,0.8);
+}
 .nav li{
     margin-left: 58px;
 }
@@ -42,5 +48,8 @@
 }
 
 .nav{
+    height: 81px;
+}
+.nav_fill{
     height: 81px;
 }
