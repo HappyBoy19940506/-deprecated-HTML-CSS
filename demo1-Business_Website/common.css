@@ -53,3 +53,38 @@
 .nav_fill{
     height: 81px;
 }
+
+/* nav end */
+
+/*  footer start */
+.footer{
+    background-color: #66c5b4;
+    height: 165px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.footer .container:nth-of-type(1){
+    height: 55px;
+    color: white;
+    line-height: 55px;
+}
+
+.footer .container:nth-of-type(1) a{
+    color: white;
+    margin:0 18px;
+}
+
+
+.footer .container:nth-child(2){
+    width: 100%;
+    background-color:white;
+    height: 110px;
+    color: #888;
+    
+}
+
+
+
+
+/* footer end */

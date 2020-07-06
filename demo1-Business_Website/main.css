@@ -87,6 +87,10 @@
 
 /* service - box */
 
+.service_box{
+    overflow: hidden;
+}
+
 .service_list{
     position: relative;
     color: #646464;
@@ -183,7 +187,7 @@
 
 /* news box */
 .news_box{
-    min-height: 415px;
+    min-height: 450px;
     overflow: hidden;
 }
 
@@ -192,52 +196,61 @@
 }
 
 .news_img{
-    width: 250px;
+    width: 230px;
     height: 200px;
-    background-size: 234px 196px;
     background: url(./img/xs1.jpg) no-repeat 0 0;
 }
 
 .news_list{
     overflow: hidden;
+    margin-left: 5px;
 }
 .news_list  a{
     display: block;
     font-size: 14px;
     margin-bottom: 8px;
+    color: #3f3f3f;
+    width: 330px;
+    margin-left: 8px;
 }
 .news_list a:hover{
     text-decoration: underline;
 }
 
 .news_list p{
+    display: block;
     font-size: 12px;
-    color: #a9a9a9;
+    color: #a4a4a4;
+    line-height: 21px;
+    margin-top: 16px;
+    width: 330px;
+    margin-left: 4px;
 }
-.news_list h4{
-    font-size: 36px;
+.news_list i{
+    font-size: 39px;
     color: #66c5b4;
-    font-weight: normal;
+    font-style: normal;
+    display: block;
 
 }
 
-.news_list h5{
-    font-size: 18px;
+.news_list span{
+    font-size: 20px;
     color: #66c5b4;
-    font-weight: normal;
+    line-height: 36px;
 }
 
 .news_list li{
-    margin-bottom: 14px;
+    margin-bottom: 48px;
+    width: 420px;
+    height: 74px;
 }
 
 .news_box .date{
-    width:55px;
-    height: 75px;
-    border-right: 1px solid #66c5b4;;
+    width:70px;
+    height: 72px;
+    border-right: 1px solid #DCDCDC;;
     margin-right: 5px;
+    text-align: center;
 }
 
-
-
-/* footer box */

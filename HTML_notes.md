@@ -255,3 +255,12 @@ span文字内联
 
 * https://www.w3school.com.cn/tags/tag_label.asp
 
+
+
+
+
+---
+
+## text-align属性使用误区
+
+text-align可以是文字在其所在行居中，但是这个属性必须用在 改文字的父元素容器的属性里面，而不是该文字的标签上。比如， div里面有个span里面有字，你想让这个span文字居中，你必须在div里面写text-align，而不是字span里面写text-align！！！

@@ -574,6 +574,8 @@ input (只适用于type=text):focus{} 当用户光标点击了这个输入框之
 
 
 
+
+
 ## CSS的继承特性
 
 > ```html
@@ -1416,3 +1418,10 @@ CSS雪碧也叫做CSS精灵，是一种网页图片应用处理方式。它允�
 >  	5. **下面的btn按键如何实现？  border+radius+cursor+伪类active+inline并排。**
 >  	6. **如何实现百叶穿的图片堆叠效果？所有图片直接absolute脱离文档流，定位到一起，然后其中第一张opacity设为1，别的设为0，并把第一张的zindex设为最高**
 
+
+
+---
+
+## text-align属性使用误区
+
+text-align可以是文字在其所在行居中，但是这个属性必须用在 改文字的父元素容器的属性里面，而不是该文字的标签上。比如， div里面有个span里面有字，你想让这个span文字居中，你必须在div里面写text-align，而不是字span里面写text-align！！！
