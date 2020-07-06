@@ -1,0 +1,25 @@
+.container-fluid{
+    width: 100%;
+}
+
+
+.container{
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.float_left{
+    float: left;
+}
+
+.float_right{
+    float: right;
+}
+
+.clear_float:after{
+    content: "";
+    display: block;
+    clear: both;
+}
