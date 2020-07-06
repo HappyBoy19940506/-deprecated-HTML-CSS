@@ -59,7 +59,7 @@
 /*  footer start */
 .footer{
     background-color: #66c5b4;
-    height: 165px;
+    height: 220px;
     font-size: 12px;
     overflow: hidden;
 }
@@ -79,11 +79,22 @@
 .footer .container:nth-child(2){
     width: 100%;
     background-color:white;
-    height: 110px;
+    height: 150px;
     color: #888;
-    
+    overflow: hidden;
 }
 
+
+.footer .container:nth-child(2) p{
+    display: block;
+    width: 1080px;
+    margin: 0 auto;
+    margin-top: 50px ;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: left;
+
+}
 
 
 
