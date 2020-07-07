@@ -101,3 +101,102 @@
 }
 
 /* main ad link end */
+
+/* banner  start */
+.main .banner{
+    background: url(./img/ia_100000077.png) no-repeat 0 0;
+	width: 976px;
+    height: 276px;
+    overflow: visible;
+}
+.main .banner_left{
+    position: relative;
+}
+.main .banner .banner_left .banner_left_download{
+    background: url(./img/ia_100000085.png) no-repeat 0 0;
+	width: 242px;
+    height: 128px;
+    margin-top: -20px;
+    margin-left: 5px;
+    overflow: hidden;
+}
+
+.main .banner .banner_left .banner_left_login{
+    background: url(./img/ia_100000085.png) no-repeat -2px -129px;;
+	width: 238px;
+    height: 184px;  
+    margin-left: 5px;
+}
+
+.main .banner .banner_left .banner_left_download div{
+    margin-top: 45px; 
+}
+
+
+.main .banner .banner_left .banner_left_download a{
+    display: block;
+    margin: 0 auto;
+}
+
+.banner .banner_left .banner_left_download a:nth-of-type(1){
+    background: url(./img/ia_100000085.png) no-repeat -254px -1px;
+	width: 90px;
+    height: 23px;
+    margin-bottom: 5px;
+}
+
+
+.banner .banner_left .banner_left_download a:nth-of-type(2){
+    background: url(./img/ia_100000085.png) no-repeat -262px -33px;
+	width: 76px;
+	height: 11px;
+    
+}
+
+/* css3 animation for Download Text*/
+
+.banner_left .banner_left_download a:nth-of-type(1){
+    animation: 1s MoveDown;
+}
+
+@keyframes MoveDown{
+    0%{ transform: translateY(-40px); opacity: 0;}
+    100%{ transform: translateY(0); opacity: 1; }
+}
+
+
+.banner_left .banner_left_download a:nth-of-type(2){
+    animation: 1s MoveUp;
+}
+@keyframes MoveUp{
+    0%{ transform: translateY(40px); opacity: 0;}
+    100%{transform: translateY(0); opacity: 1;}
+}
+
+/* css3 animation for Download Text END*/
+
+.banner .banner_left .banner_left_login{
+    color: #E0E4FF;
+    font-size:12px;
+    overflow: hidden;
+}
+
+.banner_left .banner_left_login div:nth-of-type(1){
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 4px solid #283257;
+        overflow: hidden;
+        margin-top: 30px;
+        margin-left: 95px;
+}
+
+.banner .banner_left .banner_left_login a{
+    color:#4DFFDB;
+    font-size: 12px;
+}
+.banner_left .banner_left_login p{
+    text-align: center;
+    margin-top: 20px;
+}
+/* banner end */
