@@ -1537,13 +1537,13 @@ text-align可以是文字在其所在行居中，但是这个属性必须用在 
 
 ## 四种 位置：
 
-1. Margin： 先上下，后左右， margin 0 auto，代表左右居中，上下不变,并且特别注意**值不要为负数**，会出现很多问题，比如margin-left=-多少多少，并不是margin-right，所以直接不要用。
+1. Margin： 先上下，后左右， margin 0 auto，代表左右居中，上下不变,并且特别注意**值不要为负数**，会出现很多问题，所以直接不要用。
 
-   > ​	必须理解 margin并不是移动元素，只是添加中间层的大小。
+   > ​	必须理解 margin并不是移动元素，只是添加border外面margin层的大小。
    >
-   > 这不是定位...margin-bottom 是下方的外边距，并不能让元素向下方移动，margin-top 作为上边距，把元素“推”了下去。
+   > 这不是定位...margin-bottom 是下方的外边距，增加这个值并不能让元素向上方移动，margin-top 作为上边距，把元素“推”了下去。
    >
-   > 这就解释了，为什么有些时候 你所谓的margin bottom不起作用，因为你其实是想让他往上移动，而不是margin底部增加。
+   > 这就解释了，为什么有些时候 你所谓的margin bottom不起作用，因为你其实是想让他往上移动，而不是margin底部简答的增加，你再怎么增也没用。如果div1和div2一上一下，你想让div2顶出去顶到div1里，你设置margin bottom是没有用的，必须用position，因为你要理解，margin bottom只是把盒子模型里下面的margin值增加，对整个div的位置又没有变化！很多时候你看起来设置margin bottom就感觉向上移动了，那只是因为除了border内的地方都没有颜色，都是透明的。
 
 2. background :url + no repeat+ 0 center，先左右 后上下。0 center代表左右轴不变，上下轴居中，**值必定为负数**
 
