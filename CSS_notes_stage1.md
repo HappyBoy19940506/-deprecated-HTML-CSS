@@ -1537,7 +1537,33 @@ text-align可以是文字在其所在行居中，但是这个属性必须用在 
 
 ## 四种 位置：
 
-1. Margin： 先上下，后左右， margin 0 auto，代表左右居中，上下不变
-2. background :url + no repeat+ 0 center，先左右 后上下。0 center代表左右轴不变，上下轴居中
-3. spirte 写2个负数控制，第一个负数控制左右，第二个负数控制上下。
-4. absoulte里 写top和left，加以正负控制
+1. Margin： 先上下，后左右， margin 0 auto，代表左右居中，上下不变,并且特别注意**值不要为负数**，会出现很多问题，比如margin-left=-多少多少，并不是margin-right，所以直接不要用。
+
+   > ​	必须理解 margin并不是移动元素，只是添加中间层的大小。
+   >
+   > 这不是定位...margin-bottom 是下方的外边距，并不能让元素向下方移动，margin-top 作为上边距，把元素“推”了下去。
+   >
+   > 这就解释了，为什么有些时候 你所谓的margin bottom不起作用，因为你其实是想让他往上移动，而不是margin底部增加。
+
+2. background :url + no repeat+ 0 center，先左右 后上下。0 center代表左右轴不变，上下轴居中，**值必定为负数**
+
+3. spirte 写2个负数控制，第一个负数控制左右，第二个负数控制上下。**值必定为负数**
+
+4. absoulte里 **必定**写top和left，加以正负控制，top正就是往上，top负就是往下，left正就是往左，left负就是往右，均有可能。
+
+
+
+----
+
+## 图片的层叠效果：
+
+首先你要知道， div不管设置多少宽高比如150\*50，里面如果放img标签200\*200，一定会完全显示，意思就是说，你div的大小就算小于img标签，img也会完整显示出来，但是区别是
+
+如果你用三个 div，每个都这样的话，就会造成 三个 div，都是150的宽，但是高只有50，且img还是在所在div范围内，就会造成一个 上下层叠的效果，我无意中发现的！
+
+```html
+<div 1 height 30px < img的宽> <img 1> </div>
+<div 2 height 30px < img的宽> <img 2> </div>
+<div 3 height 30px < img的宽> <img 3> </div>
+```
+
