@@ -1,0 +1,76 @@
+/* main = nav + banner */
+/* main  nav start here */
+
+.main{
+    min-height: 800px;
+    overflow: hidden;
+    background: url(./img/ia_100000044.jpg) no-repeat center 0;
+}
+
+.main .nav{
+    overflow: hidden;
+    position: relative;
+}
+.main  .nav .nav_header{
+    height: 236px;
+    background:url(./img/nav_down_re.png) repeat-x ,url(./img/ia_100000045.png) no-repeat; 
+}
+
+.main  .nav .nav_logo{
+    width: 138px;
+    height: 112px;
+    position: absolute;
+    top: 14px;
+    left: 47%;
+}
+
+.main  .nav .nav_logo a{
+    display: block;
+    width:100% ;
+    height: 100%;
+}
+
+.main .nav .nav_list{
+    position: absolute;
+    top:70px;
+    left:580px;
+}
+
+.main .nav .nav_list li{
+    width: 108px;
+    height: 26px;
+}
+
+
+.main .nav .nav_list ul:nth-of-type(4){
+    margin-left:152px;
+}
+
+.main .nav .nav_list li:hover a{
+    text-decoration: underline;
+    color: red;
+}
+
+
+.main .nav .nav_list a{
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    color: white;
+}
+
+
+.main .nav .nav_list li .nav_icon_h{
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background: url(./img/ia_100000106.png) no-repeat 0 -13px;
+}
+
+.main .nav .nav_list li .nav_icon_n{
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background: url(./img/ia_100000106.png) no-repeat 0 0;
+
+}
