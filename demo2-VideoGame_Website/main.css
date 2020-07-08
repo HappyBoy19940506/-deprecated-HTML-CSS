@@ -226,7 +226,7 @@
     position: relative;
 }
 .banner .banner_center .banner_center_btn{
-    width: 490px ;
+    width: 497px ;
     height: 37px;
     background-color: rgba(0, 0, 0, 0.5);
     margin-left: 6px;
@@ -254,6 +254,9 @@
     position: absolute;
     top: 10px;
 }
+.banner .banner_center .banner_center_btn a:nth-of-type(1):hover{
+    background: url(./img/ia_100000077.png) no-repeat -541px -326px;
+}
 
 .banner .banner_center .banner_center_btn a:nth-of-type(2){
     background: url(./img/ia_100000077.png) no-repeat -554px -297px;
@@ -261,6 +264,23 @@
     height: 22px;
     position: absolute;
     top: 10px;
+}
+
+.banner .banner_center .banner_center_btn a:nth-of-type(2):hover{
+    background: url(./img/ia_100000077.png) no-repeat -554px -326px;
+}
+
+.banner .banner_center .banner_center_cover-topleft{
+
+}
+.banner .banner_center .banner_center_cover-topright{
+    
+}
+.banner .banner_center .banner_center_cover-bottomleft{
+    
+}
+.banner .banner_center .banner_center_cover-bottomright{
+    
 }
 /* banner-center end */
 
