@@ -231,7 +231,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     margin-left: 6px;
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
 }
 
 .banner .banner_center .banner_center_btn ul{
@@ -271,16 +271,37 @@
 }
 
 .banner .banner_center .banner_center_cover-topleft{
-
+    background: url(./img/ia_100000077.png) no-repeat -621px -299px;
+	width: 12px;
+    height: 12px;
+    position: absolute;
+    top:8px;
+    left:0px;
 }
 .banner .banner_center .banner_center_cover-topright{
-    
+    background: url(./img/ia_100000077.png) no-repeat -634px -299px;
+	width: 12px;
+    height: 12px;
+    position: absolute;
+    top:11px;
+    right:-4px;
 }
 .banner .banner_center .banner_center_cover-bottomleft{
+    background: url(./img/ia_100000077.png) no-repeat -621px -312px;
+	width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom:-15px;
+    left:2px;
     
 }
 .banner .banner_center .banner_center_cover-bottomright{
-    
+    background: url(./img/ia_100000077.png) no-repeat -634px -312px;
+	width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom:-15px;
+    right:-3px;
 }
 /* banner-center end */
 
@@ -290,5 +311,4 @@
     margin-top: 14px;
     margin-left: 12px;
 }
-
 /* banner-right end */
