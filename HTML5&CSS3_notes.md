@@ -1,4 +1,4 @@
-#  HTML5&CSS3- Stage 2
+#  HTML5&CSS3_learning notes
 
 This is a demo repository for learning CSS3 HTML5	
 
@@ -57,5 +57,33 @@ i有什么意义和使用场景呢？
 
 5. cite：引用著作的**标题**，比如 一本书的名字
 
-   > ​	语义化，规范！ 牛逼！
+   > ​	语义化，规范！ 专业！牛逼！
+
+
+
+---
+
+## iframe标签
+
+1.简单来说，就是把在iframe标签下面再嵌入另一个页面儿。
+2.属性和值
+   + frameborder规定是否显示iframe的边框值：0或1
+   + width定义iframe的宽度
+   + height定义iframe的高度
+      +滚动规定是否在iframe中显示滚动条值：是或否
+   + src规定在iframe中约会的网址
+   + ** srcdoc **规定在iframe中显示的页面内容，如果和src同时存在，则src会失效，只显示srcdoc
+3.应用场景：
+      -跨页面的数据传输，配合js，把iframe宽度= 0，高度= 0，显示：无；
+      -共享代码共享，某些需要再另一个页面查看演示效果，那么演示效果直接iframe；
+      -局部刷新，只刷新iframe内部。
+      -第三方介入，第三方复杂的广告，直接嵌入进来，不需要考虑内部。
+
+---
+
+## br标签和wbr标签
+
+1. wbr就是软换行。 br就是硬换行。
+2. br就是随便用，用了就会换行。
+3. 但是wbr一般用在一个长一点的单词内部， 比如 inter\<wbr>esting， 这样做的效果就是，如果interesting这个词出现在末尾，末尾的剩余长度又不够interesting的话，默认会把interesting整个字从下一行开始，但是如果写了这页的wbr标签，他会在第一行末尾写inter，第二行开始写esting，避免第一行空出太多，不好看。
 
