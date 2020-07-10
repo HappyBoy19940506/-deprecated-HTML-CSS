@@ -119,18 +119,33 @@ i有什么意义和使用场景呢？
 
 ## fieldset标签 配合 legend标签
 
+一般可以这么写：
 
+form
 
+​	fieldset
 
+​		legend
+
+​			xxxx
+
+​		legend
+
+​	fieldset
+
+form
+
+1. fieldset会自动形成一个框
+2. 配合legend，可以给这个框做一个炫酷的结构标题。
 
 ----
 
 ## input标签配合label标签
 
-input的id 
+input的id ：用来捆绑label的for的，独一无二的标识
 
-input的value
+input的value 用来传输数据的
 
-input的name
+input的name: 是用来捆绑 选择题里面每个选项的
 
-label 的for  对应的是input的id
+**label 的for  :对应的是input的id**
