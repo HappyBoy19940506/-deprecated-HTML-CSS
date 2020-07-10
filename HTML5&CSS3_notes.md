@@ -111,15 +111,23 @@ i有什么意义和使用场景呢？
    >
    > 2. https://www.w3schools.com/tags/tag_map.asp
    >
-   > 3. **特别需要注意的是**： 就像input和label一样，map和你要映射的图片img需要一些特定关系来绑定在一起，但需要注意的是， input和label这两个标签是并列的，和map与是包含关系。
+   > 3. **特别需要注意的是**： 就像input和label一样，map和你要映射的图片img需要一些特定关系来绑定在一起，而且， input和label这两个标签是并列的，img和map也是，必须是并列关系。
    >
-   >    另外，他们是如何绑定的呢？  
+   >    另外，他们是如何绑定的呢？  正如input里的id属性，和label里面的for属性的值对应一样
    >
-   >    > ​	map里的 usemap=“#name” 
+   >    > ​	img里的 usemap=“#name” 
    >    >
    >    > ​	与
    >    >
-   >    > ​	area里的
+   >    > ​	map里的 name=“name”
+   >    >
+   >    > ​    对应，
+   >    >
+   >    >   **但是特别需要注意的是，有一点细微差别，就是 img里面usemap属性的值要比map里面name的值多一个#** 
+   >    >
+   >    >   **但是特别需要注意的是，有一点细微差别，就是 img里面usemap属性的值要比map里面name的值多一个#** 
+   >    >
+   >    >   **但是特别需要注意的是，有一点细微差别，就是 img里面usemap属性的值要比map里面name的值多一个#** 
 
 
 
@@ -131,19 +139,18 @@ i有什么意义和使用场景呢？
 
 一般可以这么写：
 
-form
+```html
+<form action="  
+  <fieldset>
+    <legend ></legend>
+    <label for="fname">First name:</label> //相当于input标签后面的字儿
+    <input type="text" id="fname" name="fname">
+  </fieldset>
+</form>
 
-​	fieldset
+```
 
-​		legend
 
-​			xxxx
-
-​		legend
-
-​	fieldset
-
-form
 
 1. fieldset会自动形成一个框
 2. 配合legend，可以给这个框做一个炫酷的结构标题。
