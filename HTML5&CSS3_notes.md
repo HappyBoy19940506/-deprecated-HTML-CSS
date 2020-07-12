@@ -166,3 +166,8 @@ input的value 用来传输数据的
 input的name: 是用来捆绑 选择题里面每个选项的
 
 **label 的for  :对应的是input的id**
+
+-
+
+-----
+
