@@ -171,6 +171,35 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
 ## embed 标签 与 object 标签
 
-1. 没有差别，针对不同浏览器，两种写法都支持了。
+1. 没有差别，针对不同浏览器，两种写法都支持了。一般用embed，那个object还需要些什么param的子标签，很麻烦。
 2. 用来 插入 flash动画。 但是现在越来越少了，因为移动端的流行，但是flash在移动端的支持不好。
-3. 
+3. swf文件，就是flash文件的后缀名
+
+
+
+----
+
+## video标签与 audio标签	
+
+1. html5中新增的来代替flash功能
+
+2.  controls属性： 默认不可见，可以设置通过“controls”属性是否显示，直接写 controls就行，类似 input标签里面的disabled。
+
+3. 类似的属性还要 loop 和 autoplay
+
+   > ​	我们可以 把 video标签配合 loop和autoplay实现 **炫酷的背景动画的效果**。
+
+4. 为了支持兼容多个设备，可以调用 source属性
+
+   > ​	拥有两份源文件的音频播放器。浏览器应该选择它所支持的文件（如果有的话）：
+   >
+   > ```html
+   > <audio controls>
+   >    <source src="horse.ogg" type="audio/ogg">
+   >    <source src="horse.mp3" type="audio/mpeg">
+   >  Your browser does not support the audio element.
+   > </audio> 
+   > ```
+
+5. 如果要自定义播放器样式，那我们要用audio标签配合js来模拟播放器
+

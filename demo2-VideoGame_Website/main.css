@@ -463,11 +463,15 @@
 /* the content of news */
 .second-main_right_newsactivity .newsactivity_news div:nth-of-type(2){
     width: 478px;
-    height: 184px;
+    height: 240px;
     background-color: white;
+    overflow: hidden;
 
 }
 
+.second-main_right_newsactivity .newsactivity_news video{
+    width: 100%;
+}
 
 .second-main_right_newsactivity .newsactivity_activity{
     background-color: beige;
