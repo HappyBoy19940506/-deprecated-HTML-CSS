@@ -298,5 +298,37 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
 ## HTML5  新语义化标签，不要再用div了
 
+1.  header  页眉
 
+2.  footer  页脚
+
+3. main  主体
+
+4. hgroup 标题组合
+
+5. nav  导航
+
+   > header , footer, main 和h1 标签类似，一个page里面只能出现一次
+   >
+   > 而且一般是 header + main+ footer这样的顺序， 然后
+   >
+   > header里面一般有 nav
+   >
+   > 然后再根据 header， main 以及 footer所占的宽度来决定，他是 通栏 还是 版心。
+
+   ```html
+   
+           <header class="container-fluid">
+           	<nav class="container"> xxx </nav>
+           	</header>
+           <main class="container">>
+             <h1>
+               xxxx
+             </h1>
+           	</main>
+           <footer class="container-fluid">
+           	</footer>
+   ```
+
+   
 
