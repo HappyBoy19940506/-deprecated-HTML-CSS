@@ -362,5 +362,48 @@ input的name: 是用来捆绑 选择题里面每个选项的
           </main>
     ```
 
+11. 我们发现，其实 新的H5语义化标签，其实就是把div标签根据结构的样式来重新命名，对规则并不发生变化。
+
+12. datalist : 选项列表，以前都是用js来实现的，现在可以直接实现 下拉选项列表,比如你搜索框的搜索历史，或者常用关键字自动补全。
+
+    ```html
+     <input type="text" name="" id="" list="elems">
+          <datalist id="elems">
+            <option value="2">1</option>
+            <option value="3">2</option>
+            <option value="4">3</option>
+            <option value="5">4</option>
+            <option value="6">5</option>
+          </datalist>
+    <!--注意input 和 datalist的配合使用  -->
+    ```
+
     
 
+13. details 配合 summary
+
+    ```html
+          <details open>
+            <summary>xxx</summary>
+            <p>666666</p>
+          </details>
+    <!--注意details和 summary的配合使用  -->
+    <!--可以实现一个 →标题， 然后点击标题，下来弹出p标签内的内容的效果，但是不能改变样式  -->
+    ```
+
+    
+
+14. progress/meter
+
+    ```html
+          <progress min="0" max="100" value="60"></progress>
+    <!--progress的含义是 表示进度，比如加载了多少百分比 -->
+          <meter min="0" max="100" value="60" low="40" high="80"></meter>
+    <!--meter的含义是 表示测量，比如测量的数字，多少人完成了该工作， -->
+    ```
+
+    
+
+15. time
+
+16. mark
