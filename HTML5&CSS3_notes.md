@@ -335,5 +335,13 @@ input的name: 是用来捆绑 选择题里面每个选项的
            	</footer>
    ```
 
-   
+6. article  独立的内容
+
+7. aside  辅助信息的内容
+
+8. section 区域
+
+9. figure 描述图像或视频
+
+10. figcaption 描述图像或者视频的标题部分
 
