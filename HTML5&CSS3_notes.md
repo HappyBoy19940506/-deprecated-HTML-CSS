@@ -335,13 +335,13 @@ input的name: 是用来捆绑 选择题里面每个选项的
            	</footer>
    ```
 
-6. article  独立的内容
+6. article  独立的内容    -- 一般用在main里面几块独立的article
 
-7. aside  辅助信息的内容
+7. aside  辅助信息的内容--- 一般和 article 配套使用， article为主题，aside为旁边一些辅助信息，比如登录信息啥的
 
-8. section 区域
+8. section 区域 ---- 一般用在article里面再进行section的分区域，特别像div
 
-9. figure 描述图像或视频
+9. figure 描述图像或视频 ----一般配合figcaption一起使用， figure里面配塞着figcapture
 
 10. figcaption 描述图像或者视频的标题部分
 
