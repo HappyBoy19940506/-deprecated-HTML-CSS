@@ -67,13 +67,14 @@ i有什么意义和使用场景呢？
 
 1.简单来说，就是把在iframe标签下面再嵌入另一个页面儿。
 2.属性和值
+
    + frameborder规定是否显示iframe的边框值：0或1
    + width定义iframe的宽度
    + height定义iframe的高度
-      +滚动规定是否在iframe中显示滚动条值：是或否
+     +滚动规定是否在iframe中显示滚动条值：是或否
    + src规定在iframe中约会的网址
    + ** srcdoc **规定在iframe中显示的页面内容，如果和src同时存在，则src会失效，只显示srcdoc
-3.应用场景：
+     3.应用场景：
       -跨页面的数据传输，配合js，把iframe宽度= 0，高度= 0，显示：无；
       -共享代码共享，某些需要再另一个页面查看演示效果，那么演示效果直接iframe；
       -局部刷新，只刷新iframe内部。
@@ -123,11 +124,11 @@ i有什么意义和使用场景呢？
    >    >
    >    > ​    对应，
    >    >
-   >    >   **但是特别需要注意的是，有一点细微差别，就是 img里面usemap属性的值要比map里面name的值多一个#** 
+   >    > **但是特别需要注意的是，有一点细微差别，就是 img里面usemap属性的值要比map里面name的值多一个#** 
    >    >
-   >    >   **但是特别需要注意的是，有一点细微差别，就是 img里面usemap属性的值要比map里面name的值多一个#** 
+   >    > **但是特别需要注意的是，有一点细微差别，就是 img里面usemap属性的值要比map里面name的值多一个#** 
    >    >
-   >    >   **但是特别需要注意的是，有一点细微差别，就是 img里面usemap属性的值要比map里面name的值多一个#** 
+   >    > **但是特别需要注意的是，有一点细微差别，就是 img里面usemap属性的值要比map里面name的值多一个#** 
 
 
 
@@ -183,7 +184,7 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
 1. html5中新增的来代替flash功能
 
-2.  controls属性： 默认不可见，可以设置通过“controls”属性是否显示，直接写 controls就行，类似 input标签里面的disabled。
+2. controls属性： 默认不可见，可以设置通过“controls”属性是否显示，直接写 controls就行，类似 input标签里面的disabled。
 
 3. 类似的属性还要 loop 和 autoplay
 
@@ -195,9 +196,9 @@ input的name: 是用来捆绑 选择题里面每个选项的
    >
    > ```html
    > <audio controls>
-   >    <source src="horse.ogg" type="audio/ogg">
-   >    <source src="horse.mp3" type="audio/mpeg">
-   >  Your browser does not support the audio element.
+   > <source src="horse.ogg" type="audio/ogg">
+   > <source src="horse.mp3" type="audio/mpeg">
+   > Your browser does not support the audio element.
    > </audio> 
    > ```
 
@@ -222,7 +223,7 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
 
 2. bdo标签：  用bdo标签包裹的文本， dir属性里面 ltr为从左到右， dir属性为 rtl为从右到左，可是实现文本从右向左排列
-3.  古诗排列 效果怎么错？其实不用bdo标签， 可以把每一div做成竖条状，然后向右浮动，然后宽度只能容纳下一个字。
+3. 古诗排列 效果怎么错？其实不用bdo标签， 可以把每一div做成竖条状，然后向右浮动，然后宽度只能容纳下一个字。
 
 
 
@@ -240,17 +241,34 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
 ## meta标签扩展
 
-扩展1
+ meta是一个辅助标签，是不会显示的，帮助优化页面的显示。
 
-扩展2
+1. ```html
+   <meta charset="utf-8">
+   ```
 
+   
 
+2. ```html
+   <meta name="description" content="World of Warcraft Classic is a faithful recreation of the original WoW—Blizzard Entertainment's lauded MMORPG.">
+   ```
 
-扩展3
+3. ```html
+   <meta name="keywords" content="淘宝,淘寶,淘寶網,掏寶,掏保,網上購物,集運,淘宝全球,taobao">
+   ```
 
+4. ```html
+   <meta name="renderer" content="webkit">
+   
+   
+   <!--   针对一些双内核浏览器，比如360浏览器，选择更高级的渲染webkit  -->
+   ```
 
+5. ```html
+   <meta property="66666" content="what waht waht">
+   
+   <!-- 可以自定义 meta标签   -->
+   ```
 
-扩展4
-
-
+6. 
 
