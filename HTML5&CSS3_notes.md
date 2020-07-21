@@ -270,5 +270,33 @@ input的name: 是用来捆绑 选择题里面每个选项的
    <!-- 可以自定义 meta标签   -->
    ```
 
-6. 
+6. ```html
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   
+   <!-- 针对不同版本的ie浏览器版本，渲染都从edge这个版本进行渲染   -->
+   ```
+
+7. ```html
+   <meta http-equiv="refresh" content="3" url="">
+   
+   <!-- 三秒钟之后 跳转到 url里面的网址   -->
+   ```
+
+8. ```html
+   <meta http-equiv="expires" content="Wed,20 Jun 2019 22:33:00 GMT" >
+   
+   <!-- 在预设的时间点进行网页缓存，如果时间过期了，重新去服务器获取 -->
+   ```
+
+
+
+
+
+---
+
+
+
+## HTML5  新语义化标签，不要再用div了
+
+
 
