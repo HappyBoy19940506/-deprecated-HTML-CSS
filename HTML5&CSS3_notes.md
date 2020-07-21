@@ -404,6 +404,19 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
     
 
-15. time
+15. time- 把p标签里面的日期可以用time标签包裹起来
 
-16. mark
+    ```html
+    <time title="2-15"> Today</time>
+    ```
+
+16. mark -把内容高亮。
+
+    ```html
+    <mark title="2-15"> Today</mark>
+    ```
+
+    
+
+    
+
