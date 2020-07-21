@@ -304,7 +304,7 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
 3. main  主体
 
-4. hgroup 标题组合
+4. hgroup 标题组合  比如一个大标题，后面还有个小标题，或者是小签名，那么可以用这个包裹起来，替换掉div
 
 5. nav  导航
 
@@ -315,18 +315,23 @@ input的name: 是用来捆绑 选择题里面每个选项的
    > header里面一般有 nav
    >
    > 然后再根据 header， main 以及 footer所占的宽度来决定，他是 通栏 还是 版心。
+   >
+   > 一般来说， header， main， footer这些 class肯定是 container-fluid了，然后里面的子类比如nav什么的，就是container！
 
    ```html
    
            <header class="container-fluid">
            	<nav class="container"> xxx </nav>
            	</header>
-           <main class="container">>
-             <h1>
+           <main class="container-fluid">>
+             <h1 class="container">
                xxxx
              </h1>
            	</main>
            <footer class="container-fluid">
+             <div class="container">
+               xxxx
+             </div>
            	</footer>
    ```
 
