@@ -345,3 +345,22 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
 10. figcaption 描述图像或者视频的标题部分
 
+    ```html
+          <main>
+            <article>
+              <section>
+                <figure>
+                  <img src="" alt="">
+                  <figcaption>sss</figcaption>
+                </figure>
+              </section>
+              <section></section>
+              <section></section>
+              <section></section>
+            </article>
+            <aside></aside>
+          </main>
+    ```
+
+    
+
