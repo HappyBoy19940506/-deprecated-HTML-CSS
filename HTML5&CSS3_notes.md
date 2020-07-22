@@ -420,3 +420,64 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
     
 
+---
+
+## table标签 扩展
+
+1.  回顾： 注意语义化的thead tbody和tfoot
+
+   ```html
+   <table>
+     <thead>
+       <tr>
+         <th>Month</th>
+         <th>Savings</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>January</td>
+         <td>$100</td>
+       </tr>
+       <tr>
+         <td>February</td>
+         <td>$80</td>
+       </tr>
+     </tbody>
+     <tfoot>
+       <tr>
+         <td>Sum</td>
+         <td>$180</td>
+       </tr>
+     </tfoot>
+   </table>
+   ```
+
+2. td属性之[rowspan](https://www.w3schools.com/tags/att_td_rowspan.asp)和 [colspan](https://www.w3schools.com/tags/att_td_colspan.asp)
+
+   > rowspan=2 就说明 向下增生2个单位
+   >
+   > 同理，colspan就是向右增生x个单位
+
+3. table css样式属性之 empty-cells：hide 隐藏空单元
+
+   > ```css
+   > .table {
+   >  empty-cells:hide;
+   > }
+   > //效果就是： 如果td里面没有内容，那就不显示该单元的边框。
+   > ```
+
+4. table css样式属性之border-collapse:collapse 隐藏空单元
+
+   ```css
+   .table{
+   	border-collapse:collapse;
+   }
+   //如果你的table、td、th设置了比如 border：solid 1px black这样的属性,那么他就会先多条边框线挤在一起，如果设置了 border-collapse:collapse,那么就会合并成一条线。
+   ```
+
+   
+
+
+
