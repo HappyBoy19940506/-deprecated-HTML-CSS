@@ -462,22 +462,33 @@ input的name: 是用来捆绑 选择题里面每个选项的
 3. table css样式属性之 empty-cells：hide 隐藏空单元
 
    > ```css
-   > .table {
+   > table {
    >  empty-cells:hide;
    > }
    > //效果就是： 如果td里面没有内容，那就不显示该单元的边框。
    > ```
 
-4. table css样式属性之border-collapse:collapse 隐藏空单元
+4. table css样式属性之border-collapse:collapse
 
    ```css
-   .table{
+   table{
    	border-collapse:collapse;
    }
    //如果你的table、td、th设置了比如 border：solid 1px black这样的属性,那么他就会先多条边框线挤在一起，如果设置了 border-collapse:collapse,那么就会合并成一条线。
    ```
 
+5. table css样式属性之   单元框内的斜线。
+
+   ```css
+   th{
+   	border-top:1px solid red;
+   }
    
+   主要思路就是， 在 该单元格内 继续造一个div
+   然后 把 div标签的 border-top 和 border-left设置出来，并且设置的150px，很大，形成
+   一个div被2个三角形瓜分的形态，然后把 border设置成没有颜色，这样，线就出来了。
+   然后把 划分的2块区域的描述文字，用em 或者i或者b标签包裹，然后用绝对定位定位出来即可。
+   ```
 
-
+   
 

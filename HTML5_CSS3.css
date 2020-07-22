@@ -1,0 +1,5 @@
+table, th ,td{
+    border: 1px black solid;
+    border-collapse: collapse;
+    empty-cells: hide;
+}
