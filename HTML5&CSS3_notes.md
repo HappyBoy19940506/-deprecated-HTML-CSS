@@ -503,4 +503,74 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
 -----
 
-1. 
+## 表单form标签之扩展
+
+1. 美化表单控件
+
+   - 美化复选框
+
+   - 美化上传按钮
+
+     > 方法：首先你要用美化样式的雪碧图
+     >
+     > 1. 用label标签+checked伪类+隐藏input标签
+     >
+     >    ```html
+     >    <label>
+     >    	<input type="checkedbox">
+     >      <div> 此处添加新样式</div>
+     >    </label>
+     >    ```
+     >
+     >    ```css
+     >    label input{
+     >      display:none;
+     >    }
+     >    
+     >    label div{
+     >      width:30px;
+     >      height:30px;
+     >      background:url() 0 -30px no-repeat;
+     >    }
+     >    
+     >    label input:checked + div{
+     >      background:url() -30px -30px no-repeat;
+     >    }
+     >    ```
+     >
+     >    
+     >
+     > 2. 用position配合opacity
+     >
+     >    ```html
+     >    <div class="upload">
+     >      <input type="file">
+     >      <div>  背景图</div>
+     >    </div>
+     >    ```
+     >
+     >    ```css
+     >    .upload{
+     >      position:relative;
+     >      width:80px;
+     >      height:30px;
+     >    }
+     >    
+     >    .upload input{
+     >      opacity:0;
+     >      position:absolute;
+     >      left:0;
+     >      top:0;
+     >      width:100%;
+     >      height:100%
+     >    }
+     >    .upload div{
+     >      width:100%;
+     >      height:100%;
+     >      background:url() no-repeat 0 0;
+     >    }
+     >    ```
+     >
+     >    
+
+2. 
