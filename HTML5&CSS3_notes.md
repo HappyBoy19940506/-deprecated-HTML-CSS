@@ -598,30 +598,71 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
    - ```html
      <form action:"www.sss.com">
-     	<input type="email">
+     	<input type="range" min="0" max="10" value="5">
      	<input type="submit">
      </form>
      ```
 
    - ```html
      <form action:"www.sss.com">
-     	<input type="email">
+     	<input type="date">
      	<input type="submit">
      </form>
      ```
 
    - ```html
      <form action:"www.sss.com">
-     	<input type="email">
+     	<input type="month">
+       //只能输入xx年的xx月
      	<input type="submit">
      </form>
      ```
 
    - ```html
      <form action:"www.sss.com">
-     	<input type="email">
+     	<input type="week">
+         //只能输入xx年的第x周
      	<input type="submit">
      </form>
+     ```
+
+   - ```html
+     <form action:"www.sss.com">
+     	<input type="search">
+     	<input type="submit">
+     </form>
+     ```
+
+   - ```html
+     <form action:"www.sss.com">
+     	<input type="color">
+     	<input type="submit">
+     </form>
+     ```
+
+   - ```html
+     <form action:"www.sss.com">
+     	<input type="tel">
+       //PC端没有反应，在移动端点击之后自动调出数字键盘，而不是全键盘。
+     	<input type="submit">
+     </form>
+     ```
+
+   - ```html
+     <form action:"www.sss.com">
+     	<input type="time">
+     	<input type="submit">
+     </form>
+     ```
+
+3.  新的form表单属性：
+
+   - ```html
+     <form>
+       <input type="text">
+       <input type="form">
+     </form>
+     
      ```
 
    - 
