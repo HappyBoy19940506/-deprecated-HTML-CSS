@@ -573,4 +573,56 @@ input的name: 是用来捆绑 选择题里面每个选项的
      >
      >    
 
-2. 
+2. HTML5新的input控件：
+
+   - ```html
+     <form action:"www.sss.com">
+     	<input type="email">
+     	<input type="submit">
+     </form>
+     ```
+
+   - ```html
+     <form action:"www.sss.com">
+     	<input type="url">
+     	<input type="submit">
+     </form>
+     ```
+
+   - ```html
+     <form action:"www.sss.com">
+     	<input type="number">
+     	<input type="submit">
+     </form>
+     ```
+
+   - ```html
+     <form action:"www.sss.com">
+     	<input type="email">
+     	<input type="submit">
+     </form>
+     ```
+
+   - ```html
+     <form action:"www.sss.com">
+     	<input type="email">
+     	<input type="submit">
+     </form>
+     ```
+
+   - ```html
+     <form action:"www.sss.com">
+     	<input type="email">
+     	<input type="submit">
+     </form>
+     ```
+
+   - ```html
+     <form action:"www.sss.com">
+     	<input type="email">
+     	<input type="submit">
+     </form>
+     ```
+
+   - 
+
