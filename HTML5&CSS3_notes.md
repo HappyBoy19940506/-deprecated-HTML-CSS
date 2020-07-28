@@ -771,6 +771,46 @@ input的name: 是用来捆绑 选择题里面每个选项的
         cannot enter value that is not in the list.
         ```
 
+        -----
+
         
 
         
+
+        
+
+## BFC 规范
+
+1. 什么是bfc
+
+   > ​	简单来说，就是拥有bfc机制的容器会看做一个独立的容器，内部不会出现一些诡异的块级渲染的bug, **内部**不受到外界元素的容器，**注意，是拥有bfc机制的容器的内部的子元素不受外部影响，而不是本身这个bfc元素不受外界影响**，非常重要这一点，我举个例子，比如margin叠加问题，也就是上下2个div一个margin-bottom一个margin-top如何触发bfc来规避他们的叠加bug，要么就全写在一个margin-top里面，要么的话，需要给2个div都套上父容器，把他们的父容器都做bfc化，比如overflow：hidden。这里有个误区：不是把这2个div bfc化，还是把他们的父容器bfc化，因为bfc化的本身父容器还是受外部影响的，并不能改变margin的叠加问题，**而是bfc容器内部的子容器不受外界影响，**可以理解为：脱离文档流的容器内部的子元素都不受影响。
+
+2. 如何触发bfc，会触发bfc的样式
+
+   > ​	浮动元素，除了none以外的float
+   >
+   > ​    定位元素： 除了relative以外的position
+   >
+   > ​    display为 in'li'ne-block, table-cells, flex
+   >
+   > ​     溢出:  除了visible以外overflow,比如hidden，scroll，auto
+
+3.  我们在什么样的场合下需要触发bfc机制来规避bug：
+
+   > 1. margin叠加问题：一上一下，一个top一个bottom会取较大值算。
+   >
+   >    简单来说，凡是遇到要设置margin-top和margin-bottom的时候，必须**分别**（注意：是分别，不是在他们共同，如果没有，就现场造）在其父容器设置属性：
+   >
+   >    overflow:hidden,来避免出现 margin-topbottom的叠加问题。
+   >
+   > 2. margin传递问题：  嵌套结构下， 子元素 margin-top，父容器会跟着一起动。
+   >
+   >    解决方法：给父容器加overflow：hidden，让他变成bfc元素，那他的子元素就不受影响，随意变化。
+   >
+   > 3. 浮动问题：after伪类 ， 1，after 。2 content 3 display 4 clear：both
+   >
+   > 4. 左边固定+右边自适应效果（利用bfc实现）：
+   >
+   >    > 	1. 左边的div： float-left  +相同高度 +固定宽度
+   >    >  	2. 右边的div：overflow：hidden +相同高度+ 不固定宽度
+
