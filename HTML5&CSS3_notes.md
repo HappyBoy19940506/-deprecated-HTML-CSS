@@ -655,14 +655,72 @@ input的name: 是用来捆绑 选择题里面每个选项的
      </form>
      ```
 
-3.  新的form表单属性：
+3. **新的form表单属性：**
 
    - ```html
-     <form>
-       <input type="text">
-       <input type="form">
+     <form action:"www.baidu.com">
+       <input type="text" name="username" autocomplete="off">
+       //默认值为on， 当为on时，将开启在该input下面输入的历史记录列表，并且自动补全。
+       <input type="submit">
      </form>
+     ```
      
+   - ```html
+     <form action:"www.baidu.com">
+       <input type="text" name="username" autofocus>
+       //如果有这个属性，每次加载这个属性的时候，会自动把焦点钉在该input框内。
+       <input type="submit">
+     </form>
      ```
 
-4. 
+   - ```html
+     <form action:"www.baidu.com">
+       <input type="text" name="username" required>
+       //如果有这个属性，input提交的内容 不能为空。
+       <input type="submit">
+     </form>
+     ```
+
+   - ```html
+     <form action:"www.baidu.com">
+       <input type="text" name="username" pattern="\d+" pattern="[a-Z]+">
+       //判断input里面的pattern正则表达式
+       <input type="submit">
+     </form>
+     ```
+
+4.  **form表单中的全后端的数据交互**
+
+   - method属性
+
+     ```html
+     <form action:"www.baidu.com" method="GET" 或者 method="POST">
+       <input type="text" name="username" >
+       <input type="submit">
+     </form>
+     //action表示递交到的地址，一般是后台的php文件。
+     //method里面有get和post两种方式，其中get的话会把 键值对 显示在 url中 "?"后面，所以不太安全，一般只用来做查询。
+     //post是隐藏起来键值对的，也就是说隐藏 你的value和name值，所以比较安全。
+     ```
+
+   - enctypes属性
+
+     ```html
+     <form action:"1.php" method="GET" enctype="application/x-www-form-urlencoded"  或者 enctype="multipart/form-data">
+       <input type="text" name="username" >
+       <input type="submit">
+     </form>
+     //enctype="application/x-www-form-urlencoded"  是指提交的内容是 字符串
+     //或者 enctype="multipart/form-data"> 是指提交的内容是文件格式，所以别忘了 input里type要变成 type="file"
+     ```
+
+   - name/value 数据的键值对
+
+     ```html
+     <input type="text" name="username">
+     //在后台，传输数据是以 键值对的方式进行的，也就是 name+value， name就是包裹的名称，value是包裹里面的内容，所以在这里， input里，name的值为username， value的值就是我们input输入的值。
+     ```
+
+     
+
+     
