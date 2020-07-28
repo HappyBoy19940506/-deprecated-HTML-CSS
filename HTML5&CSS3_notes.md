@@ -721,6 +721,56 @@ input的name: 是用来捆绑 选择题里面每个选项的
      //在后台，传输数据是以 键值对的方式进行的，也就是 name+value， name就是包裹的名称，value是包裹里面的内容，所以在这里， input里，name的值为username， value的值就是我们input输入的值。
      ```
 
-     
+     5. 表单扩展 ---新标签
 
-     
+        -  fieldset 表单内的分组
+        - legend 配合表单内的分组，给分组一个标题
+
+        ```html
+        一般可以这么写：
+        
+        <form action="  
+          <fieldset>
+            <legend ></legend>
+            <label for="fname">First name:</label> //相当于input标签后面的字儿
+            <input type="text" id="fname" name="fname">
+          </fieldset>
+        </form>
+        
+        
+        1. fieldset会自动形成一个框
+        2. 配合legend，可以给这个框做一个炫酷的结构标题。
+        ```
+
+        - optgroup
+
+        ```html
+        <label for="cars">Choose a car:</label>
+        
+        <select name="cars" id="cars">
+          <optgroup label="Valuable Cars"></optgroup>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          // 在选项列表里面加入 optgroup标签，并配合其label属性，可以把你的下拉选择列表分类，更直观。
+          <optgroup label="Prestige Cars"></optgroup>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+        ```
+
+     6. select标签 与   datalist标签的区别
+
+        ```html
+        Difference between <select> and <datalist> elements in HTML
+        •<datalist> is a new element in HTML5. It is
+        a text field that suggests the possible values
+        from an available list. Users can also enter
+        value that is not in the available list.
+        • <select> provides a number of values from
+        which user needs to select one. User
+        cannot enter value that is not in the list.
+        ```
+
+        
+
+        
