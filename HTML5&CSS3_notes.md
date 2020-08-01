@@ -814,7 +814,7 @@ input的name: 是用来捆绑 选择题里面每个选项的
    >    > 	1. 左边的div： float-left  +相同高度 +固定宽度
    >    >  	2. 右边的div：overflow：hidden +相同高度+ 不固定宽度
    >
-   > 5. 
+   > 5. ss
 
    
 
