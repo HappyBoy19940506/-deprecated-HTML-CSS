@@ -766,9 +766,31 @@ input的name: 是用来捆绑 选择题里面每个选项的
         a text field that suggests the possible values
         from an available list. Users can also enter
         value that is not in the available list.
+         <----------------------------!>
+        <label for="browser">Choose your browser from the list:</label>
+        <input list="browsers" name="browser" id="browser">
+        
+        <datalist id="browsers">
+          <option value="Edge">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+         </-----------------------------!>
         • <select> provides a number of values from
         which user needs to select one. User
         cannot enter value that is not in the list.
+          <----------------------------!>
+        <label for="cars">Choose a car:</label>
+        
+        <select name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+        </-----------------------------!>
         ```
 
         -----
