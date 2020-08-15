@@ -877,3 +877,7 @@ input的name: 是用来捆绑 选择题里面每个选项的
    浏览器内核：Webkit
 
    前缀：-webkit-
+
+6.  现在一般不用了，除非是旧的浏览器，没更新到最新版本的，比如：
+
+   > ​	-webkit-animation:1s  name; 这样写在 css文件里面
