@@ -842,4 +842,38 @@ input的name: 是用来捆绑 选择题里面每个选项的
    >
    > 5. 利用4的原理，可以实现bootstrap的栅格系统。
 
-4. s
+
+
+----
+
+## 浏览器前缀
+
+1. 浏览器名称:  IE
+
+   浏览器内核：Trident
+
+   前缀：-ms-
+
+2. 浏览器名称:Firefox
+
+   浏览器内核：Gecko
+
+   前缀：-moz-
+
+3. 浏览器名称:Opera
+
+   浏览器内核：Presto/Blink
+
+   前缀：-o-
+
+4. 浏览器名称: Chrome
+
+   浏览器内核：Webkit/Blink
+
+   前缀：-webkit-
+
+5. 浏览器名称: Safari
+
+   浏览器内核：Webkit
+
+   前缀：-webkit-
