@@ -882,12 +882,16 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
    > ​	-webkit-animation:1s  name; 这样写在 css文件里面
 
-7. no study today
+7. 具体写法:
 
-8. no study today
-
-9. no study today
-
-10. no study today
-
-11. 
+   > ```css
+   > -webkit-transition: all 4s ease;
+   > -moz-transition: all 4s ease;
+   > -ms-transition: all 4s ease;
+   > -o-transition: all 4s ease;
+   > transition: all 4s ease;
+   > 
+   > //绝大多数时候都是写在 css3的里面的
+   > ```
+   >
+   > 
