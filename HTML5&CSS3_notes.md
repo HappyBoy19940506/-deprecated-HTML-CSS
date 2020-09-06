@@ -953,9 +953,6 @@ input的name: 是用来捆绑 选择题里面每个选项的
    >     height: 120px;
    >     border: 1px solid black;
    >     margin: 100px auto;
-   >   
-   > 
-   > 
    > }
    > 
    > .box4{
