@@ -891,11 +891,28 @@ input的name: 是用来捆绑 选择题里面每个选项的
    > -o-transition: all 4s ease;
    > transition: all 4s ease;
    > 
-   > //绝大多数时候都是写在 css3的里面的
-   > 
-   > no study today
-   > no study today
-   > no study today but soon start
+   > //绝大多数时候都是写在 css3的里面的	
    > ```
    >
-   > 
+
+8.  **现阶段不用在乎这个知识点，在后面webpack使用中，可以自动工程化 解决兼容性问题。**
+
+---
+
+## transitions效果
+
+1. transition-property: 规定设置过渡效果的**css**属性名称
+
+2. transition-duration:规定完成过渡需要多少秒
+
+3. transition-delay:定义过渡何时开始，可正可负
+
+4. transition-timing-function:规定速度效果的速度曲线
+
+   > ​	一般效果，如何实现？ --- hover+ transition
+
+   ​	
+
+   >  首先， 原本的div 先设置一下 transition：秒数
+   >
+   >  然后 要在该div上设置一个 hover，transition之后的样子就是这个hover的样子
