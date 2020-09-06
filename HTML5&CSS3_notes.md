@@ -909,6 +909,15 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
 4. transition-timing-function:规定速度效果的速度曲线
 
+   * 可选值：linear 匀速
+   * ease（默认）逐渐慢下来
+   * ease-in 越来越快
+   * ease-out 越来越慢
+   * ease-in-out 先快后慢
+   * cubic-bezier
+
+5. 一般来说，直接用复合写法。
+
    > ​	一般效果，如何实现？ --- hover+ transition
 
    ​	
@@ -916,3 +925,140 @@ input的name: 是用来捆绑 选择题里面每个选项的
    >  首先， 原本的div 先设置一下 transition：秒数
    >
    >  然后 要在该div上设置一个 hover，transition之后的样子就是这个hover的样子
+   >
+   > ```css
+   > ul li{
+   >     list-style-type: none;
+   >     float: left;
+   >     width: 60px;
+   >     height: 60px;
+   >     background: lightblue;
+   >     text-align: center;
+   >     line-height: 60px;
+   >     transition: .5s;
+   > }
+   > ul li:hover{
+   >     background: red;
+   >     width:360px;
+   > }
+   > ```
+   >
+   > 如果需要 父div ：hover ： 子div这种情况的话：
+   >
+   > transition请加在 子div上：
+   >
+   > ```css
+   > .box3{
+   >     width: 130px;
+   >     height: 120px;
+   >     border: 1px solid black;
+   >     margin: 100px auto;
+   >   
+   > 
+   > 
+   > }
+   > 
+   > .box4{
+   >     width: 110px;
+   >     height: 110px;
+   >     background: red;
+   >     transition: 2s;
+   >  
+   > }
+   > 
+   > .box3:hover .box4{
+   >     width: 200px;
+   > }
+   > ```
+   >
+   > **总之就是一句话， transition这个属性要加在hover出来的那个div上，而不是鼠标悬停的那个div上**
+
+---
+
+## transform 效果
+
+> :star:一般来说 如何实现：
+>
+> * hover + transition+ transform
+>
+> * hover 写法注意:  父类div ：hover 子类div
+>
+> * 在要transform的div上加上 transition来规定时间
+>
+> * 在要transform的div上加上 hover， 在hover里面写translate的位移量
+>
+>   ```css
+>   .box1{
+>       width: 300px;
+>       height: 200px;
+>       border: 1px solid black;
+>       margin: 0 auto;
+>   }
+>   
+>   .box2{
+>       width: 100px;
+>       height: 100px;
+>       background: red;
+>       transition: 2s;
+>   }
+>   
+>   .box2:hover{
+>       transform: translate(100px,100px);
+>       background-color: black;
+>   }
+>   ```
+>
+>   
+
+1. translate：位移
+
+   > ​	 transform: translate(100px**,**100px);
+   >
+   > ​	 或者用 translateX 
+   >
+   > ​	translate Y
+   >
+   > ​	 translateZ (3d)
+   >
+   > ​	注意这个 x y 轴之间有个逗号
+
+2. scale：缩放
+
+   > ​	transfrom:scale(2,2);
+   >
+   > ​	scaleX
+   >
+   > ​	scaleY
+   >
+   > ​	scaleZ (3d)
+   >
+   >  	值1就是大小不变，2就是2倍，.5就是一半
+
+3. rotate: 旋转
+
+   > transform:rotate(-45deg)
+   >
+   > ​	rotateX(3d)
+   >
+   > ​	rotateY(3d)
+   >
+   > ​	rotateZ
+
+4. skew: 斜切
+
+   > ​	transform:skew(45deg , 0) 正值向左倾斜，负值向右倾斜
+   >
+   > ​	skewX
+   >
+   > ​	skewY
+
+5. transform的注意事项：
+   1·变形操作不会影响到其他元素。
+   2·变形操作只能添加给块元素，但是不能添加给内联元素。
+   3·复合写法，可以同时添加多个变形操作。
+   执行是有顺序的，先执行后面的操作，再执行前面的操作。
+   translate会受到rotate、scale、skew的影响
+
+6. transform-origin:0 0;
+
+   设置transform开始的基点，默认是center center，0  0就是左上角

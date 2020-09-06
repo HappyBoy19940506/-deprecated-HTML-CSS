@@ -28,3 +28,43 @@ ul li:hover{
     clear: both;
     display: block;
 }
+
+.box1{
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 100px auto;
+}
+
+.box2{
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 2s;
+}
+
+.box2:hover{
+    transform: translate(100px,100px);
+    background-color: black;
+}
+
+.box3{
+    width: 130px;
+    height: 120px;
+    border: 1px solid black;
+    margin: 100px auto;
+  
+
+
+}
+
+.box4{
+    width: 110px;
+    height: 110px;
+    background: red;
+    transition: 2s;
+}
+
+.box3:hover .box4{
+    width: 200px;
+}
