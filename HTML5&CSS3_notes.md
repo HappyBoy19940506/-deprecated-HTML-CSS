@@ -928,18 +928,13 @@ input的name: 是用来捆绑 选择题里面每个选项的
    >
    > ```css
    > ul li{
-   >     list-style-type: none;
-   >     float: left;
-   >     width: 60px;
-   >     height: 60px;
-   >     background: lightblue;
-   >     text-align: center;
-   >     line-height: 60px;
+   > 
    >     transition: .5s;
    > }
    > ul li:hover{
    >     background: red;
    >     width:360px;
+   >    	transfrom:rotate(45deg);
    > }
    > ```
    >
@@ -949,26 +944,22 @@ input的name: 是用来捆绑 选择题里面每个选项的
    >
    > ```css
    > .box3{
-   >     width: 130px;
-   >     height: 120px;
-   >     border: 1px solid black;
-   >     margin: 100px auto;
+   > 
    > }
    > 
    > .box4{
-   >     width: 110px;
-   >     height: 110px;
-   >     background: red;
+   > 
    >     transition: 2s;
    >  
    > }
    > 
    > .box3:hover .box4{
    >     width: 200px;
+   >   transfrom:rotate(45deg);
    > }
    > ```
    >
-   > **总之就是一句话， transition这个属性要加在hover出来的那个div上，而不是鼠标悬停的那个div上**
+   > **总之就是一句话， transition这个属性要加在hover后面的那个div上，而不是鼠标悬停的那个div（父div）上**,**也不是 直接写在DIV:HOVER里面。**
 
 ---
 
@@ -978,28 +969,31 @@ input的name: 是用来捆绑 选择题里面每个选项的
 >
 > * hover + transition+ transform
 >
-> * hover 写法注意:  父类div ：hover 子类div
+> * hover有2种情况，一种是直接【div:hover】,一种是 【父div:hover:子div】
 >
-> * 在要transform的div上加上 transition来规定时间
+> * 简单型的话： transition写在div里，transform写在hover里。
 >
-> * 在要transform的div上加上 hover， 在hover里面写translate的位移量
+> * 复杂型的话：【父div:hover:子div】里写transform，【div子】里写transistion。
+>
+> * 总结一句话，1带hover的地方一定不写transition,2 transition写在子div里，3transform一定写在带hover的里面。
 >
 >   ```css
->   .box1{
->       width: 300px;
->       height: 200px;
->       border: 1px solid black;
->       margin: 0 auto;
+>   .box1 :hover .box2{
+>   
+>       transform:translate(100px,100px);
 >   }
 >   
 >   .box2{
->       width: 100px;
->       height: 100px;
->       background: red;
+>     transition:1s;
+>   }
+>   
+>   //////////////////////////////要么是下面一种//////////////////////////////////
+>   .box{
+>   
 >       transition: 2s;
 >   }
 >   
->   .box2:hover{
+>   .box:hover{
 >       transform: translate(100px,100px);
 >       background-color: black;
 >   }
@@ -1059,3 +1053,5 @@ input的name: 是用来捆绑 选择题里面每个选项的
 6. transform-origin:0 0;
 
    设置transform开始的基点，默认是center center，0  0就是左上角
+
+   no study today

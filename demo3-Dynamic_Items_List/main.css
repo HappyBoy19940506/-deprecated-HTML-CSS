@@ -74,6 +74,8 @@ li{
     border: 1px black solid;
     margin-left: 20px;
     float: left;
+    position: relative;
+    overflow: hidden;
 }
 
 .list li:nth-of-type(1){
@@ -104,8 +106,11 @@ li{
 .cover{
     width:252px;
     height: 252px;
-    background-color: black;
-    opacity: .5;
+    background-color: rgb(0,0,0,0.5);
+    position: absolute;
+    top:-252px;
+    left:0;
+    transition: 1s;
 }
 
 .cover span{
@@ -115,4 +120,36 @@ li{
     text-align: center;
     display: block;
     line-height: 252px;
+}
+
+.list li:nth-of-type(1):hover .cover{
+  
+    transform:translate(0,252px);
+}
+.list li:nth-of-type(2):hover .cover{
+   
+    transform:translate(0,252px);
+}
+.list li:nth-of-type(3):hover .cover{
+   
+    transform:translate(0,252px);
+}
+.list li:nth-of-type(4):hover .cover{
+  
+    transform:translate(0,252px);
+}
+.list li:nth-of-type(5):hover .cover{
+
+    transform:translate(0,252px);
+}
+.list li:nth-of-type(6):hover .cover{
+
+    transform:translate(0,252px);
+}
+.a{
+    width: 300px; height: 100px; background-color: black; 
+    transition: 1s;
+}
+.a:hover{
+    transform:rotate(45deg);
 }
