@@ -147,7 +147,8 @@ li{
     transform:translate(0,252px);
 }
 .a{
-    width: 300px; height: 100px; background-color: black; 
+    width: 300px; height: 100px; background-color: red;
+    opacity: 0.2; 
     transition: 1s;
 }
 .a:hover{
@@ -156,9 +157,24 @@ li{
 
 .b{
     width: 300px; height: 100px; background-color: red; 
+    opacity: 0.2; 
     transition: 1s;
-    transform:rotate(0);
 }
 .b:hover{
     transform:rotate(45deg);
+}
+
+.tubiao{
+    width: 124px;
+    height: 124px;
+}
+.tubiao:hover img{
+    animation: move 1s;
+}
+
+@keyframes move{
+    0%{transform: translate(0,0); opacity: 1;}
+    50%{transform: translate(0,-25px); opacity: 0;}
+    51%{transform: translate(0,25px); opacity: 0;}
+    100%{transform: translate(0,0);opacity: 1;}
 }

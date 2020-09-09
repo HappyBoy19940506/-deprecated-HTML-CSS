@@ -1055,3 +1055,37 @@ input的name: 是用来捆绑 选择题里面每个选项的
    设置transform开始的基点，默认是center center，0  0就是左上角
 
    no study today
+
+   ---
+
+   ## animation css
+
+   1. 单一样式:
+
+      animation-name·设置动画的名字（自定义的）
+      animation-duration：动画的持续时间
+      animation-delay：动画的延迟时间
+      animation-iteration-count：动画的重复次数，默认值就是1
+      infinite无限次数
+      animation-timing-function·动画的运动形式，比如ease ease in out之类的
+
+   2. 注意事项：
+
+      1. 默认情况下，播放完动画会停留在起始位置，注意是回到原点，不是往回再走一遍
+      2. 可以写from to 也可以写 0%和100%
+
+   3. 复合样式：
+
+      animation: name 4s 2s infinite;
+
+   4. ```css
+      .class_name{
+      -webkit-animation:move 1s -0.1s;
+      }
+      @keyframs move{
+      0%{transform:translate(199px,0);opacity:0;}
+      100%{transform:translate(199px,0);opacity:0;}
+      }
+      ```
+
+   5. 
