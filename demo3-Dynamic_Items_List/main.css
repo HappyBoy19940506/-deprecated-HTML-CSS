@@ -25,7 +25,14 @@ ul li{
     height: 124px;
     background: url('./img/play_btn.png');
     position: relative;
+    border: 2px red solid;
+    transition: 1s;
 }
+.play:hover{
+    border: 2px blue solid;
+}
+
+
 .play_info{
     width:124px;
     height:124px;
@@ -177,4 +184,54 @@ li{
     50%{transform: translate(0,-25px); opacity: 0;}
     51%{transform: translate(0,25px); opacity: 0;}
     100%{transform: translate(0,0);opacity: 1;}
+}
+
+
+
+.show_pic{
+    width: 640px;
+    height: 640px;
+    position: relative;
+    perspective: 700px;
+
+}
+
+.pic1{
+    position: absolute;
+    top:0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: 1s;
+   
+    width: 640px;
+    height: 640px;
+    background: url('./img/1.jpeg');
+    margin: 0 0;
+    transform:rotateY(-180deg);
+}
+
+.pic2{
+    position: absolute;
+    top:0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: 1s;
+ 
+    width: 640px;
+    height: 640px;
+    background: url('./img/2.jpeg');
+    margin: 0 0;
+    transform:rotateY(0);
+} 
+
+.show_pic:hover .pic1{
+    transform-style: preserve-3d;
+    transform:rotateY(0);
+
+}
+
+.show_pic:hover .pic2{
+    transform-style: preserve-3d;
+    transform:rotateY(180deg);
+
 }

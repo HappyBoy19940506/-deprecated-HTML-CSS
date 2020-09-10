@@ -1109,3 +1109,79 @@ input的name: 是用来捆绑 选择题里面每个选项的
       both:backwards和forwards同时生效
 
       > ​	 在运动结束的之后，停到结束位置. 而且 0%时候的关键帧的样式，在 delay执行前就生效。
+
+   6. animation-direction：属性定义是否应该轮流反向播放动画。
+      alternate: 一次正向（0%~100%),一次反向(100%~0%).
+      reverse：永远都是反向，从100%~0%.
+      norma1〈默认值）：永远都是正向，从0%-100%.
+
+----
+
+## animate.css库
+
+1. 现成的动画样式，不需要自己写了。
+
+2. 先引用 animate.css
+
+3. 再写class
+
+   ```css
+   <img class="animate tada infinite">
+   ```
+
+   
+
+---
+
+## transform之 3D transform
+
+1. 典型的属性就是 rotateX rotateY ，但是rotateZ就是相当于普通的旋转了。
+
+2. 如果效果不明显，请在父容器div上添加【景深】，perspective属性。值越小，效果越明显。但不能为负。
+
+3. translate属性中， translateZ属于 3D位移效果,有点像 scale效果,注意和景深属性的大小.
+
+4. scale属性中,scaleZ属于3d效果
+
+5. transform-origin：center center -50px；  z轴上只能写数值，不能写单词。
+
+6. perspective-origin: left --- 把照相机放到左侧的视角来观察浏览器
+
+   perspective-origin: top right --- 把照相机放到  右上方的视角来观察浏览器
+
+7.  3D写法:
+
+   transfrom: scale3d(2,2,1.5)
+
+   transform: translate3d(200px,300px,100px)
+
+   transform:rotate3d(0，0，1，30deg) 四个值： x轴不变，y轴不变，z轴旋转30度。
+
+8. backface-visibility： visible默认/hidden。 如果选择opacity的话能不能看到后面。和transition一样，不要和hover同时出现，而要写在子div里
+
+9. transform-style：flat（默认值), 如果有3d效果的transform要选择 preserve-3d，产生一个三维空间
+
+10. 总结：
+
+    > 1. 要写transform3d的写法，或者 rotateX rotateY translateZ位置的属性值等等.
+    > 2. 要设置 transform-style：preserve-3d 不然立体的话没有厚度。 此 加给本身。
+    > 3. 有时候要设置 transform-origin：center center -50px；  z轴上只能写数值，不能写单词。此 加给本身。
+    > 4. 要设置景深perspective：100px。不然没有3d效果，此加给 父容器。
+
+---
+
+##  3d翻转效果：
+
+技巧： 
+
++ 所有ul中的li用position：absolute定位的话，最后一个会出现在最上面，注意顺序层次。
+
++ 父类里面写： perspective， 
+
++ 子类里面写：transition和transform的初始状态，另外还要写背面隐藏backface
+
++ hover里面写： transform-style：3d 和 transform的终止形态
+
++ 效果构造： 第一张图是rotateY 0 --->rotateY 180， 外加背面隐藏
+
+  ​					第二张图是从rotateY  负180 ----> rotate0， 外加背面隐藏
