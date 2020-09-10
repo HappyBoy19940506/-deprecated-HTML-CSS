@@ -1185,3 +1185,19 @@ input的name: 是用来捆绑 选择题里面每个选项的
 + 效果构造： 第一张图是rotateY 0 --->rotateY 180， 外加背面隐藏
 
   ​					第二张图是从rotateY  负180 ----> rotate0， 外加背面隐藏
+
+----
+
+## CSS中background属性的扩展
+
+1. background-size：背景图的尺寸大小
+   * cover：覆盖
+   * contain： 包含
+2. background-origin：背景图的填充位置
+   * padding-box（默认）
+   * border-box
+   * content-box
+3. background-clip：背景图的裁切方式
+   - padding-box
+   - border-box（默认）
+   - content-box
