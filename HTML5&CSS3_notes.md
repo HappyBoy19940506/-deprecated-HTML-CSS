@@ -1170,7 +1170,7 @@ input的name: 是用来捆绑 选择题里面每个选项的
 
 ---
 
-##  3d翻转效果：
+##  3d翻转效果
 
 技巧： 
 
@@ -1191,13 +1191,206 @@ input的name: 是用来捆绑 选择题里面每个选项的
 ## CSS中background属性的扩展
 
 1. background-size：背景图的尺寸大小
-   * cover：覆盖
-   * contain： 包含
+   * cover：覆盖。 就是等比放大，一定会填完填满整个div，多出来的部分自动隐藏
+   * contain： 包含。也是等比放大，但是到边界就停止了，背景图会完整显示，至于能不能填满就不知道了
+   * 或者直接设置数值，比如在设计loading bar的时候background-size：30px 30px
 2. background-origin：背景图的填充位置
-   * padding-box（默认）
-   * border-box
-   * content-box
+   * padding-box（默认）：背景图会出现在padding区域开始填充
+   * border-box：背景图会出现在border区域开始填充
+   * content-box：背景图会出现在content区域开始填充
+   * 从外到内--- margin--border---padding---content
 3. background-clip：背景图的裁切方式
-   - padding-box
-   - border-box（默认）
-   - content-box
+   - padding-box：如果不选择 no-repeat，他会从padding区域开始repeat复制
+   - border-box（默认）：如果不选择 no-repeat，他会从border区域开始repeat复制
+   - content-box：如果不选择 no-repeat，他会从content区域开始repeat复制
+
+
+
+---
+
+## background-image中的css渐变
+
+1. 就像rgb那种光谱效果一样
+
+2. ```css
+   background-image:linear-gradient(red,blue,yellow,green); //默认从上到下
+   background-image:linear-gradient(to top red,blue,yellow,green); //设置从下到上
+   background-image:linear-gradient(to right red,blue,yellow,green); //设置从左到右
+   background-image:linear-gradient(0deg,red,blue,yellow,green); //0度是从下往上，和默认相反
+   background-image:linear-gradient(45deg,red,blue,yellow,green); //从底开始顺时针
+   background-image:linear-gradient(-45deg,red,blue,yellow,green); //从底开始逆时针
+   background-image:linear-gradient(red 25%,blue 75%); //设置百分比的话就没有渐变效果了，适合用来做条纹。比如
+    background-image: linear-gradient(to right bottom,yellow 0%,yellow 25%,black 25%,black 50%,yellow 50%,yellow 75%,black 75%,black 100%);
+   的意是就是 yellow是从0-25%， black从25%-50%，这段内只存在yellow，或只存在black
+   ```
+
+3. 还有一种不常用，叫 radial-gradient(red,blue) 就是从中心点开始的光谱
+
+
+
+---
+
+## Loading 加载条 的实现。
+
+1. <prgress> 标签可以直接实现进度条，但不是动态的
+
+2. 动态的那种 斜杠形的 加载条不停的 向右传递带的实现方法。
+
+   ```html
+       <div class="loading_bar2">
+       </div>
+   ```
+
+   ```css
+   .loading_bar2{
+       width: 400px;
+       height: 40px;
+       border:1px solid black;
+       margin: 200px auto;
+       background-image: linear-gradient(to right bottom,yellow 0%,yellow 25%,black 25%,black 50%,yellow 50%,yellow 75%,black 75%,black 100%);
+       background-size: 40px;
+       background-repeat: repeat;
+       animation: moveLoadingBar 3s infinite linear;
+   }
+   
+   @keyframes moveLoadingBar{
+       0%{background-position: 0 0;}
+       100%{background-position:400px 0 ;}
+   }
+   ```
+
+3. 还有自制的更加炫酷的动态光条效果loading bar：
+
+   ```css
+   .loading_bar{
+       width: 400px;
+       height: 40px;
+       border: 1px solid black;
+       margin : 200px auto;
+       animation: moves 3s infinite linear;
+       background-image: linear-gradient(to right, blue,red,blue);
+       background-size:400px 40px;
+       background-repeat: repeat;
+   
+   }
+   
+   @keyframes moves{
+       0%{background-position: 0 0;}
+       100%{background-position:400px 0 ;}
+   }
+   
+   ```
+
+
+4.  总之原理就是：
+
+   > * 在div里设置
+   >   * background-image：linear-gradinet(设置方向，设置渐变形式，条形用%，渐变直接写，注意收尾颜色呼应)
+   >   * background-size：\*px \*px ，\* 就是bar的高度
+   >   * bacground-repeat ：no-repeat
+   >   * 设置animation： name 3s infinite **linear**
+   > * @keyframes设置动画
+   >   - 注意格式 0%{} 这个后面没有；分号，写了的话会动画失效
+   >   - 然后设置 0%{} 以及100%{}，分别设置background-position属性
+   >   - 值分别为0 0， 和 bar的宽度和0
+   >   - 这样就可以连贯动起来了
+
+   
+
+
+
+   
+
+   
+
+## 小图标进阶---@font-face 直接用icon-font
+
+   1. 首先了解下 通过class来调用 icon-font的底层原理
+
+      > ​	其实就是自己命名了一个class名字，然后该class有一个after伪元素，content内容就是字体的内容，然后通过@font-face定义 font-family里面的字体库，相当于调用了一个字体。
+
+   2. 步骤：
+
+      + 下载css文件，用 阿里的那个项目保管更方便
+      + 然后放到项目列表里面
+      + 然后link标签引用
+      + 然后调用的时候，直接class就可以了
+      + 可以当做字体一样修改大小和颜色，很方便。
+      + 如果是彩色的，是svg图，引入方式不同，具体看demo.html
+      + 和如何使用 animate.css很像
+
+   
+
+------
+
+## CSS3 文字阴影
+
+   ```css
+   div{
+     text-shadow:10px 10px 30px blue  ;
+    //阴影的默认颜色跟文字的颜色相同
+    //10px 10px就是 想x轴偏移10px，想y轴偏移10px
+    // 第三个值是模糊值，越大越模糊
+    //可以设置多原因，用逗号分隔
+   }
+   ```
+
+   
+
+## CSS 盒子阴影
+
+```css
+div{
+  box-shadow:10px 10px;
+  //x轴和y轴的偏移量，默认是黑色背景。
+  box-shadow:10px 10px 10px;
+  //第三个10px就是 模糊值。
+  box-shadow:10px 10px 10px 10px；
+  //第四个10px就是 阴影的范围，越大会越大。
+  box-shadow:10px 10px 10px 10px blue;
+  //背景颜色改成蓝色。
+  box-shadow:10px 10px 10px 10px blue inset;
+  //改成inset就是内阴影，默认是外阴影。但是如果设置outset，反而会什么效果都没有。
+  
+  ////可以设置多原因，用逗号分隔
+  ///可以设置多原因，用逗号分隔
+}
+```
+
+
+
+```css
+实现   商品列表 悬停hover后 浮起来的效果：
+技术要点：
+1.  通过hover +transition来实现动态效果
+2.   通过定位，原div设置top 0 ，hover后设置top -3px来实现 向上移动的效果
+3.   通过box-shadow：0px 10px 10px 3px #ccc来设置一个 下边和两边的灰色阴影
+.mb{
+    border: 1px solid black;
+    width: 398px;
+    margin: 100px 100px;
+    transition: 1s;
+    position: relative;
+    top: 0;
+}
+
+img{
+    display: block;
+}
+
+.mb:hover{
+    top:-3px;
+    box-shadow: 0px 10px 10px 3px  #ccc ;
+}
+```
+
+
+
+
+
+## mask遮罩
+
+```css
+
+```
+

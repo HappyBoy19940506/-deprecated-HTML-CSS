@@ -235,3 +235,59 @@ li{
     transform:rotateY(180deg);
 
 }
+
+
+.loading_bar{
+    width: 400px;
+    height: 40px;
+    border: 1px solid black;
+    margin : 200px auto;
+    animation: moves 3s infinite linear;
+    background-image: linear-gradient(to right, blue,red,blue);
+    background-size:400px 40px;
+    background-repeat: repeat;
+
+}
+
+@keyframes moves{
+    0%{background-position: 0 0;}
+    100%{background-position:400px 0 ;}
+}
+
+.loading_bar2{
+    width: 400px;
+    height: 40px;
+    border:1px solid black;
+    margin: 200px auto;
+    background-image: linear-gradient(to right bottom,yellow 0%,yellow 25%,black 25%,black 50%,yellow 50%,yellow 75%,black 75%,black 100%);
+    background-size: 40px;
+    background-repeat: repeat;
+    animation: moveLoadingBar 3s infinite linear;
+    -webkit-animation:moveLoadingBar 3s infinite linear;
+}
+
+@keyframes moveLoadingBar{
+    0%{background-position: 0 0;}
+    100%{background-position:400px 0 ;}
+}
+
+/*  */
+/*  */
+/*  */
+.mb{
+    border: 1px solid black;
+    width: 398px;
+    margin: 100px 100px;
+    transition: 1s;
+    position: relative;
+    top: 0;
+}
+
+img{
+    display: block;
+}
+
+.mb:hover{
+    top:-3px;
+    box-shadow: 0px 10px 10px 3px  #ccc ;
+}
