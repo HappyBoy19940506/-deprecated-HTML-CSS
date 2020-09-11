@@ -1352,8 +1352,8 @@ div{
   box-shadow:10px 10px 10px 10px blue inset;
   //改成inset就是内阴影，默认是外阴影。但是如果设置outset，反而会什么效果都没有。
   
-  ////可以设置多原因，用逗号分隔
-  ///可以设置多原因，用逗号分隔
+  ////可以设置多阴影，用逗号分隔
+  ///可以设置多阴影，用逗号分隔
 }
 ```
 
@@ -1391,6 +1391,70 @@ img{
 ## mask遮罩
 
 ```css
+1. mask目前还没有标准化，需要添加浏览器前缀：-webkit-mask:
+2. mask肯定都是没有背景的图片，所以图片格式一定是png;
+3.有哪些属性呢？
+div{
+    background:url('./img.jpg');
+  	-webkit-mask:url('mask/png') no-repeat center center /200px 200px;
+  //设置no-repeat， center center是位置， 用/分隔， 后面200px 200px为size大小
+}
+///可以设置多遮罩，用逗号分隔，后面的遮罩在下面
+```
 
+---
+
+## CSS3倒影
+
+```css
+box-reflect操作
+1. 目前还没有标准化，需要添加浏览器前缀：-webkit-box-reflect:
+2.有那些属性？
+.box{-webkit-box-reflect:below 20px;}
+//设置倒影在below下方， 并且距离20px
+.box{-webkit-box-reflect:below 20px url('mask.png');}
+//设置倒影在below下方， 并且距离20px，并且设置遮罩mask.png
+.box{-webkit-box-reflect:below 20px linear-gradient(rgba(255,255,255,0) 50% ,rgba(255,255,255,1) 100%);}
+//设置倒影在below下方， 并且距离20px，并且设置颜色渐变，从黑慢慢变白。
+3.补充：
+因为box-reflect还没有标准化，所以如果单纯想要图片翻转的话可以：
+div{ transform:scaleX(-1)} 左右翻转
+div{ transform:scaleY(-1)} 上下翻转
+div{ transform:scale(-1)} 全部翻转
+```
+
+
+
+----
+
+
+
+## CSS3中的blur模糊
+
+```css
+img{
+  filter:blur(10px);
+}
+
+10px值越大，模糊越大
+```
+
+
+
+
+
+---
+
+## CSS中的 calc就算
+
+用途： 当同时出现100%和 100px这种单位不同的时候，可以用calc自动换算。
+
+比如我要在一个div中始终不管父div长度多少，我要求始终右边有一个100px的子div。此时可以：
+
+```css
+.box1{
+  width:calc(100%-100px;)
+}
+那么不管 父容器长度是多少，反正100%换算成***px后，box1的长度是一个变量，然后box2永远是100px；
 ```
 
