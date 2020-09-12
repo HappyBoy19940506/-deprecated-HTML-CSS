@@ -246,7 +246,6 @@ li{
     background-image: linear-gradient(to right, blue,red,blue);
     background-size:400px 40px;
     background-repeat: repeat;
-
 }
 
 @keyframes moves{

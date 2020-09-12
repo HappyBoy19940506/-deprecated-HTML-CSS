@@ -1462,3 +1462,59 @@ img{
 
 ## CSS3报纸分栏布局属性
 
+```css
+.box{
+ width:600px;
+ height:400px;
+ colum-count:4;
+  //分成四栏
+ colum-width:100px;
+  // 每栏100px，分成几个自动
+ ** **  ** 特别注意** ** ** ** ，  
+ ** ** colum-count:4;** ** 
+ ** ** 和** ** ** 
+** **  colum-width:100px;** ** ** 
+** ** 只能二选一，两个是冲突的，只能选择一个生效。
+  ** ** ** ** ** ** ** ** ** ** ** ** ** ** 
+ colum-gap:40px;
+  //每个column之间的间隔。
+ 
+ colum-rule:1px red dashed;
+  //每个column之间的 边界线
+}
+
+
+.box h2{
+  colum-span:all; 
+  text-algin:center
+    //将某一段设置成版头，并居中。
+}
+```
+
+----
+
+## 伪元素和伪类
+
+**pseudo class VS pseudo element**
+
+1. 如何判断? 
+
+   > ​	到底有没有创建这个虚拟容器？
+   >
+   >  pseudo class是不创建虚拟容器的，直接改变class本身的样式，比如hover，直接改变hover里所有内容的样式。
+   >
+   > 但是 pseduo element是额外创建了一个虚拟容器的，比如：：after 或者  ::selection， 是直接后面创建了一个虚拟的类似span的标签，然后更改的是里面虚拟容器的样式
+   >
+   > 所以，after 和before 一定要写成 ::after 和  ：：before
+
+2. 所以，after 和before 一定要写成 ::after 和  ：：before，是双冒号。
+
+----
+
+## CSS Hack and Compatibility
+
+1. 针对老旧浏览器做兼容性处理
+2. 如何使用？
+   - CSS属性前缀法
+   - 选择器前缀法
+   - IE条件注释法
