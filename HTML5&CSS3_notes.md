@@ -1518,3 +1518,4 @@ img{
    - CSS属性前缀法
    - 选择器前缀法
    - IE条件注释法
+3. compatibility
