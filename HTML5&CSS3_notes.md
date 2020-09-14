@@ -1575,13 +1575,29 @@ img{
    >
    > 前缀标识			只能兼容的浏览器（只能对IE生效，用Chrome什么前缀都没用）
    >
-   > ​    <!--[if IE]>	...<![endif]-->						 IE
+   > ​    <!--[if IE]>	...<![endif]-->						 IE7 IE8 IE9 IE10 （但是再以上就不支持注释法了）
    >
    > ​	<!--[if IE7]>...<![endif]-->							 IE7
    >
-   > ​	<!--[if lte IE7]>	...<![endif]-->					 IE7 以下
+   > ​	<!--[if lte(小于等于) IE7]>	...<![endif]-->					 IE7 以下
    >
    > ​	<!--[if ! IE7]>	...<![endif]-->					 非IE7
    >
    >  里面的... 是html代码，这是写在html里面的，上面2个是写在css里面的。
+
+6. ** **IE浏览器常见低版本IE浏览器BUG****
+
+   + 透明度BUG
+
+     > ​	IE6 IE7 IE8 的浏览器不支持 opactiy:0.5这种属性
+     >
+     >  解决方案: 写成 filter:alpha(opacity=50);
+
+   + IE6下面的双边距BUG
+
+     > ​	IE6 下如果是 .box{float:left  ; width:100px ; height:100px; margin-left:100px;}
+     >
+     >  浮动+margin-left 就会出现诡异的两倍左margin效果，左边会变成2倍margin-left，即200px
+     >
+     >  解决方案： 在后面加一条  \_display:inline;  注意下划线 \_  ，其目的是只对 IE6生效。
 
