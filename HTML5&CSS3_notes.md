@@ -1798,12 +1798,7 @@ img{
                background: grey;
            //不设置宽度，要让他自适应，瓜分剩余的宽度 
            }
-           .neirong{
-               width: 100%;
-               height: 200px;
-               background-color: blue;
-          	
-           }
+         
    
    			 .right{
                width: 300px;
