@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何实现等高布局</title>
+    <link rel="stylesheet" href="">
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .parent{
+            border:10px black solid;
+            overflow: hidden;
+        }
+        .box1{
+            float: left;
+            width:100px;
+            
+            margin-bottom: -2000px;
+            padding-bottom:2000px;
+            background: red;
+
+        }
+        .box2{
+            float:right;
+            width: 100px;
+            
+            margin-bottom: -2000px;
+            padding-bottom: 2000px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box1">
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+
+        </div>
+        <div class="box2">
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+            <p>222</p>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
