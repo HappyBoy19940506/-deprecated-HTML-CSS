@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双飞翼布局</title>
+    <style>
+        *{margin:0; padding:0;}
+        .header{ height: 300px; background: red;}
+        .left{
+            width: 300px;
+            height: 500px;
+            background: black;
+            float: left;
+            margin-left: -100%;
+    
+        }
+        .right{
+            width: 300px;
+            height: 500px;
+            background: yellow;
+            float: left;
+            margin-left: -300px;
+        }
+        .center{
+            height: 800px;
+            width: 100%;
+            /* 宽度不固定，填100%，不然不显示 */
+            background: grey;
+            float: left;
+        }
+        .neirong{
+            width: 100%;
+            height: 200px;
+            background-color: blue;
+            margin: 0 300px 0 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="container">
+        <div class="center">
+            <div class="neirong"></div>
+        </div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    
+</body>
+</html>

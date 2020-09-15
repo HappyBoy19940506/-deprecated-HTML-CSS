@@ -1643,13 +1643,176 @@ img{
 
    - 等高布局
 
-     > ​	用途：很多时候内容是动态的，不太好控制多列div的大小。
+     > ​	用途：如何让多列div的高度 取决于最高的一个div。 宽度是任意的，无所谓。
      >
-     > ​    技巧： 首先 肯定每列都是float的
+     > ​    技巧： 首先 肯定每列都是float的，其次父容器设置overflow:hidden;
      >
      > ​				然后每列如何实现 不管内容如何，永远等高呢？永远和最多内容的那一行等高呢？
      >
      > ​				方法就是把每个div 都设置 一个 margin-bottom：\***px 和 padding-bottom：\***px,  里面*值相等。
      >
-     >    **特别注意： div里面不能设置高度，要让他自适应内容的高度。**
+     >    **特别注意： 子div里面不能设置高度，要让他自适应内容的高度。**你设置了高度，还用得着自适应吗？？
 
+   - 双飞翼布局
+
+     > ​	用途：一般用在 三列布局，左右两列固定宽和高，中间高度固定，宽度自适应的时候，即 **中间的div，高度固定，宽度无论如何变化，左右两列的div不会有任何宽高改变**。比如：后台管理系统。
+     >
+     >  1. BFC方法
+     >
+     >  2. 定位，左边定位，右边定位，中间margin：0 auto；
+     >
+     >  3. 浮动（双飞翼布局、圣杯布局）
+     >
+     >  4. flex弹性布局
+     >
+     >     :star:这里重点说下 第三种，利用**浮动实现双飞翼布局**。
+     >
+     >     - 首先，三个div要注意顺序，必须先写center，所以是 div.center   / div.left / div.right
+     >
+     >     - 其次，让三个div都要float：left浮动
+     >
+     >     - 然后 让 div.left和div.right通过margin负值，移动到制定的位置
+     >
+     >     - 最后，把center里面的内容用margin的办法固定在中间。
+     >
+     >       ```css
+     >       .left {
+     >        float:left;
+     >        width:100px;
+     >        height:200px;
+     >        margin-left:-100%;
+     >         //直接移动到最左边去了
+     >       }
+     >       .right {
+     >        float:left;
+     >        width:100px;
+     >        height:200px;
+     >        margin-left:-150px;
+     >         //直接移动到最右边， -150怎么来的？ 相当于负的 div宽度。
+     >       }
+     >       
+     >               .center{
+     >                   height: 800px;
+     >                   width: 100%;
+     >                   /* **特别注意： 中间div以及他的内容div里面不能设置宽度，要设置称100%。**如果你设置了宽度，还用得着自适应吗？？ */
+     >                   
+     >                   float: left;
+     >               }
+     >               .neirong{
+     >                   width: 100%;
+     >                   height: 200px;
+     >                   
+     >                   margin:0 150px 0 100px;这个数值其实就是 左div 和 右 div的宽度。
+     >               }
+     >       ```
+     >
+     >          **特别注意： 中间div以及他的内容div里面不能设置宽度，要设置称100%。**如果你设置了宽度，还用得着自适应吗？？
+
+   - 圣杯布局  基本上双飞翼一样
+
+   - 其实现在，都用flex布局了，请看下面一节
+
+     ## 
+
+
+
+
+
+
+
+##  牛逼的来了， Flex布局
+
+1. display：flex； 把该元素变成flex元素，此时该容器变成flex容器，float浮动和vertical-align通通失效。
+
+2. flex-direction：row/ column; 规定主轴方向， 主轴方向为row，水平排列；主轴方向为column，垂直排列；
+
+3. justify-content: 
+
+   - flex-start  从头部对齐
+
+   - flex-end 尾部对齐
+
+   - center 中心对齐
+
+   - space-between  两端对齐
+
+   - space-around 自动分配间隔
+
+     
+
+4. flex-wrap:
+
+   - nowrap
+   - wrap
+   - warp-reverse
+
+5. align-items:
+
+   - stretch
+   - center
+   - flex-start
+   - flex-end
+   - baseline
+
+   
+
+   ---
+
+   牛逼的来了：
+
+   ----
+
+   
+
+6. **flex-grow:** 
+
+7. flex-shrink:
+
+8. 所以，之前的双飞翼布局，我们可以直接：
+
+   ```css
+   			        *{margin:0; padding:0;}
+           .header{ height: 300px; background: red;}
+           .container{
+               display: flex;
+               flex-direction: row;
+               justify-content:space-around;
+               width: 100%;
+   
+           }
+           .left{
+               width: 300px;
+               height: 500px;
+               background: black;
+         
+       
+           }
+           .right{
+               width: 300px;
+               height: 500px;
+               background: yellow;
+           
+           }
+           .center{
+               height: 800px;
+               flex-grow: 1;
+               background: grey;
+            
+           }
+           .neirong{
+               width: 100%;
+               height: 200px;
+               background-color: blue;
+          
+           }
+   ```
+
+
+
+----
+
+## 用Flex布局完成 手机页面布局
+
+- 
+
+  
