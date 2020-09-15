@@ -1764,16 +1764,17 @@ img{
 
    
 
-6. **flex-grow:** 在父容器规定尺寸的情况下，部分子容器已经固定尺寸，（比如主轴是row，就指的是width，主轴是column，就指的是height）。剩余部分的子容器并未设置相应尺寸的时候，用该属性可以自动填充剩余空间。 
+6. **flex-grow:父容器剩余空间的瓜分比例**--> 在父容器规定尺寸的情况下，部分子容器已经固定尺寸(没有也无所谓），（比如主轴是row，就指的是width，主轴是column，就指的是height）。剩余部分的子容器并未设置相应尺寸的时候，用该属性写在他们的css上可以自动填充剩余空间。 
 
    如果有2个不确定的子容器，那一个设置flex-grow：1，另一个设置flex-grow：2的意思就是剩余部分按1：2的比例划分给他们。
 
-7. flex-shrink:
+7. flex-shrink:元素的多余的剩余空间剩余比例
 
 8. 所以，之前的双飞翼布局，我们可以直接：
 
    ```css
-   			        *{margin:0; padding:0;}
+   html,body{height: 100%;}		        
+   *{margin:0; padding:0;}
            .header{ height: 300px; background: red;}
            .container{
                display: flex;
@@ -1818,10 +1819,12 @@ img{
 
 ## 用Flex布局完成 手机页面布局
 
-- 要点1： body设置 display: flex;
-              flex-direction: row;
+- 要点1： body设置 display: flex; **height：100%**
+              flex-direction: column;
 
-- 要点2: 主题部分直接设置: flex-grow:1
+- html 和 body设置 **height：100%**
+
+- 要点2: 主体部分直接设置: flex-grow:1
 
 - 要点3：设置footer： 比如60px；
 
