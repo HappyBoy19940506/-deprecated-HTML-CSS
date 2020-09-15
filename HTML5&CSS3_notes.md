@@ -1728,7 +1728,7 @@ img{
 
 3. justify-content: 
 
-   - flex-start  从头部对齐
+   - flex-start  从头部对齐 （默认）
 
    - flex-end 尾部对齐
 
@@ -1736,20 +1736,20 @@ img{
 
    - space-between  两端对齐
 
-   - space-around 自动分配间隔
+   - space-around 自动分配间隔，使得每个div间隔相同px
 
      
 
-4. flex-wrap:
+4. flex-wrap: 沿着主轴方向排列，如果排满了怎么处理
 
-   - nowrap
-   - wrap
-   - warp-reverse
+   - nowrap 默认：不移到下一行或下一列，直接溢出父div
+   - wrap：移到下一行或下一列
+   - warp-reverse：移到下一行或下一列，溢出的那个移反而在第一行或第一列
 
-5. align-items:
+5. align-items: 和主轴对应的那个交叉轴上的定位，而且可以用在任何元素上
 
    - stretch
-   - center
+   - center  默认
    - flex-start
    - flex-end
    - baseline
@@ -1764,7 +1764,9 @@ img{
 
    
 
-6. **flex-grow:** 
+6. **flex-grow:** 在父容器规定尺寸的情况下，部分子容器已经固定尺寸，（比如主轴是row，就指的是width，主轴是column，就指的是height）。剩余部分的子容器并未设置相应尺寸的时候，用该属性可以自动填充剩余空间。 
+
+   如果有2个不确定的子容器，那一个设置flex-grow：1，另一个设置flex-grow：2的意思就是剩余部分按1：2的比例划分给他们。
 
 7. flex-shrink:
 
@@ -1777,33 +1779,36 @@ img{
                display: flex;
                flex-direction: row;
                justify-content:space-around;
+             //相当于做了个浮动，把所有子元素全部row排列
                width: 100%;
-   
+   						//注意，要固定父容器宽度
            }
            .left{
                width: 300px;
                height: 500px;
                background: black;
-         
+         	//固定尺寸
        
            }
-           .right{
-               width: 300px;
-               height: 500px;
-               background: yellow;
-           
-           }
+   
            .center{
                height: 800px;
                flex-grow: 1;
                background: grey;
-            
+           //不设置宽度，要让他自适应，瓜分剩余的宽度 
            }
            .neirong{
                width: 100%;
                height: 200px;
                background-color: blue;
-          
+          	
+           }
+   
+   			 .right{
+               width: 300px;
+               height: 500px;
+               background: yellow;
+           //固定尺寸
            }
    ```
 
@@ -1813,6 +1818,13 @@ img{
 
 ## 用Flex布局完成 手机页面布局
 
-- 
+- 要点1： body设置 display: flex;
+              flex-direction: row;
+
+- 要点2: 主题部分直接设置: flex-grow:1
+
+- 要点3：设置footer： 比如60px；
+
+- 其实还有解决方案，比如设置main的padding-top：60px来填充一下。然后position：fixed
 
   
