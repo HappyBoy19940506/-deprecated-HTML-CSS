@@ -1749,12 +1749,16 @@ img{
 5. align-items: 和主轴对应的那个交叉轴上的定位，而且可以用在任何元素上
 
    - stretch
+
    - center  默认
+
    - flex-start
+
    - flex-end
+
    - baseline
 
-   
+     > ​	这个align-items是用在父容器上的，如果想用在子元素上单独修改，请用**align-self**来分别定制修改。
 
    ---
 
