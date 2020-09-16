@@ -1,0 +1,55 @@
+.header{
+    width: 100%;
+    height: 80px;
+    border-top: 5px solid #424147;
+    background:#042550;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header .header_logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .header_logo img{
+    width: 49px;
+}
+
+.header .header_logo span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: #ffff;
+}
+
+
+
+.header .header_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* welcome */
+.header .header_nav li:nth-of-type(1){
+    
+}
+/* pasword forget */
+.header .header_nav li:nth-of-type(2){
+    
+}
+
+/* homepage */
+.header .header_nav li:nth-of-type(3){
+    
+}
+
+
+/* exit */
+.header .header_nav li:nth-of-type(4){
+    
+}
