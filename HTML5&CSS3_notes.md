@@ -1836,7 +1836,9 @@ img{
 ## 后台管理界面技巧知识点
 
 1. 如果想把iconfont旋转，可以用 tranform:rotate,但是 注意必须添加 display：inline-block，因为transform不能对行内元素使用。
-2. 做后台管理系统，不用写container-fluid和container，直接写 header然后接class=main就行。就算要写，一定要注意 height：100%传递。**相邻的父类必须要是100%或者px, 不可以不写**。
-3. 注意要写 html, height：100%，而且**百分比的话 必须相邻最近的父类就要有100%或者px，否则会失效。** 看2.
-4. 注意header下面的div高度要设置为 calc(100%  -  header的高度）。 **注意， 负号两边要留点距离否则会失效**，这么做的目的是让整个页面不出现滚动条。header+div.main完美正好是 100%的浏览器高度。
-5. 用flex做，左边固定宽度，右边用 flex-grow:1 来自适应宽度。
+2. **当css样式只应用于一个元素时，使用id来定义**， 比如header，main，footer请用id。
+3. 做后台管理系统，不用写container-fluid和container，直接写 header然后接class=main就行。就算要写，一定要注意 height：100%传递。**相邻的父类必须要是100%或者px, 不可以不写**。
+4. 注意要写 html, height：100%，而且**百分比的话 必须相邻最近的父类就要有100%或者px，否则会失效。** 看2.
+5. 注意header下面的div高度要设置为 calc(100%  -  header的高度）。 **注意， 负号两边要留点距离否则会失效**，这么做的目的是让整个页面不出现滚动条。header+div.main完美正好是 100%的浏览器高度。
+6. 用flex做，左边固定宽度，右边用 flex-grow:1 来自适应宽度。
+7. 中心区域，设置高度为 calc(100% -  上高度  - 下高度)。并且设置 overflow:auto 这样内容过多时，可以出现滚动条。

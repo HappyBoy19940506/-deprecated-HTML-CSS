@@ -130,3 +130,22 @@
 .main aside li .icon-shezhi{
     font-size:50px;
 }
+
+.main .main_container{
+    height: calc(100%  - 50px);
+    overflow: auto;
+}
+
+.main #footer{
+    border-top:  1px solid #dbe7ed;
+    height: 49px;
+    background: #f1f9fc;
+    color:#8888;
+    font-size: 12px;
+    text-align: right;
+}
+
+.main #footer span{
+    margin-right: 20px;
+    line-height: 49px;
+}
