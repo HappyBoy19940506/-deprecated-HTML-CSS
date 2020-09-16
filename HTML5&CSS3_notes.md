@@ -1830,3 +1830,13 @@ img{
 - 其实还有解决方案，比如设置main的padding-top：60px来填充一下。然后position：fixed
 
   
+
+----
+
+## 后台管理界面技巧知识点
+
+1. 如果想把iconfont旋转，可以用 tranform:rotate,但是 注意必须添加 display：inline-block，因为transform不能对行内元素使用。
+2. 做后台管理系统，不要写container-fluid和container，直接写 header下面是main就行。
+3. 注意要写 html, height：100%，而且**百分比的话 必须相邻最近的父类就要有px，否则会失效。**
+4. 注意左边高度100%，右边高度也是100%。用3里面提到的方法。
+5. 用flex做，左边固定宽，右边自适应宽度。
