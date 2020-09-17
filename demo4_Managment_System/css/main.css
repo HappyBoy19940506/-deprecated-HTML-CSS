@@ -259,7 +259,9 @@
 }
 
 /* project contents */
-.project_info_contents{}   
+.project_info_contents{
+    margin:20px;
+}   
 
 .project_info_contents>div{
     display: none;
@@ -314,8 +316,37 @@
 
 
 .project_info_contents .project_info_search{
-    width: 100px;
+    width: 220px;
     height: 30px;
-    border:1px black solid;
+    border:1px #819bd1 solid;
+    border-radius: 5px;
 }
 
+.project_info_contents .project_info_search input{
+    border:none;
+    text-indent:10px;
+    margin-top: 5px;
+    outline: none;
+}
+
+.project_info_contents .project_info_search input::placeholder{
+    color: #819bd1;
+}
+
+.project_info_contents .project_info_search button{
+    border:none;
+    color: #999999;
+    font-size:14px;
+    border-left:1px solid #333333;
+    cursor: pointer;
+    background-color: #e8ebf0;
+    width: 74px;
+    height: 30px;
+}
+
+/* table */
+.project_info_table{
+    background-color: #93d615;
+    height: 500px;
+    width: 100%;
+}
