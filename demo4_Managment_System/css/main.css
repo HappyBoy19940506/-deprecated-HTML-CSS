@@ -166,8 +166,8 @@
 
 .project_title .project_title_details i{
     font-size: 22px;
-    color:#333333
-    margin-left: 18px;
+    color:#333333;
+    margin-left:18px;
 }
 
 .project_title .project_title_details h2{
@@ -193,5 +193,49 @@
 
 .main_container .project_info{
     flex-grow: 1;
-    background-color: lightblue;
+    width: 100%;
 }
+
+/* project informations buttons */
+
+.project_info .project_info_btns{
+    height: 56px;
+    background-color:  #dacfdf;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+.project_info .project_info_btns ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 58px;
+    align-items: center;
+    width:1000px;
+}
+
+.project_info .project_info_btns li{
+    height: 40px;
+    width: 110px;
+    background-color: #fbfeff;
+    border-radius: 5px 5px 0 0;
+    font-size: 16px;
+    color: #666666;
+    border: 1px solid black;
+    border-bottom: none;
+    line-height: 40px;
+    text-align: center;
+}
+
+.project_info .project_info_btns ul::after{
+    display: block;
+    content: " ";
+    height: 40px;
+    width: 300px;
+    background-color: transparent;
+}
+
+.project_info .project_info_btns li.active{
+    cursor: pointer;
+}
+
