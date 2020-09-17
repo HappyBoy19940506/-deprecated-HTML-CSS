@@ -211,7 +211,8 @@
     justify-content: space-around;
     height: 58px;
     align-items: center;
-    width:1000px;
+    width:600px;
+    margin-top: 7px;
 }
 
 .project_info .project_info_btns li{
@@ -227,15 +228,65 @@
     text-align: center;
 }
 
-.project_info .project_info_btns ul::after{
+/* .project_info .project_info_btns ul::after{
     display: block;
     content: " ";
     height: 40px;
     width: 300px;
     background-color: transparent;
-}
+} */
 
 .project_info .project_info_btns li.active{
     cursor: pointer;
+    background-color: blueviolet;
+    color: white;
+}
+
+.project_info .project_info_btns .active::after{
+    display: block;
+    content: " ";
+    background: url('../imgs/a.png') no-repeat; 
+    /* opacity: 0.8; */
+    /* border: 1px solid black; */
+    /* background-color: red; */
+    background-size: contain;
+	width: 20px;
+    height: 30px;
+    position: relative;
+    transform: rotate(90deg);
+    top:-5px;
+    left:35%;
+}
+
+/* project contents */
+.project_info_contents{}   
+
+.project_info_contents>div{
+    display: none;
+}
+
+.project_info_contents div.show{
+    display: block;
+
+}
+
+.project_info_contents .project_info_submit1{
+    width: 110px;
+    height: 32px;
+    font-size: 14px;
+    border:1px black solid;
+}
+
+.project_info_contents .project_info_submit2{
+    width: 100px;
+    height: 30px;
+    border:1px black solid;
+}
+
+
+.project_info_contents .project_info_search{
+    width: 100px;
+    height: 30px;
+    border:1px black solid;
 }
 

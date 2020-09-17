@@ -1839,7 +1839,7 @@ img{
 2. **当css样式只应用于一个元素时，使用id来定义**， 比如header，main，footer请用id。
 3. 做后台管理系统，不用写container-fluid和container，直接写 header然后接class=main就行。就算要写，一定要注意 height：100%传递。**相邻的父类必须要是100%或者px, 不可以不写**。
 4. 注意要写 html, height：100%，而且**百分比的话 必须相邻最近的父类就要有100%或者px，否则会失效。** 看2.
-5. 注意header下面的div高度要设置为 calc(100%  -  header的高度）。 **注意， 负号两边要留点距离否则会失效**，这么做的目的是让整个页面不出现滚动条。header+div.main完美正好是 100%的浏览器高度。
+5. 注意header下面的div高度要设置为 calc(100%  -  header的高度）。 **注意， 负号两边要留点距离否则会失效**，这么做的目的是让整个页面不出现滚动条。header+div.main完美正好是 100%的浏览器高度。但是，相反地，你写：：after，：hover这些的时候，冒号要紧贴着，不然也不起效。
 6. 用flex做，左边固定宽度，右边用 flex-grow:1 来自适应宽度。
 7. 中心区域，设置高度为 calc(100% -  上高度  - 下高度)。并且设置 overflow:auto 这样内容过多时，可以出现滚动条。
 8. h5标签如果写错，就不要乱改了，写完css之后再去改tag很有可能出现问题，比如想把div改成section，如果你css里面直接写了 section的 tag选择器的话，就很容易出问题。
@@ -1847,4 +1847,19 @@ img{
 10. ul li的flex布局中，因为ul不经常写height和width值，所以很多时候会造成align-items：center失效，因为align-items是交叉轴上的定位，如果你不设置height或者width值，你在设置row或者column的direction的时候，就没有交叉轴。
 11. 注意，很多时候 写li.active的时候要注意 选择器 "li.active" 贴在一起写才有用，你分开写，意思是li下面的叫 active类的另一个div，就选不到了。别粗心搞错了。
 12. 在设置搜索历史记录的时候， 如果不满一排四个，只有三个，这三应该是 等间距排列，但是不可以太稀释，怎么做？ 在后面添加一个伪类，然后 看不见，并且自适应 剩余宽度就行。但是具体怎么做，我还不清楚。
-    
+13. 在做 三个按钮 每点击一个劲就会跳出相应界面的功能里面， 我们会使用 display none 把几个遮起来，再把一个直接display：block显示，其中我们要注意， 设置display：none，会写到： .className>div 这样来遮柱 classname这个div下所有的相邻div，为什么一定要写”>“呢？ 如果不写，你后面孙子div只要出现了div这个名字就会被遮住，就惨了！或者你直接 classname下面每个div都给一个class 名字，然后分别在他们的css里面写 display none也可以。
+14.  如何把一段字，比如input里面的placehoder里面的字，稍微往右移动一点，可以用text-indent：19px
+15. 如何选中一个框体 取消默认样式的那种蓝色边框： outline：none
+16. button标签的默认样式，鼠标移动上去是箭头，所以一般搜索框，要变成pointer
+
+----
+
+## 吃大亏 绝对路径 相对路径
+
+学的不扎实：绝对路径，相对路径
+
+> ​	 在Linux里面, cd .. 是回到根目录。 但是不存在 什么 cd .   这个命令。
+>
+> ​    在url（）里面，要注意 ./imgs 和imgs直接写没区别， ./ 意思就是当前这一层。
+>
+> ​    比如你在css里面写background，如果css在css文件夹里，img在imgs文件夹里的话，注意很多时候是 ../imgs/a.png ，是两个点！！！！
