@@ -270,18 +270,47 @@
 
 }
 
-.project_info_contents .project_info_submit1{
-    width: 110px;
-    height: 32px;
-    font-size: 14px;
-    border:1px black solid;
+.project_info_contents .project_info_submit1 input{
+   display: none;
 }
 
-.project_info_contents .project_info_submit2{
-    width: 100px;
-    height: 30px;
-    border:1px black solid;
+.project_info_contents .project_info_submit2 input{
+    display: none;
 }
+
+.project_info_contents .project_info_submit1{
+    width: 170px;
+    height: 30px;
+    font-size: 14px;
+    color: white;
+    background-color: #93d615;
+    border-radius: 5px;
+    margin:0 20px 0 20px;
+    
+}
+
+.project_info_contents .project_info_submit1 label{
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+
+
+.project_info_contents .project_info_submit2{
+    width: 170px;
+    height: 30px;
+    font-size: 14px;
+    color: white;
+    background-color: #0f2480;
+    border-radius: 5px;
+}
+
+.project_info_contents .project_info_submit2 label{
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}   
 
 
 .project_info_contents .project_info_search{

@@ -1851,6 +1851,8 @@ img{
 14.  如何把一段字，比如input里面的placehoder里面的字，稍微往右移动一点，可以用text-indent：19px
 15. 如何选中一个框体 取消默认样式的那种蓝色边框： outline：none
 16. button标签的默认样式，鼠标移动上去是箭头，所以一般搜索框，要变成pointer
+17. label标签的使用，如果你想用label标签直接包住input标签来达到效果的话，请不要写 label里面的 for属性，写了的话 值为空，会失效。
+18. 对于 cusior：pointer的设置要注意，普通div设置无所谓，但是当出现 层叠结构，比如有div被display：none之后的话，必须在最表层，也就是能看到的那个div上加cursor：pointer否则是不生效的。
 
 ----
 
