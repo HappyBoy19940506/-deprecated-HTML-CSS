@@ -8,6 +8,10 @@ html,body{
     height: 100%;
 }
 
+th{
+    font-weight: normal;
+}
+
 ul, li{
     list-style: none;
 }

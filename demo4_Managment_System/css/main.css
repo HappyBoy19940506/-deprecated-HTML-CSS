@@ -348,3 +348,36 @@
 .project_info_table{
     width: 100%;
 }
+
+.project_info_table table{
+    width: 80%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.project_info_table table thead{
+    text-align: left;
+    
+}
+.project_info_table table thead tr{
+    
+}
+
+.project_info_table table thead tr th{
+    border: 1px solid black;
+    height: 32px;
+}
+.project_info_table table tbody{
+    
+}
+
+.project_info_table table tbody tr{
+    
+}
+
+.project_info_table table tbody tr td{
+    border: 1px solid black;
+    height: 32px;
+}
+
+
