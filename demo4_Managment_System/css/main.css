@@ -347,25 +347,35 @@
 /* table */
 .project_info_table{
     width: 100%;
+    
 }
 
 .project_info_table table{
     width: 80%;
-    border: 1px solid black;
     border-collapse: collapse;
+    text-indent: 10px;
+    font-size: 18px;
+    margin-left: 20px;
+
+}
+
+
+.project_info_table table tbody .icon-tongxunlu{
+    color:lightblue;
 }
 
 .project_info_table table thead{
     text-align: left;
     
 }
-.project_info_table table thead tr{
-    
+.project_info_table table thead tr th:first-child{
+    text-align: center;
 }
 
 .project_info_table table thead tr th{
-    border: 1px solid black;
+    border: 1px solid #dbe7ed;
     height: 32px;
+    background-color: #dbe7ed;
 }
 .project_info_table table tbody{
     
@@ -376,8 +386,53 @@
 }
 
 .project_info_table table tbody tr td{
-    border: 1px solid black;
+    border: 1px solid #dbe7ed;
     height: 32px;
 }
 
+.project_info_table table tbody tr td:first-child{
+    text-align: center;
+}
 
+.project_info .project_info_footer{
+    width: 80%;   
+    height: 50px;
+}
+.project_info .project_info_footer .project_info_footer_operats{
+
+
+}
+.project_info .project_info_footer .project_info_footer_operats button{
+    margin: 20px 0 0 10px;
+    border-radius: 5px;
+    border: 1px #dacfdf solid;
+    height: 25px;
+    width: 80px;
+    cursor: pointer;
+    
+}
+
+.project_info_footer .project_info_footer_operats button:nth-of-type(1){
+    background-color: yellowgreen;
+    color: white;
+}
+
+.project_info_footer .project_info_footer_operats button:nth-of-type(2){
+    background-color: blueviolet;
+    color: white;
+}
+
+
+.project_info .project_info_footer .project_info_footer_page{
+
+
+}
+.project_info .project_info_footer .project_info_footer_page div{
+    border: 1px solid #dbe7ed;
+    margin: 20px 0 0 10px;
+    text-align: center;
+    font-size: 16px;
+    background-color: white;
+    padding: 4px 8px;
+    cursor: pointer;
+}

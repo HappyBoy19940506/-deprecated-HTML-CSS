@@ -89,3 +89,19 @@ ul li:hover{
     transform:rotateY(180deg);
     transform-style: preserve-3d;
 }
+
+.box7{
+    width: 300px;
+    height: 300px;
+    border:1px black solid;
+    display: flex;
+    justify-content: center;
+
+}
+
+.box8{
+    width: 30px;
+    height: 130px;
+    background-color: red;
+    align-self: center;
+}
