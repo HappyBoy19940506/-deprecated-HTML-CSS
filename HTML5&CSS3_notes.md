@@ -1871,3 +1871,49 @@ img{
 > ​    比如你在css里面写background，如果css在css文件夹里，img在imgs文件夹里的话，注意很多时候是 ../imgs/a.png ，是两个点！！！！
 >
 > 
+
+
+
+
+
+-------
+
+## grid 网格布局
+
+1. flex布局只能做一维布局，比如说 有两排列表，你就只能一排一排的设置，但是grid网格布局，就可以同时设置两排。或者有 左边2个div，右边一个div的就比较麻烦。
+
+2. 我个人的经验是: 大的布局，大块的div，分布很不等分，而且数量也比较少的话， 一般放在大的一维上，比如移动端整体架构，所以用flex。 小的部分 比如 items列表的话，用grid来细分。
+
+3. grid布局就是一个二维布局，他的横纵轴同时存在。
+
+4. 用在父容器上的属性：
+
+   - display:grid  
+
+     > ​	不多说
+
+   - grid-template-columns
+
+     > 在列上设置几列，可以写 像素， 也可以写百分比，或者自适应写auto
+     >
+     > grid-template-columns： 100px auto 25% ; 这就是分三列的意思。	
+
+   - grid-template-rows
+
+     > ​	更多时候，我们会用一种 叫fr的单位来写， 1fr就相当于 一个div flex-grow的意思
+     >
+     >  叫网格剩余空间百分比。
+     >
+     > 
+     >
+     >  所以，比如你要四等分，你当然可以写 grid-template-columns:25% 25% 25% 25%;
+     >
+     > 但是，你三等分的时候百分比除不尽了啊，写什么呢，你可以写 ：
+     >
+     > grid-template-columns : 1fr 1fr 1fr;
+
+   - 有时候 比如要分成一个 6*3的大grid，你总不能写 6个 1fr 在 row上吧，
+
+     > ​	所以，我们可以用 repeat()来简写， 写6个1fr，可以简写成
+     >
+     >   grid-template-columns: repeat (6,1fr);
