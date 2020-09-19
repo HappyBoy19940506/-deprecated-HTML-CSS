@@ -1917,3 +1917,5 @@ img{
      > ​	所以，我们可以用 repeat()来简写， 写6个1fr，可以简写成
      >
      >   grid-template-columns: repeat (6,1fr);
+
+   - 响应式布局
