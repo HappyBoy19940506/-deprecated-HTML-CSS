@@ -105,3 +105,43 @@ ul li:hover{
     background-color: red;
     align-self: center;
 }
+
+.grid_demo{
+    width: 500px;
+    height: 500px;
+    border:1px solid red;
+    /* 如何显示 不是九等分的那种布局呢 */
+    display: grid;
+    grid-template-areas: 
+    'nav nav nav nav'
+    'side1 mid1 mid1 side2'
+    'side1 mid2 mid2 side2'
+    ;
+}
+
+.grid_demo .nav{
+    grid-area: nav;
+    background: red;
+}
+
+.grid_demo .side1{
+    grid-area: side1;
+    background: rgb(72, 160, 38);
+}
+
+
+.grid_demo .side2{
+    grid-area: side2;
+    background: rgb(74, 190, 89);
+}
+
+
+.grid_demo .mid1{
+    grid-area: mid1;
+    background: rgb(112, 68, 170);
+}
+ 
+.grid_demo .mid2{
+    grid-area: mid2;
+    background: rgb(92, 57, 57);
+}

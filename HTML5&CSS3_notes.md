@@ -1886,7 +1886,7 @@ img{
 
 3. grid布局就是一个二维布局，他的横纵轴同时存在。
 
-4. 用在父容器上的属性：
+4. 属性：
 
    - display:grid  
 
@@ -1918,9 +1918,126 @@ img{
      >
      >   grid-template-columns: repeat (6,1fr);
 
-   - 响应式布局
+   - grid-template-areas: 不划分9等分，比如是 上面一个长方形，下面2个长方形这种怎么做呢
 
-   - s
+     > ​	1.	首先，父类 不多说display:grid肯定要。
+     >
+     > ​	2.	然后，不用写grid-template-rows/columns了， 而是用grid-template-ares:
+     >
+     >    **然后注意加 每行的引号：**
+     >
+     >  "a1  a1 a1 a1"
+     >
+     >  "a2 a3 a3 a5"
+     >
+     > "a2  a4  a4 a5"
+     >
+     > 3. 然后你可以看得出来这个里面 有5个子div，这时候去父类下面造5个小的div
+     >
+     > 4. 每个子div需要用 grid-area: name来绑定你之前上面写的a1 a2 a5绑定起来，我一般就和div 名字一样了，**需要特别注意的是，这里的grid-area：后面不可以加引号，否则会失效！**
+     >
+     > 5. 完整代码：
+     >
+     >    ```css
+     >    //    <div class="grid_demo">
+     >          <div class="nav">nav</div>
+     >          <div class="side1">side1</div>
+     >          <div class="mid1">mid1</div>
+     >          <div class="mid2">mid2</div>
+     >          <div class="side2">side2</div>
+     >        </div>
+     >    //
+     >    
+     >    .grid_demo{
+     >        width: 500px;
+     >        height: 500px;
+     >        border:1px solid red;
+     >        /* 如何显示 不是九等分的那种布局呢 */
+     >        display: grid;
+     >        grid-template-areas: 
+     >        'nav nav nav nav'
+     >        'side1 mid1 mid1 side2'
+     >        'side1 mid2 mid2 side2'
+     >        ;
+     >    }
+     >    
+     >    .grid_demo .nav{
+     >        grid-area: nav;
+     >        background: red;
+     >    }
+     >    
+     >    .grid_demo .side1{
+     >        grid-area: side1;
+     >        background: rgb(72, 160, 38);
+     >    }
+     >    
+     >    
+     >    .grid_demo .side2{
+     >        grid-area: side2;
+     >        background: rgb(74, 190, 89);
+     >    }
+     >    
+     >    
+     >    .grid_demo .mid1{
+     >        grid-area: mid1;
+     >        background: rgb(112, 68, 170);
+     >    }
+     >     
+     >    .grid_demo .mid2{
+     >        grid-area: mid2;
+     >        background: rgb(92, 57, 57);
+     >    }
+     >    ```
+     >
+     > 6. 注意区分什么时候用 普通的grid-tempalte-row 什么时候用复杂的grid-template-ares
+     >
+     >    说白了很好区分，就是看实际需求，如果是9个格子，你用areas的话你就要写a1-a9，肯定很麻烦，最好的办法就是rows repeat（9，1fr）/coloumns repeat（9，1fr）这样写。
+
+   - 暂时gird无法实现不规则，非矩形的div处理
+
+   - 不推荐用复合写法
+
+   - grid-row-gap  和 grid-column-gap
+
+     > ​	就是设置整个网格里面每行或者每列的gap大小
+     >
+     > ​    写在 父div里面，设置的是整个网格。
+
+   - justify-items /////   align-items////// place-items复合写法  -**-写在父div里的**
+
+     > ​	在grid中，justify-items指的是每个网格里边儿, 的**内容**，在**水平**方向的分布
+     >
+     > ​    而align-items指的是，在每个网格里边的 **内容**，在**垂直**方向的分布
+
+   - justify-content/////   align-content////// place-contents复合写法---**写在父div里的**
+
+     > ​	在grid中，justify-contents指的是每个网格 在所在 那一行，也就是水平方向的分布。
+     >
+     >   而align-contents指的是每个网格所在列，垂直方向的分布。
+     >
+     >  也就是说， 网格一定要比父容器小，产生空隙才可以有效果。
+
+   - 想一想，为什么flex布局里只有 justify content-和 align-items，却没有justify items和align-content.
+
+     ​	在二维里，也就是在grid里。
+
+     1. 首先要明确什么是justify： 水平方向的调整叫justify
+
+     2. 其次要明确什么是align：垂直方向的调整叫align
+
+        在一维里，也就是在flex里。
+
+        1.不存在 justify和align它只要一个方向，所以他的justify只代表他的默认方向
+
+        2.align只代表他的默认的交叉轴方向。
+
+        3.仔细想一下，比如我设置一个 横向的 3个div排列，那他根本不存在align方向，所以自然不可能存在什么align-content，（align-content指的是 竖直方向的网格本身排列），只可能修改竖直方向的网格内的内容，也就是只存在align-items
+
+        4. 同理，还是上面的例子，可能存在justify-items吗？也就是水平方向的网格内的内容调整。
+
+           
+
+   - 一些值： space-around space-evenly space-between的区别
 
 ---
 
