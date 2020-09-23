@@ -2169,11 +2169,39 @@ img{
 
 ## 响应式布局之媒介查询
 
-@media screen and( max-width:640px){
+1. 分水岭：1024      1023 
 
+2. 响应式触发的媒体类型： @media all/print/screen/speech
 
+3. ```css
+   @media screen and (max-width:640px) {
+   
+   }
+   @media screen and (max-width:640px) {
+   
+   }
+   @media screen and (max-width:640px) {
+   
+   }
+   @media all and (oritentaion:portrait) {
+   
+   }
+   @media all and (oritentaion:landscape) {
+   
+   }
+   ```
 
-}
+4. 常见的修改的 响应样式：
+
+   - display- 导航栏
+   - flex -pc上横着排列，mobile上需要上下排列
+   - width- 改宽度
+
+5. **注意：响应式的css要写在 正常css的后面！！！后面才写媒体查询**
+
+6. **注意：响应式的css要写在 正常css的后面！！！后面才写媒体查询**
+
+7. **注意：响应式的css要写在 正常css的后面！！！后面才写媒体查询**
 
 -------
 
