@@ -2174,13 +2174,13 @@ img{
 2. 响应式触发的媒体类型： @media all/print/screen/speech
 
 3. ```css
-   @media screen and (max-width:640px) {
+   @media screen and (min-width:768px) {
    
    }
-   @media screen and (max-width:640px) {
+   @media screen and (min-width:992px) {
    
    }
-   @media screen and (max-width:640px) {
+   @media screen and (min-width:1200px) {
    
    }
    @media all and (oritentaion:portrait) {
@@ -2194,14 +2194,52 @@ img{
 4. 常见的修改的 响应样式：
 
    - display- 导航栏
-   - flex -pc上横着排列，mobile上需要上下排列
+   - flex 方向-pc上横着排列，mobile上需要上下排列
    - width- 改宽度
 
-5. **注意：响应式的css要写在 正常css的后面！！！后面才写媒体查询**
+5. 两种操作模式：
+
+   ```css
+   .nav { wwww};
+   @media screen and (min-width:768px) {
+   	.nav { wwww};
+   }
+   @media screen and (min-width:992px) {
+   	.nav { wwww};
+   }
+   @media screen and (min-width:1200px) {
+   	.nav { wwww};
+   }
+   //这种写法下， 只需要写一个nav就可以适应所有情况，在html直接调用
+   //  <nav class='nav'>
+   		
+   //   </nav>
+   ```
+
+   ```css
+   .nav { wwww};
+   @media screen and (min-width:768px) {
+   	.nav-xs { wwww};
+   }
+   @media screen and (min-width:992px) {
+   	.nav-md { wwww};
+   }
+   @media screen and (min-width:1200px) {
+   	.nav-lg { wwww};
+   }
+   //这种写法下， 只需要写不同的nav就可以适应不同情况，在html需要调用全部：
+   //  <nav class='nav nav-xs nav-md nav-lg'>
+   		
+   //   </nav>
+   ```
+
+   
 
 6. **注意：响应式的css要写在 正常css的后面！！！后面才写媒体查询**
 
 7. **注意：响应式的css要写在 正常css的后面！！！后面才写媒体查询**
+
+8. **注意：响应式的css要写在 正常css的后面！！！后面才写媒体查询**
 
 -------
 
@@ -2299,4 +2337,10 @@ img{
    
 
 ----
+
+## Bootstrap
+
+sss-
+
+---
 
