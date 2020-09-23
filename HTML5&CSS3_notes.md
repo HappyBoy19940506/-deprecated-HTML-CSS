@@ -2188,3 +2188,15 @@ img{
 4. 大项目---- pc端 移动端 两套完全不同的代码。不仅仅导航栏，什么都变了
 
    小项目---多端适配的响应式布局  自适应缩放，缩放一定比例 只有个导航栏变下什么的
+
+5. viewport里还可以 设置 viewport-fit：cover来处理 iphonex 下面功能键覆盖
+
+6. 目前市场上大多数移动端设计稿原型机都是iphone6plus，宽度414px
+
+7. 移动端图片等比缩放-- img的话，请设置为block+max-width:100%,height:auto; div背景图片的话 请设置background-size:100%,直接缩减div百分比。并且请选择高清大图。http://www.jeepxie.net/article/385408.html
+
+8. 市面上目前流行的两种响应式移动端布局方案。fluid布局 和 adaptive布局
+
+   fluid布局就是 尺寸变小时， div的大小不变，改变的是 div之间的距离，适合小项目
+
+   adpative布局就是尺寸变小时，所有内容都跟着等比变小，具体看需求
