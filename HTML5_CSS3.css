@@ -117,6 +117,7 @@ ul li:hover{
     'side1 mid1 mid1 side2'
     'side1 mid2 mid2 side2'
     ;
+
 }
 
 .grid_demo .nav{
@@ -145,3 +146,68 @@ ul li:hover{
     grid-area: mid2;
     background: rgb(92, 57, 57);
 }
+
+.box9{
+    width: 500px;
+    height: 300px;
+    border:1px black solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-end;
+   
+  
+    
+}
+
+.box10{
+    width: 100px;
+    height: 50px;
+    background: red;
+}
+
+.box10 div{
+    width: 50px;
+    background: chartreuse;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.box11{
+    width: 100px;
+    height: 50px;
+    background: blue;
+}
+
+
+.box12{
+    width: 100px;
+    height: 50px;
+    background: black;
+}
+
+
+.grid_demo2{
+    width: 1200px;
+    height: 1200px;
+    display: grid;
+    grid-template-rows: repeat(3, 200px);
+    grid-template-columns:repeat(3, 200px);
+    border:1px solid blue;
+
+    /*  */
+    justify-items: start;
+    align-items: end;
+    /*  */
+    justify-content: center;
+    align-content: center;
+}
+
+
+.grid_demo2>div{
+    width: 150px;
+    height: 150px;
+    border:1px solid black;
+    background: red;
+    }

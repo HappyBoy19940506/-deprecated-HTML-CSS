@@ -1728,9 +1728,9 @@ img{
 
 3. justify-content: 
 
-   - flex-start  从头部对齐 （默认）
+   - **flex-start**  从头部对齐 （默认） **特别注意，要写flex，直接写start没用，和下面grid区分开来**
 
-   - flex-end 尾部对齐
+   - **flex-end** 尾部对齐**特别注意，要写flex，直接写start没用，和下面grid区分开来**
 
    - center 中心对齐
 
@@ -1746,15 +1746,13 @@ img{
    - wrap：移到下一行或下一列
    - warp-reverse：移到下一行或下一列，溢出的那个移反而在第一行或第一列
 
-5. align-items: 和主轴对应的那个交叉轴上的定位，而且可以用在任何元素上
+5. align-items: 和主轴对应的那个交叉轴上的定位，
 
    - stretch
-
    - center  默认
-
-   - flex-start
-
-   - flex-end
+   - **flex-start* ***特别注意，要写flex，直接写start没用，和下面grid区分开来**
+   - **flex-end** **特别注意，要写flex，直接写start没用，和下面grid区分开来**
+   - **发现了吗？ align-items是没有space-between这些值的，不过也好理解**
 
    - baseline
 
@@ -2003,21 +2001,35 @@ img{
      >
      > ​    写在 父div里面，设置的是整个网格。
 
-   - justify-items /////   align-items////// place-items复合写法  -**-写在父div里的**
+   - justify-items /////   align-items////// place-items复合写法  -**-写在父div里的**，网格里面的内容在网格里面怎么分布
 
      > ​	在grid中，justify-items指的是每个网格里边儿, 的**内容**，在**水平**方向的分布
      >
      > ​    而align-items指的是，在每个网格里边的 **内容**，在**垂直**方向的分布
+     >
+     > **特别注意，写center无所谓，start和end是 不带flex的，和flex区分开**
 
-   - justify-content/////   align-content////// place-contents复合写法---**写在父div里的**
+   - justify-content/////   align-content////// place-contents复合写法---**写在父div里的**，网格怎么分布
 
      > ​	在grid中，justify-contents指的是每个网格 在所在 那一行，也就是水平方向的分布。
      >
      >   而align-contents指的是每个网格所在列，垂直方向的分布。
      >
      >  也就是说， 网格一定要比父容器小，产生空隙才可以有效果。
+     >
+     > **特别注意，写center无所谓，start和end是 不带flex的，和flex区分开**
 
-   - 想一想，为什么flex布局里只有 justify content-和 align-items，却没有justify items和align-content.
+   - 切记，flex布局里只有 justify content-和 align-items，却没有justify items和align-content.
+
+     **而且语义是不同的。** **一个写的是flex-start，一个写的是start，**而且同样的属性名，意思是不一样的。
+
+     flex里面 justify-content意思就是默认方向的位置调整
+
+     align-items是网格在交叉轴上的调整
+
+     都是都指的是  网格本身的位置，和里面的内容没有任何关系，这点和grid中是完全不一样的。
+
+     **但是 在grid里面，这些属性是另外的意思：**
 
      ​	在二维里，也就是在grid里。
 
@@ -2025,19 +2037,25 @@ img{
 
      2. 其次要明确什么是align：垂直方向的调整叫align
 
-        在一维里，也就是在flex里。
+        ---再次强调，这里面的值 写start /end/space 而不是 flex-start和flex-end
 
-        1.不存在 justify和align它只要一个方向，所以他的justify只代表他的默认方向
+        而且 justify-content 和align-content在这里的意思是： 水平和垂直方向上 网格本身的排版，言下之意就是 这些网格在父容器中一定要有剩余空间才会看出效果，比如你用了 1fr，这种剩余空间单位，他就直接占满了，你写这个是没有任何效果的。而且要明确一点的是，网格划分的区域和div没有直接关系，在网格划分区域里的div并不一定是占满整个网格子区域的，所以才会有下面的items系列的属性。
 
-        2.align只代表他的默认的交叉轴方向。
+        **而 justify-items和align-items在grid里指的是网格容器内部的 内容的 位置定位。这种功能和flex里是完全不同的。flex里的align-itmes值得是 网格本身而不是网格内部的内容。**
 
-        3.仔细想一下，比如我设置一个 横向的 3个div排列，那他根本不存在align方向，所以自然不可能存在什么align-content，（align-content指的是 竖直方向的网格本身排列），只可能修改竖直方向的网格内的内容，也就是只存在align-items
-
-        4. 同理，还是上面的例子，可能存在justify-items吗？也就是水平方向的网格内的内容调整。
-
-           
+        
 
    - 一些值： space-around space-evenly space-between的区别
+
+     - **space-around 中间之间的空隙是 左右两边的2倍**
+     - **space-between 两端对齐**
+     - **space-evenly 所有空白都平均分配**
+
+   - 单独网格内的元素在网格内的位置；
+
+     可以用
+
+     > ​	justify-self 和align-self来调整，记住，这个是写在 子div元素上哦。
 
 ---
 
@@ -2157,3 +2175,16 @@ img{
 
 }
 
+-------
+
+## 移动端布局
+
+1. 切换平台尺寸之后，一定要记得刷新。
+
+2. 一些自适应工具 比如 lamdatest 或者 responsive app这些，测的时候要多关注url，多测几次。特别有些时候如果遇到 自动改变地址，反应会不灵敏，有时候有效，有时候又没有效果。
+
+3. 大部分公司都会pc段和移动端各一套代码，在用户访问的时候检测下浏览器尺寸，如果是pc端就显示普通的，如果是移动端，就重定向到另一个网页去。（后端去做，http请求中的重定向）
+
+4. 大项目---- pc端 移动端 两套完全不同的代码。不仅仅导航栏，什么都变了
+
+   小项目---多端适配的响应式布局  自适应缩放，缩放一定比例 只有个导航栏变下什么的
