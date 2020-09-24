@@ -1,0 +1,251 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+ul ,li{
+    list-style: none;
+}
+
+img{
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html,body {
+    height: 100%;
+}
+
+body{
+    font-size: 1rem;
+}
+
+html{
+    font-size: 0.83333vw;
+}
+/* font-size=1 rem = 1rem in 120rem width */
+
+
+/* all reset.css */
+/* all reset.css */
+/* all reset.css */
+
+.container-fluid{
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+    /* background-color: lightcyan; */
+    flex-grow: 1;
+}
+
+footer{
+    width: 100%;
+    background-color: lightcyan;
+    height:9.0625rem;
+    text-align: center;
+    line-height: 9.0625rem;
+}
+
+/* main.css */
+/* main.css */
+/* main.css */
+/* main.css */
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.0625rem black solid;
+    height: 4.375rem;
+    font-size: 1.5rem;
+}
+
+.title h1{
+    color: black;
+    font-size: 2rem;
+}
+
+.title a{
+    color:#6c757d;
+    cursor: pointer;
+}
+.title a:nth-of-type(1):hover{
+    text-decoration: underline;
+}
+
+.title a:nth-of-type(1){
+   margin-left: 0.75rem;
+}
+
+.title a:nth-of-type(2){
+    margin-right: 0.75rem;
+}
+
+.title a i{
+    font-size: 2rem;;
+}
+
+.title a span{
+    border: 0.0625rem  #6c757d solid ;
+    border-radius: 0.3125rem;
+    margin-left: 0.75rem;
+}
+
+/*  */
+.nav_menu ul{
+    border-bottom: 0.0625rem black solid;
+    height: 2.8125rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav_menu a{
+    font-size: 1rem;
+    color:#6c757d;
+    cursor: pointer;
+   
+}
+
+/*  */
+.banner{
+    height: 22.625rem;
+    background-color: #343a40;
+    color:white;
+    overflow: hidden;
+}
+
+.banner div{
+    margin-left: 1.25rem;
+    width: 31.6875rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+}
+
+.banner div p:nth-of-type(1){
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.375rem;
+    line-height: 2.625rem;
+}
+
+.banner div p:nth-of-type(2){
+    font-size: 1.375rem;
+    line-height: 2.625rem;
+
+}
+
+.banner div p:nth-of-type(3){
+    font-weight: bold;
+    font-size: 1.625rem;
+    line-height: 2.625rem;
+}
+/*  */
+.news{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.875rem;
+}
+
+.news .news_box{
+    width: 47%;
+    height: 17.125rem;
+    border: 0.0625rem solid #6c757d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+
+.news .news_info{
+    width: 21.125rem;
+    height: 15.625rem;
+    font-size: 1.375rem;
+}
+
+@media all and (max-width:93.875rem){
+    .news .news_info{
+       width:100% ;
+    }
+}
+
+.news .news_pic{
+    width: 12.5rem;
+    height: 15.625rem;
+    background-color: #212529;
+}
+
+@media all and (max-width:93.875rem){
+    .news .news_pic{
+        display: none;
+    }
+}
+
+/*  */
+.post_and_side{
+    
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post_and_side .p_n_s_post{
+    width: 42.5rem;
+    
+}
+
+@media screen and (max-width:93.875rem){
+
+    .post_and_side .p_n_s_post{
+        width: 30rem;
+        background-color: red;
+    }
+}
+
+.post_and_side .p_n_s_side{
+    width: 21.875rem;
+    height: 16.875rem;
+    background-color: red;
+    align-self: flex-start;
+}
+
+.post_and_side .p_n_s_side .about{
+    width: 21.875rem;
+    height: 17.25rem;
+    background-color: #f8f9fa;
+    font-size:1.125rem;
+    font-weight: bold;
+}
+
+.post_and_side .p_n_s_side .archives{
+    width: 21.875rem;
+    height: 23.25rem;
+    font-size:1.125rem;
+    font-weight: bold;
+}
+
+.post_and_side .p_n_s_side .elsewhere{
+    width: 21.875rem;
+    height: 10.75rem;
+    font-size:1.125rem;
+    font-weight: bold;
+}

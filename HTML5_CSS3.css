@@ -192,8 +192,8 @@ ul li:hover{
     width: 1200px;
     height: 1200px;
     display: grid;
-    grid-template-rows: repeat(3, 200px);
-    grid-template-columns:repeat(3, 200px);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns:repeat(3, 1fr);
     border:1px solid blue;
 
     /*  */
@@ -206,8 +206,8 @@ ul li:hover{
 
 
 .grid_demo2>div{
-    width: 150px;
-    height: 150px;
+    width: 50%;
+    height: 50%;
     border:1px solid black;
     background: red;
     }

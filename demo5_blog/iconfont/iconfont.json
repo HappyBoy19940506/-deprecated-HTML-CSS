@@ -1,0 +1,72 @@
+{
+  "id": "2072912",
+  "name": "管理系统demo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1048867",
+      "name": "密码",
+      "font_class": "icon_password",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "3865245",
+      "name": "房子",
+      "font_class": "fangzi",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "5431172",
+      "name": "官网",
+      "font_class": "guanwang",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "8348146",
+      "name": "通讯录",
+      "font_class": "tongxunlu",
+      "unicode": "e720",
+      "unicode_decimal": 59168
+    },
+    {
+      "icon_id": "14059605",
+      "name": "帮助",
+      "font_class": "bangzhu",
+      "unicode": "e7bc",
+      "unicode_decimal": 59324
+    },
+    {
+      "icon_id": "14060198",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e7cd",
+      "unicode_decimal": 59341
+    },
+    {
+      "icon_id": "14060278",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e7d2",
+      "unicode_decimal": 59346
+    },
+    {
+      "icon_id": "14060321",
+      "name": "资料",
+      "font_class": "ziliao",
+      "unicode": "e7d9",
+      "unicode_decimal": 59353
+    },
+    {
+      "icon_id": "17124302",
+      "name": "撤销",
+      "font_class": "chexiao",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    }
+  ]
+}

@@ -2,29 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEST</title>
     <style>
+        *{
+            margin:0;
+            padding:0;
+        }
         html,body{
             height: 100%;
         }
-        div{
-            background: red;
-            height:800px;
-            width:800px;
-        }
         .box{
-            background: yellow;
-            /* height:400px;
-            width:400px; */
-            height:50%;
             width:50%;
+            height: 50%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .box>div{
+            border: 1px solid black  ;
+        }
+        .box2{
+            width:50%;
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .box2>div{
+            flex-grow: 1;
+            background: red;
+            border: 1px solid black;
         }
     </style>
 </head>
 <body>
-    <div>
-        <div class="box"></div>
+    <div class="box">
+        <div> <div>  x </div>  </div>
+        <div> <div>  x </div>  </div>
+        <div> <div>  x </div>  </div>
+        <div> <div>  x </div>  </div>
+        <div> <div>  x </div>  </div>
+        <div> <div>  x </div>  </div>
+        <div> <div>  x </div>  </div>
+        <div> <div>  x </div>  </div>
+        <div> <div>  x </div>  </div>
+    </div>
+    <br>
+
+    <br>
+    <br>
+    <div class="box2">
+        <div>  </div>
+        <div>  </div>
+        <div>  </div>
+        <div>  </div>
     </div>
 </body>
 </html>
