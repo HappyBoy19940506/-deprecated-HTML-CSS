@@ -2430,3 +2430,5 @@ https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-h
    > ​	1.在less里没有这种操作
    >
    > ​	2..在sass的选择器里，比如font，可以写成 font{size:19px;  weight:bold; family:ss; }来简写
+   >
+   > 
