@@ -21,3 +21,33 @@ $background:background-color;
 .box2{
     #{$background}:red;
 }
+/*  */
+/*  */
+/*  */
+
+
+$height:100px;
+
+$height:200px;
+$height:222px;
+
+.d4c{
+   
+    height: $height;
+    $height:300px;
+}
+
+.d5c{
+    $height:138px;
+    height: $height;
+}
+
+.ddc{
+    list-style: square;
+    div{list-style: square;}
+    ul{
+        li{
+            p{list-style: square;}
+        }
+    }
+}
