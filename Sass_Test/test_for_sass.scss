@@ -1,0 +1,23 @@
+//zhushi yixia
+/* zhu
+shi 
+yi
+xia */
+/*  */
+/*  */
+/*  */
+
+
+$banner_width: 50px;
+
+.banner{
+    height: $banner_width;
+}
+/*  */
+/*  */
+/*  */
+
+$background:background-color;
+.box2{
+    #{$background}:red;
+}
