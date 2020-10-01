@@ -2439,14 +2439,32 @@ https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-h
 
    > 1. 在less的嵌套选择器里，若要添加伪类，使用 &:hover添加，但是必须注意，这个 &：hover相当于一个独立的div，请写在你想要hover的标签的{}里，也就是把他当做其子元素来写。
    >
-   >    比如你要 在 ul li*3 这样的结果里把第一个li加上hover。请在 第一个li的{}里再写一个 &:hover{}. 而不是想当然的再li后面直接添加&:hover
+   >    **比如你要 在 ul li*3 这样的结构里把第一个li加上hover。请在 第一个li的{}里再写一个 &:hover{}. 而不是想当然的再li后面直接添加&:hover**
    >
    > 2. 在sass的嵌套选择器里，相同。
 
-8. 属性选择器 (sass才有)
+8. 属性嵌套 **(sass才有)**
 
    > ​	1.在less里没有这种操作
    >
    > ​	2..在sass的选择器里，比如font，可以写成 font{size:19px;  weight:bold; family:ss; }来简写
    >
-   > sss
+   > ```scss
+   > .bbox {
+   >     font : {
+   >         size: 11px;
+   >         family:red;
+   >         weight: normal;
+   >     }
+   > }
+   > ```
+
+9. 运算
+
+   > 	1. 小知识点： :hover伪类在css里面是要紧贴着的，不然不生效，但是 **运算符** 反而要空格开来，不然不生效。
+   >  	2. 在less中：
+   >      - 相同单位，可以直接运算，注意 符号中间空格就行。
+   >      - 不同单位，以运算符前面的一个数的 单位为准。
+   > 	3. 在scss中：
+   >     - 相同单位，可以直接运算，注意 符号中间空格就行。
+   >     - 不同单位，会报错。
