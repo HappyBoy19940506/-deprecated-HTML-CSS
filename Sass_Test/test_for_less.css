@@ -44,3 +44,6 @@
 .div ul li {
   list-style: none;
 }
+.div ul li:hover {
+  list-style: none;
+}

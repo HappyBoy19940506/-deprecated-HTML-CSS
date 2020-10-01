@@ -35,6 +35,10 @@ xia */
   list-style: square;
 }
 
+.ddc div:active {
+  list-style: none;
+}
+
 .ddc ul li p {
   list-style: square;
 }

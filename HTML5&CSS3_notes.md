@@ -2437,8 +2437,11 @@ https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-h
 
 7. 带伪类的嵌套选择器
 
-   > 1. 在less的嵌套选择器里，比如ul{  li{    }}，可以写成ul{   li{ }  &hover{}  }来生成ul的伪类
-   > 2. 在sass的嵌套选择器里，比如ul{  li{    }}，可以写成ul{   li{ }  &hover{}  }来生成ul的伪类
+   > 1. 在less的嵌套选择器里，若要添加伪类，使用 &:hover添加，但是必须注意，这个 &：hover相当于一个独立的div，请写在你想要hover的标签的{}里，也就是把他当做其子元素来写。
+   >
+   >    比如你要 在 ul li*3 这样的结果里把第一个li加上hover。请在 第一个li的{}里再写一个 &:hover{}. 而不是想当然的再li后面直接添加&:hover
+   >
+   > 2. 在sass的嵌套选择器里，相同。
 
 8. 属性选择器 (sass才有)
 

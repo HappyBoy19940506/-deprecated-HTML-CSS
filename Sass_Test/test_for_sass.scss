@@ -44,7 +44,10 @@ $height:222px;
 
 .ddc{
     list-style: square;
-    div{list-style: square;}
+    div{
+        list-style: square;
+        &:active{list-style: none;}
+    }
     ul{
         li{
             p{list-style: square;}
