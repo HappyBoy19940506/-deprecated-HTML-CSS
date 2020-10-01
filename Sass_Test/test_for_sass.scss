@@ -67,3 +67,16 @@ $height:222px;
     }
 }
 
+
+
+@mixin name{
+    display: inline;
+}
+
+@mixin chuacan($number) {
+    color:$number;
+}
+.what{
+    @include name;
+    @include chuacan(red);
+}

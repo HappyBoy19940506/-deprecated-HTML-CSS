@@ -2465,6 +2465,126 @@ https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-h
    >  	2. 在less中：
    >      - 相同单位，可以直接运算，注意 符号中间空格就行。
    >      - 不同单位，以运算符前面的一个数的 单位为准。
+   >      - 遇到除法，默认会把 / 当做 除法符号，如果想把它当做分隔，用 ~" xx / x" 转义
    > 	3. 在scss中：
    >     - 相同单位，可以直接运算，注意 符号中间空格就行。
    >     - 不同单位，会报错。
+   >     - 遇到除法，默认会把 / 当做 分隔符，如果想把它当做除法，用 （ x/ xxx） 转义
+
+10. 函数：
+
+    > 1.less和scss中有很多内置函数可以使用，比如: round()  percentage()
+    >
+    > 2.也有一些只有less中有，比如squrt()
+    >
+    > 3.也有一些只有scss中有，比如random()
+    >
+    > 4.scss支持自定义函数:
+    >
+    > ```scss
+    > @function func_name_jia_fa($n,$m)
+    >   
+    >   @return($n + $m)
+    > ```
+
+11. 混入
+
+    > - **在less中**， 可以直接写成 div{     .show;  } 来吧show的样式 混入到div中去。
+    >
+    > ```less
+    > @number:100px;
+    > .c{
+    >     height: @number + 10em;
+    >     width: 3em + @number;
+    > }
+    > 
+    > .show{
+    >     .c;
+    > }
+    > // 引入了.c 的样式。
+    > ```
+    >
+    > - 如果想混入，但是不想 把混入之前的 样式，自动生成到css里面，可以加个（ ）。
+    >
+    >   ```less
+    >   .hide( ){
+    >       display: block;
+    >   }
+    >   //这里hide加了括号， hide这个样式就不会生成到css里面了。
+    >   .show{
+    >       .c;
+    >       .hide( );
+    >   }
+    >   ```
+    >
+    > - 还可以利用 ()传递参数：
+    >
+    >   ```less
+    >   .hide(@dd){
+    >       display: block;
+    >       color:@dd;
+    >   }
+    >   
+    >   .show{
+    >       .c;
+    >       .hide(red);
+    >   }
+    >   //这里把red的值 传给hide，hide中 @dd 对应red，传到color，从而生成color：red；
+    >   ```
+    >
+    > - -----
+    >
+    > - **在sass中，混入是用 @mixin +@include来实现，**
+    >
+    > - 注意 @minxin后面的 classname 不加· 点。而且 不同于less，它一定不会渲染在css里。
+    >
+    >   ```scss
+    >   @mixin name{
+    >       display: inline;
+    >   }
+    >   //它一定不会生成在css里，放心，
+    >   .what{
+    >       @include name;
+    >   }
+    >   ```
+    >
+    > - 在scss中传递参数：
+    >
+    >   ```scss
+    >   @mixin name{
+    >       display: inline;
+    >   }
+    >   
+    >   @mixin chuacan($number) {
+    >       color:$number;
+    >   }
+    >   .what{
+    >       @include name;
+    >       @include chuacan(red);
+    >   }
+    >   ```
+    >
+    >   
+
+    
+
+12. less命名空间
+
+    > - less中有一种操作 可以 给定固定的命名空间，然后再命名空间里面设置class。
+    >
+    > - ```scss
+    >   #space(){
+    >       .show{display: contents;}
+    >   }
+    >   //  这个space后面的（）不能省去，因为一省去就成了 嵌套结构下的div了，#space直接变成了 id=space的一个div
+    >   .go{
+    >       #space.show;
+    >   }
+    >   //如此，go就可以使用space下特定的show，而不是全局下的show。
+    >   ```
+    >
+    > - 
+
+13. 继承
+
+    > ​	

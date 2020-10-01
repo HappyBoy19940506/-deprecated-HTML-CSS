@@ -51,3 +51,12 @@
   height: 110px;
   width: 103em;
 }
+.show {
+  height: 110px;
+  width: 103em;
+  display: block;
+  color: red;
+}
+.go {
+  display: contents;
+}
