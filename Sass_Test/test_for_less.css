@@ -60,3 +60,11 @@
 .go {
   display: contents;
 }
+.jicheng,
+.use,
+.use2 {
+  display: inline;
+}
+.use2 {
+  columns: red;
+}

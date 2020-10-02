@@ -2244,6 +2244,8 @@ img{
 
 8. **注意：响应式的css要写在 正常css的后面！！！后面才写媒体查询**
 
+9. 以免被 前面的默认css样式覆盖，出现bug
+
 -------
 
 ## 移动端布局-概览
@@ -2587,4 +2589,58 @@ https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-h
 
 13. 继承
 
-    > ​	
+    > - 首先，混入的写法，有一个问题，就是 会重复把一些样式写到很多 div里面去。很多时候我们想写成:  div1 , div2 , div3 { 样式} 这种样子。 这时候，我们可以用继承。
+    >
+    > - ```less
+    >   .jicheng{
+    >       display: inline;
+    >   }
+    >   //继承里面一定不写（），因为如果写了（）就会在css中消失了，这里要做的，不是混入样式，而是把.jicheng 与.use 用逗号的方法写在一块。
+    >   .use{
+    >       &:extend(.jicheng);
+    >   }
+    >   .use2{
+    >       columns: red;
+    >       &:extend(.jicheng);
+    >   }
+    >   // use2里的colums:red；会自己出来单独写一条。
+    >   ```
+    >
+    > - 在sass中：
+    >
+    > - ```scss
+    >   .line{
+    >       display: inline;
+    >   }
+    >   
+    >   .box8{
+    >       @extend .line;
+    >   }
+    >   
+    >   .box9{
+    >       background-color: red;
+    >       @extend .line;
+    >   }
+    >   ```
+    >
+    > - 继承 的class一定没有（），但是用作混入的class可以用（）。
+    >
+    > - 如果你@extend的class 不想出现在生成的css文件中，可以如下操作（但是less没这个功能）
+    >
+    > - ```scss
+    >   %line1{
+    >       display: inline;
+    >   }
+    >   
+    >   .box8{
+    >       @extend %line1;
+    >   }
+    >   
+    >   .box9{
+    >       background-color: red;
+    >       @extend %line1;
+    >   }
+    >   ```
+
+14. 
+

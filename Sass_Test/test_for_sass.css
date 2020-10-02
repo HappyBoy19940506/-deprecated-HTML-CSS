@@ -57,3 +57,27 @@ xia */
   display: inline;
   color: red;
 }
+
+/*  */
+/*  */
+/*  */
+/*  */
+.line, .box8, .box9 {
+  display: inline;
+}
+
+.box9 {
+  background-color: red;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+.box8, .box9 {
+  display: inline;
+}
+
+.box9 {
+  background-color: red;
+}

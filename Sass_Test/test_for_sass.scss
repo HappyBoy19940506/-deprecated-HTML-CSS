@@ -80,3 +80,35 @@ $height:222px;
     @include name;
     @include chuacan(red);
 }
+/*  */
+/*  */
+/*  */
+/*  */
+.line{
+    display: inline;
+}
+
+.box8{
+    @extend .line;
+}
+
+.box9{
+    background-color: red;
+    @extend .line;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+%line1{
+    display: inline;
+}
+
+.box8{
+    @extend %line1;
+}
+
+.box9{
+    background-color: red;
+    @extend %line1;
+}
