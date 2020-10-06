@@ -2465,9 +2465,9 @@ https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-h
 
    > 	1. 小知识点： :hover伪类在css里面是要紧贴着的，不然不生效，但是 **运算符** 反而要空格开来，不然不生效。
    >  	2. 在less中：
-   >      - 相同单位，可以直接运算，注意 符号中间空格就行。
-   >      - 不同单位，以运算符前面的一个数的 单位为准。
-   >      - 遇到除法，默认会把 / 当做 除法符号，如果想把它当做分隔，用 ~" xx / x" 转义
+   >  	- 相同单位，可以直接运算，注意 符号中间空格就行。
+   >  	- 不同单位，以运算符前面的一个数的 单位为准。
+   >  	- 遇到除法，默认会把 / 当做 除法符号，如果想把它当做分隔，用 ~" xx / x" 转义
    > 	3. 在scss中：
    >     - 相同单位，可以直接运算，注意 符号中间空格就行。
    >     - 不同单位，会报错。
@@ -2646,4 +2646,6 @@ https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-h
 14. 媒体查询
 
     > ​	332112dd
+    >
+    > meitichaxun
 
