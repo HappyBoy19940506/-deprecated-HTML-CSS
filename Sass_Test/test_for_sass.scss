@@ -112,3 +112,31 @@ $height:222px;
     background-color: red;
     @extend %line1;
 }
+
+$background : (
+			a  : url(1.png),
+			b  : url(2.png)
+);
+
+.box10{
+	background: map-values($background);
+}
+
+$transform : (
+	a : scale(2),
+	b : rotate(90deg)
+);
+
+.box11{
+		transform:   zip(map-values($transform)...);
+}
+
+.cbox{
+    width:100px;
+    @media all and (min-width : 768px ){
+      width : 600px;
+    }
+    @media all  and (min-width : 1440px ){
+      width : 900px;
+    }
+  }

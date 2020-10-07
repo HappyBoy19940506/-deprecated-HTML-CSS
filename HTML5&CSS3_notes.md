@@ -2645,8 +2645,200 @@ https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-h
 
 14. 媒体查询
 
-    > ​	332112dd
-    >
-    > meitichaxun
+    > ​	Less 和 Sass下面语法一样
 
-ss
+    ```less
+    .box{
+      width:100px;
+      @media all and (min-width : 768px ){
+        width : 600px;
+      }
+      @media all  and (min-width : 1440px ){
+        width : 900px;
+      }
+    }
+    ```
+
+    
+
+15. 合并 
+
+    > ​	比如background有多张图片
+
+    1. 在less中用+号,或者+_ 来显示
+
+       ```less
+       .box{
+         background+:url(2.png);
+         background+: url(1.png);
+       }
+       //用逗号分开
+       .box{
+         background+_: red;
+         background+_: no-repeat;
+       }
+       //用空格分开
+       ```
+
+    2. 在sass里面，用的是 类似于 键值对的方式存储的。
+
+       ```sass
+       $background : (
+       			a  : url(1.png),
+       			b  : url(2.png)
+       );
+       
+       .box{
+       	background: map-values($background);
+       }
+       ///map-values 显示所有键值对
+       
+       $tramsform : (
+       	a : scale(2),
+       	b : rotate(90deg)
+       );
+       
+       .box{
+       		transform:   zip(map-values($transform)...)
+       }
+       ```
+
+16. if条件
+
+    1. less下
+
+       ```less
+       @count : 3 ;
+       
+       .get(@number) when ( @number < 4){
+       		width : 100px +  @number;
+       
+       }
+       
+       .get(@number) when ( @number > 4){
+       		width : 100px +  @number;
+       
+       }
+       
+       .box11{
+       		.get(@count);
+       }
+       ```
+
+       
+
+    2. sass下
+
+    ```sass
+    $count : 6 ;
+    
+    .box11{
+    		@if($count > 4){
+    				width: 100px + $count;
+    		}
+    		@else{
+    			widdth:10px + $count;
+    		}
+    
+    
+    }
+    ```
+
+    
+
+17. 循环操作
+
+    
+
+    ```less
+    @count2 : 0;
+    
+    .get2(@cn)  when ( @cn<3) {
+    		.get2((@cn+1));
+    		.box-@{cn}{
+    				width:100px + @cn;
+    		}
+    }
+    
+    
+    .get2(@countt2);
+    
+    ```
+
+    
+
+    Sass
+
+    ```sass
+    @for $i from 0 through 3 {
+    		.box-#{$i}{
+    					widht:100px+ $i;
+    		}
+    
+    }
+    
+    
+    ```
+
+    
+
+18. 模块化导入
+
+    1在less中
+
+    ```less
+    @import './reset.less'
+    ```
+
+    
+
+    2 在sass中
+
+    ```sass
+    @import './reset.scss'
+    ```
+
+    
+
+19. 
+
+20. 
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+

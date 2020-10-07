@@ -81,3 +81,27 @@ xia */
 .box9 {
   background-color: red;
 }
+
+.box10 {
+  background: url(1.png), url(2.png);
+}
+
+.box11 {
+  transform: scale(2) rotate(90deg);
+}
+
+.cbox {
+  width: 100px;
+}
+
+@media all and (min-width: 768px) {
+  .cbox {
+    width: 600px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .cbox {
+    width: 900px;
+  }
+}
