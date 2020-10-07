@@ -1,3 +1,5 @@
+
+
 # Sass &  PostCSS
 
 ## Sass / less
@@ -418,4 +420,92 @@
 
    
 
-2. 
+2. ```
+    postcss src/demo.css -o dist/demo.css
+   //在 总postcss文件夹下。
+   ```
+
+3. ```
+    postcss src/demo.css -o dist/demo.css -w
+   //在 总postcss文件夹下。
+   ```
+
+4. postcss.config.js 在src里面放置
+
+   ```js
+   const autoprefixer = require('autoprefixer');
+   
+   const  pcImport = require('postcss-import');
+   
+   const cssnano = require('cssnano');
+   
+   const cssnext =require('postcss-cssnext');
+   
+   const sytlelint = require( 'stylelint')
+   
+   const sprites = require('postcss-sprites')
+   
+   module.exports = {
+     plugins : [
+       autoprefixer({
+         	browsers : [ '> 0%' ]
+       }),
+       picImport,
+       cssnano,
+       cssnext,
+       stylelint({
+         'rules' : {
+           'color-no-invalid-hex' : true;
+         }
+       }),
+       sprites([
+         spritePath : './dist/'
+       ])
+     ]
+   };
+   
+   ///////////////////////////////////////////////////
+   ```
+
+   
+
+5. ```js
+    npm i autoprefixer
+   ```
+
+   > ​	安装autoprefixer插件 --用来自动添加浏览器前缀。
+
+6. ```js
+    npm i postcss-import   
+   ```
+
+   > ​	用来合并 css文件成一个css文件
+
+7. ```js
+   npm i cssnano
+   ```
+
+   > ​	用来给css压缩
+
+8. ```js
+   npm i postcss-cssnext
+   ```
+
+   > ​	把css高级语法降级 
+
+9. ```js
+   npm i stylelint
+   ```
+
+   > 语法检查 插件
+   >
+   > https://stylelint.io/
+
+10. ```js
+    npm i postcss-sprites
+    ```
+
+    > 自动生成精灵图
+
+11. 
+
