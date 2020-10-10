@@ -105,3 +105,96 @@ xia */
     width: 900px;
   }
 }
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+.bbobox {
+  width: 17px;
+  font-size: 11px;
+  height: 19px;
+  background-color: red;
+  display: none;
+}
+
+.navvi {
+  background-color: red;
+}
+
+.navvi .logo {
+  font-size: 19px;
+}
+
+.navvi .menu ul li {
+  font: 1em sans-serif;
+}
+
+.navvi .menu ul .haha {
+  font-size: 222px;
+  font-size: 212px;
+}
+
+.navvi .menu ul .haha:hover {
+  display: grid;
+}
+
+.masticas {
+  width: 1466;
+}
+
+/* blend VS herite */
+.bsasaber, .inherit_class {
+  height: 19px;
+  background-color: blue;
+  font-size: 6px;
+}
+
+.box8, .box9 {
+  font-weight: 19px;
+}
+
+/* inherit */
+.inherit_class {
+  display: none;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+.her2, .her3 {
+  font-size: 1px;
+  font-weight: 1px;
+}
+
+.her2 {
+  font-weight: 221px;
+}
+
+.box8, .box9 {
+  display: inline;
+}
+
+.box9 {
+  background-color: red;
+}

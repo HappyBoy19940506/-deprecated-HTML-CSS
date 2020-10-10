@@ -140,3 +140,121 @@ $transform : (
       width : 900px;
     }
   }
+
+// this is a demo
+/*  */
+/*  */
+/*  *//*  */
+/*  */
+/*  */
+
+
+/*  */
+/*  */
+/*  */
+
+
+/*  */
+/*  */
+/*  */
+
+
+/*  */
+/*  */
+/*  */
+
+
+
+/*  */
+/*  */
+/*  */
+
+$fontSize: 19px;
+$bannerDisplay:display;
+
+.bbobox{
+    $fontSize:17px;
+    width:$fontSize;
+    $fontSize:11px;
+    font-size: $fontSize;
+    height:19px;
+    background-color: red;
+    #{$bannerDisplay}:none;
+}
+
+.navvi{ background-color: red;
+    .logo{ font-size: $fontSize;}
+    .menu{
+        ul{
+            li{font: 1em sans-serif;}
+            .haha{font-size: $height;
+                font-size: $height - 10px;
+                &:hover{ display: grid;}
+            }
+        }
+    }
+}
+
+
+.masticas{
+    width: random($limit: 1999);
+}
+
+/* blend VS herite */
+@mixin bannerColor($nc) {
+    background-color: blue;
+    font-size: 3px + $nc;
+}
+
+.bsasaber{
+    height: $fontSize;
+    @include bannerColor(3px);
+}
+
+%line1{
+    font-weight: $fontSize;
+}
+
+/* inherit */
+.inherit_class{
+    @extend .bsasaber;
+    display: none;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+%her1{
+    font-size: 1px;
+    font-weight: 1px;
+}
+
+
+.her2{
+    font-weight: 221px;;
+    @extend %her1;
+    
+}
+
+.her3{
+    @extend %her1;
+}
+%line1{
+    display: inline;
+}
+
+.box8{
+    @extend %line1;
+}
+
+.box9{
+    background-color: red;
+    @extend %line1;
+  
+}
+
