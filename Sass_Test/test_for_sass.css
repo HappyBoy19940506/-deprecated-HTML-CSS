@@ -154,7 +154,7 @@ xia */
 }
 
 .masticas {
-  width: 1466;
+  width: 502;
 }
 
 /* blend VS herite */
@@ -198,3 +198,21 @@ xia */
 .box9 {
   background-color: red;
 }
+
+.media {
+  width: 100px;
+}
+
+@media all and (min-width: 768px) {
+  .media {
+    width: 120px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .media {
+    width: 220px;
+  }
+}
+
+/*  */

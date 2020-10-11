@@ -296,7 +296,7 @@
          background+_: red;
          background+_: no-repeat;
        }
-       //用空格分开
+       //用空格分开.
        ```
 
     2. 在sass里面，用的是 类似于 键值对的方式存储的。
