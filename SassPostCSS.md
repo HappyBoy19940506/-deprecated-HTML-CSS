@@ -1,4 +1,4 @@
-# Sass &  PostCSS
+# (Sass &  PostCSS
 
 ## Sass / less
 
@@ -574,11 +574,92 @@
    > 首先要对CSS进行**模块化处理，一个模块负责一类操亻乍行为。可利用Sass或Less**
    > **来实现。**
 
-   1. 文件夹
-      base  --一些初始的通用css，如重置默认样式，动画，工具，打印等。
-      components--用于构建页面的所有组件，如按钮，表单，表格，弹窗等。
-      layout--用于布局页面的不同部分，如页眉，页脚，弹性布局，网格布局等。
-      themes--放置页面之间不同的样式，如首页特殊样式，列表页特殊样式等。
-      abstracts--应用不同的主题样式时，如管理员，买家，卖家等。
-      vendors--放置一些第三方独立的css文件，如bootstrap'iconfont等。
-      
+2. > 文件夹
+   > base  --一些初始的通用css，如重置默认样式，动画，工具，打印等。
+   > components--用于构建页面的所有组件，如按钮，表单，表格，弹窗等。
+   > layout--用于布局页面的不同部分，如页眉，页脚，弹性布局，网格布局等。
+
+   pages--放置页面之间不同的样式，如首页特殊样式，列表页特殊样式等。
+
+   themes--应用不同的主题样式时，如管理员，买家，卖家等。
+   abstracts--放置一些如：变量，函数，响应式等辅助开发工具。
+   vendors--放置一些第三方独立的css文件，如bootstrap'iconfont等。
+
+3. 所有文件夹里面写 _file.scss
+
+   注意加 _代表私有，不能直接使用。
+
+   然后在最外部文件夹写一个 main.scss。
+
+   这个里面写 import  ，import各种文件夹里面的scss。统一调度。
+
+   main .css里面 写满了 各种 @import '.sss/file'
+
+----
+
+## CSS 新特性之自定义变量
+
+1. 有点像 less里面的 @number 和 sass里面的 $number
+
+2. 原生css里用 --number来自定义一个变量。
+
+3. 全局变量写在：root里：
+
+   ```css
+   :root{
+     --number:100px;
+   }
+   
+   .box{
+     height: var(--number);
+   }
+   ```
+
+   
+
+
+
+---
+
+## CSS新特性之文字环绕
+
+1. 如果div是正常情况下， 文字会到下面去开始一排 ，因为div默认占一整行。
+
+2. 如果想要 需要 把div 环绕排列，首先需要把 div 做float处理。
+
+3. 如果div不是矩形，而是 圆形，比如 设置了 border-radius：50%，那我们可以使用 shape-outside属性来 将文字环绕矩形排列。
+
+4. 并且可以设置 shape-margin 来设置环绕时距离div的距离是多少。
+
+5. ```css
+   .box{
+     height:100px;
+     width:100px;
+     border:1px black solid;
+     border-radius:50%;
+     float:left;
+     shape-outside:margin-box;
+     shape-margin:15px;
+     
+   }
+   ```
+
+6. 我们还可以使用clip-path来把div切割成任意多边形：
+
+7. ```css
+   .box{
+     height:100px;
+     width:100px;
+     border:1px black solid;
+     border-radius:50%;
+     float:left;
+     clip-path: polygon(0 0, 0 100px , 100px 100px);
+     ///用polygon搭建一个三角形
+     shape-outside:polygon(0 0, 0 100px , 100px 100px);
+     //文字环绕也 按照三角形的边框环绕。
+     shape-margin:15px;
+     
+   }
+   ```
+
+8. 
