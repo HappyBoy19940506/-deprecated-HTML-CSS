@@ -1,0 +1,15 @@
+.basda{
+    height: 100px;
+    background-image: url(../dist/sprite.png);
+    background-position: 0px 0px;
+    background-size: 140px 70px;
+}
+/* 66666666 */
+
+
+.basda{
+    height: 100px;
+    background-image: url(../dist/sprite.png);
+    background-position: -70px 0px;
+    background-size: 140px 70px;
+}

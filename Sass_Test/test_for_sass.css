@@ -5,6 +5,7 @@ xia */
 /*  */
 /*  */
 /*  */
+@import url(/Users/KevinJoestar/Desktop/Front_End_God/HTML-CSS/Sass_Test/test_for_sass.css);
 .banner {
   height: 50px;
 }
@@ -154,7 +155,7 @@ xia */
 }
 
 .masticas {
-  width: 502;
+  width: 1033;
 }
 
 /* blend VS herite */
@@ -216,3 +217,31 @@ xia */
 }
 
 /*  */
+.box21212 {
+  background: url(1.png), url(2.png);
+  transform: url(1.png) url(2.png);
+}
+
+.boxxcc {
+  width: 120px;
+}
+
+.while .boxnext0 {
+  height: 100px;
+}
+
+.while .boxnext1 {
+  height: 100px;
+}
+
+.while .boxnext2 {
+  height: 100px;
+}
+
+.while .boxnext3 {
+  height: 100px;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6 {
+  height: 100px;
+}

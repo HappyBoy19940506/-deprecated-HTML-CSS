@@ -1,5 +1,3 @@
-
-
 # Sass &  PostCSS
 
 ## Sass / less
@@ -461,7 +459,8 @@
        cssnext,
        stylelint({
          'rules' : {
-           'color-no-invalid-hex' : true;
+                   'color-no-invalid-hex'  :   true,
+                   "indentation": 4|"tab",
          }
        }),
        sprites([
@@ -471,6 +470,47 @@
    };
    
    ///////////////////////////////////////////////////
+   ///////////////////////////////////////////////////
+   //////////////////////////////////////////////////////////////////////////////////////////////////////
+   
+   // const picImport = require('postcss-import');
+   // const autoprefixer = require('autoprefixer');
+   // const cssnano = require('cssnano');
+   // const cssnext = require('postcss-cssnext');
+   const stylelint = require('stylelint');
+   const sprites = require('postcss-sprites');
+   
+   /* autoprefixer 自动加浏览器前缀 */
+   /*  */
+   /*  */
+   /*  */
+   /*  */
+   /*  */
+   
+   
+   module.exports = {
+       plugins : [
+           // autoprefixer(
+           //     {
+           //         browsers : [ ' > 0% ']
+           //     }
+           // ),
+           // picImport(),
+           // // cssnano(),
+           // cssnext,
+           stylelint({
+               'rules' :   {
+                   'color-no-invalid-hex'  :   true
+               }
+           }),
+           sprites({
+               spritePath  :   './dist'
+           }),
+   
+   
+   
+       ]
+   };
    ```
 
    
@@ -486,6 +526,13 @@
    ```
 
    > ​	用来合并 css文件成一个css文件
+   >
+   >    源文件们在 src文件夹里，  目标文件在 dist文件夹里 ，没run一次postcss就可以合并一次
+   >
+   > 但是一定要住 ：
+   >
+   > 1. **最好把postcss-import放在第一个插件来使用**
+   > 2. 一定要在想合并的源css文件的 **头部** 写 @import './src_2'  （注意，一是要写在头部，二是不要写后缀名）
 
 7. ```js
    npm i cssnano
@@ -501,18 +548,23 @@
 
 9. ```js
    npm i stylelint
-   ```
-
+   // 1 tab =  2 spaces
+```
+   
    > 语法检查 插件
    >
-   > https://stylelint.io/
-
+> https://stylelint.io/
+   
 10. ```js
     npm i postcss-sprites
     ```
 
     > 自动生成精灵图
 
-11. 
+11.  :star:注意： 
 
-sass
+     > ​	postcss报错，要去 src里的源文件改，永远不要去 dist的目标文件里面改！你要改的是src里面的。
+
+-----
+
+## CSS文件组织架构

@@ -1,2 +1,22 @@
+@import './demo_2';
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJkZW1vLmNzcyJ9 */
+/* banner */
+.banner{
+    position: relative;
+}
+  
+.banner_list a{
+    display: block;
+    width: 1500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.banner_list li{
+    width: 100%;
+    height: 500px;
+
+}
+.banner_list{
+  position: relative;
+}
