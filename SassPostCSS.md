@@ -663,3 +663,28 @@
    ```
 
 8. 
+
+----
+
+## CSS新特性之自定义滚动条
+
+·
+
+```css
+html::-webkit-scrollbar{
+  width:10px;
+  //浏览器滚动条所在那列的整体宽度
+}
+html::-webkit-scrollbar-thumb{
+  background:yellow;
+  border-radius:15px;
+  //浏览器滚动条的设置
+}
+html::-webkit-scrollbar-track{
+  background:#DEDEDE;
+  //浏览器滚动条所在那列的轨道的设置
+}
+
+// 当然不局限于 html:: 如果有需要也可以加在 div上。
+```
+
