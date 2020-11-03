@@ -688,3 +688,25 @@ html::-webkit-scrollbar-track{
 // 当然不局限于 html:: 如果有需要也可以加在 div上。
 ```
 
+
+
+----
+
+## CSS新特性之滚动条捕捉
+
+1. 给产生滚动条的父容器添加 scroll-snap-type属性
+
+2. 给要定位捕捉的子容器添加scroll-snap-align属性
+
+3. ```css
+   .menu{
+     scroll-snap-type: x mandatory;
+     //设置滚动条捕捉的方向为 x轴。
+   }
+   .menu ul li{
+     scroll-snap-align:start/center/end;
+     //设置滚动条捕捉定位的每个子类的 悬停位置。
+   }
+   ```
+
+4. 
