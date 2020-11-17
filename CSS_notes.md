@@ -1265,10 +1265,10 @@ float：添加之后，会脱离文档流，然后沿着父容器靠左或者靠
    - fixed
    
   - 使其脱离文档流-所占空间会消失，下面的会顶上去。
-     
+    
      - 如果有内容，默认宽度由内容宽度决定。所以你又没内容 又没设置宽度就会啥也看不到
   - 使内联元素支持宽和高
-     
+    
    - 相当于整个浏览器窗口进行偏移，并且不受鼠标滚动条的影响。
    
 - sticky
@@ -1605,8 +1605,13 @@ text-align可以是文字在其所在行居中，但是这个属性必须用在 
 ## 居中问题
 
 1. 文字居中
-   * 上下居中， line-height=div高度
+   * 上下居中， line-height=div高度 但是不可以写100%
    * 左右居中 ， text-align：center +display：block
+   
 2. div居中
    - 左右居中： margin： 0 auto；
    - 上下居中： 只能手动调节，因为高度不是固定的
+   
+3. 一行代码实现 div居中： flex布局 justify-content ：center +  align -content:center
+
+    
